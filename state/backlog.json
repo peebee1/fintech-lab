@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "note": "Source of truth for the build lane. Rendered into BACKLOG.md by tools/render_readme.py. Scores follow RUBRIC.md section 2.",
+  "items": [
+    {
+      "id": "agent-spend-policy",
+      "title": "Spend policy engine for agent-initiated payments",
+      "thesis": "Agents can now check out on their own. Nobody can show you the policy layer that decides whether they should.",
+      "theme": "agentic-commerce",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 4, "s3": 5, "s4": 5, "s5": 5, "s6": 5, "s7": 5},
+      "notes": "Closest to the existing ACP POC. Ship after the ACP repo has a distinct angle so this reads as a layer, not a repeat.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "recon",
+      "title": "Settlement reconciliation that balances to zero",
+      "thesis": "Every payments team claims their recon is tight. Here is one that scores its own accuracy against injected breaks.",
+      "theme": "money-movement",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {"s1": 5, "s2": 5, "s3": 4, "s4": 4, "s5": 5, "s6": 5, "s7": 5},
+      "notes": "First artifact. Break classes are injected with ground truth, so precision and recall are measured, not asserted.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "agent-credit",
+      "title": "Agent-to-agent credit with exposure limits and netting",
+      "thesis": "If agents transact with each other all day, someone has to underwrite the float between them.",
+      "theme": "agentic-commerce",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 4, "s3": 5, "s4": 5, "s5": 4, "s6": 5, "s7": 5},
+      "notes": "Strongest novelty candidate. Needs a careful failure model: default, exposure, netting window.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "idempotency-conformance",
+      "title": "Idempotency conformance suite for payment APIs",
+      "thesis": "A payments API is not idempotent until a buyer can replay it and get the same answer. Most cannot.",
+      "theme": "reliability",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 5, "s3": 4, "s4": 4, "s5": 4, "s6": 5, "s7": 4},
+      "notes": "Adversarial replays: same key different body, crash between write and response, concurrent duplicates.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "fx-rounding",
+      "title": "Money allocation and FX rounding engine",
+      "thesis": "The penny that goes missing when you split a payment across three parties is a real bug class, not a rounding footnote.",
+      "theme": "money-movement",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 5, "s3": 4, "s4": 4, "s5": 5, "s6": 5, "s7": 3},
+      "notes": "Largest remainder allocation, preservation invariant, property based tests with Hypothesis.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "kyc-graph",
+      "title": "Sanctions screening that cuts false positives",
+      "thesis": "Screening is not a search box. It is entity resolution, and the cost of a false positive is a frozen customer.",
+      "theme": "risk",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 5, "s3": 4, "s4": 4, "s5": 4, "s6": 4, "s7": 4},
+      "notes": "Synthetic list modeled on public OFAC structure. Report precision and recall at fixed review budget.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "payment-routing",
+      "title": "Authorization-rate aware payment routing",
+      "thesis": "Routing on cost alone leaves money on the table. Routing on approval probability is where the margin is.",
+      "theme": "acquiring",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 4, "s3": 4, "s4": 5, "s5": 4, "s6": 5, "s7": 4},
+      "notes": "Simulator with PSP-level latency, cost, and approval curves. Compare static rules, epsilon greedy, and Thompson sampling.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "mandate-sim",
+      "title": "Subscription mandate simulator across rails",
+      "thesis": "Card mandates, SEPA direct debit, and UPI autopay disagree about notifications, retries, and revocation. Most teams learn this in production.",
+      "theme": "recurring",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 4, "s3": 4, "s4": 5, "s5": 4, "s6": 5, "s7": 5},
+      "notes": "Model pre-debit notification windows, retry ladders, dunning outcomes, revocation lag.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "dispute-lifecycle",
+      "title": "Chargeback representment state machine",
+      "thesis": "Every dispute is a clock. The product is knowing which clock is running and what evidence still matters.",
+      "theme": "risk",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 4, "s3": 4, "s4": 4, "s5": 4, "s6": 5, "s7": 4},
+      "notes": "Network rule variants, evidence deadlines, liability shift, deadline breach simulation.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "exchange-recon",
+      "title": "Broker order, fill, and position reconciliation",
+      "thesis": "Retail trading apps fail quietly at the seam between the broker, the exchange, and the books.",
+      "theme": "market-infra",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 4, "s3": 4, "s4": 4, "s5": 4, "s6": 5, "s7": 5},
+      "notes": "Extends the Angel One repo into a reconciliation harness. Keep separate from recon to avoid theme repetition.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "ledger-close",
+      "title": "Append only ledger with a provable close",
+      "thesis": "Closing the books is a testable property, not a monthly meeting.",
+      "theme": "money-movement",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 5, "s2": 4, "s3": 3, "s4": 4, "s5": 4, "s6": 5, "s7": 4},
+      "notes": "Temporal queries, reversal only, period locks. Overlaps recon, sequence it after.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "underwriting-eval",
+      "title": "LLM underwriting judged by calibration, not vibes",
+      "thesis": "An underwriting model is good when its probabilities mean something. Brier score does not care how confident the prompt sounded.",
+      "theme": "credit",
+      "type": "artifact",
+      "status": "queued",
+      "scores": {"s1": 4, "s2": 5, "s3": 4, "s4": 4, "s5": 4, "s6": 3, "s7": 5},
+      "notes": "Needs a pinned model and a recorded fixture set so results stay reproducible offline.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "token-vault",
+      "title": "PAN vault with scoped detokenization",
+      "thesis": "Storing the card number is easy. Proving who was allowed to read it, and why, is the product.",
+      "theme": "security",
+      "type": "artifact",
+      "status": "parked",
+      "scores": {"s1": 4, "s2": 3, "s3": 3, "s4": 3, "s5": 4, "s6": 5, "s7": 3},
+      "notes": "Useful but the public version is well covered by vendor docs. Low novelty.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "statement-parser",
+      "title": "Bank statement to normalized ledger",
+      "thesis": "Turning messy statements into clean entries is the unglamorous tax on every finance product.",
+      "theme": "data",
+      "type": "artifact",
+      "status": "parked",
+      "scores": {"s1": 3, "s2": 3, "s3": 2, "s4": 2, "s5": 4, "s6": 4, "s7": 3},
+      "notes": "Crowded space, extraction quality is hard to prove without real statements, and real statements are PII.",
+      "added": "2026-10-23"
+    },
+    {
+      "id": "reg-watch",
+      "title": "Regulatory change watcher for PSD3, RBI, MiCA",
+      "thesis": "Regulation moves monthly. Most teams read about it when a partner asks.",
+      "theme": "compliance",
+      "type": "artifact",
+      "status": "parked",
+      "scores": {"s1": 3, "s2": 2, "s3": 3, "s4": 3, "s5": 4, "s6": 3, "s7": 4},
+      "notes": "Better as a newsletter than a repo. Fails the measured gate without an evaluation set.",
+      "added": "2026-10-23"
+    }
+  ]
+}

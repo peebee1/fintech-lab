@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "note": "Improvements to existing public repos, scored per RUBRIC.md section 5. priority = impact * confidence / effort.",
+  "items": [
+    {
+      "id": "h-profile-readme",
+      "repo": "peebee1",
+      "title": "Add the profile README on the peebee1 account",
+      "defect": "The account has no profile README. A visitor lands on a bare repo list with 0 followers and no thesis.",
+      "fintech_angle": "Lead with the thesis: AI agents for fintech and commerce, built in the open, with links to the proofs.",
+      "impact": 5,
+      "confidence": 5,
+      "effort": 2,
+      "status": "queued"
+    },
+    {
+      "id": "h-shopping-timebomb",
+      "repo": "shopping-concierge",
+      "title": "Fix the wall-clock test that broke on its own",
+      "defect": "test_human_age_and_freshness fails because freshness_line calls datetime.now while the test asserts against a fixed date. The suite rots every time max_age_days elapses.",
+      "fintech_angle": "Deterministic time is a payments requirement, not a test detail. Inject now() everywhere.",
+      "impact": 5,
+      "confidence": 5,
+      "effort": 1,
+      "status": "shipped",
+      "shipped": "2026-10-23"
+    },
+    {
+      "id": "h-angelone-tests",
+      "repo": "angelone-smartapi",
+      "title": "Make the test suite runnable from a clean checkout",
+      "defect": "pytest is not in requirements.txt. uv run pytest fails with no such executable, so the 5 test files have never run in CI.",
+      "fintech_angle": "A trading agent with unrunnable tests is a liability story, not a portfolio story.",
+      "impact": 5,
+      "confidence": 5,
+      "effort": 2,
+      "status": "queued"
+    },
+    {
+      "id": "h-ci-acp",
+      "repo": "agentic-commerce-protocol-poc",
+      "title": "Add CI to the ACP proof of concept",
+      "defect": "39 tests pass locally, no workflow file exists. Nothing proves green on push.",
+      "fintech_angle": "Conformance tests are the whole argument of that repo. They must run where people can see them.",
+      "impact": 4,
+      "confidence": 5,
+      "effort": 1,
+      "status": "queued"
+    },
+    {
+      "id": "h-ci-shopping",
+      "repo": "shopping-concierge",
+      "title": "Add CI to shopping-concierge",
+      "defect": "61 tests, 8 files, no workflow. The failing test would have been caught on day one.",
+      "fintech_angle": "Same argument: if the eval harness is the claim, CI has to run it.",
+      "impact": 4,
+      "confidence": 5,
+      "effort": 1,
+      "status": "queued"
+    },
+    {
+      "id": "h-ci-bazaar",
+      "repo": "agent-bazaar",
+      "title": "Add CI and a frozen mock benchmark to agent-bazaar",
+      "defect": "43 tests pass, no workflow. The README quotes LLM negotiation results that nobody can reproduce without the same model.",
+      "fintech_angle": "Publish a deterministic mock-mode benchmark table that CI regenerates, and keep the LLM run as a recorded artifact.",
+      "impact": 4,
+      "confidence": 4,
+      "effort": 2,
+      "status": "queued"
+    },
+    {
+      "id": "h-topics",
+      "repo": "all",
+      "title": "Add repository topics and sharper descriptions",
+      "defect": "No repo topics on any public repo, and descriptions read like internal notes rather than a thesis.",
+      "fintech_angle": "Topics are the discovery surface for agentic commerce, payments, reconciliation, and stablecoin search.",
+      "impact": 3,
+      "confidence": 5,
+      "effort": 1,
+      "status": "queued"
+    },
+    {
+      "id": "h-angelone-readme",
+      "repo": "angelone-smartapi",
+      "title": "Rewrite the Angel One README around risk, not returns",
+      "defect": "The README leads with the mandate size. It does not state what the agent proves, what the rails forbid, or what happened in the 60 days.",
+      "fintech_angle": "The interesting claim is the guardrails: what the agent is structurally unable to do. Lead with that.",
+      "impact": 4,
+      "confidence": 4,
+      "effort": 1,
+      "status": "queued"
+    },
+    {
+      "id": "h-acp-bench",
+      "repo": "agentic-commerce-protocol-poc",
+      "title": "Make the ACP benchmark a committed results file",
+      "defect": "bench/results.md is prose. There is no machine-readable result and no threshold that fails a regression.",
+      "fintech_angle": "Latency and idempotency under concurrency are the claims a payments reviewer actually checks.",
+      "impact": 3,
+      "confidence": 4,
+      "effort": 2,
+      "status": "queued"
+    },
+    {
+      "id": "h-shopping-refresh",
+      "repo": "shopping-concierge",
+      "title": "Refresh the stale catalog and eval numbers",
+      "defect": "Committed data is 79 days old and the eval report quotes stale freshness labels.",
+      "fintech_angle": "Refresh via the crawler so the numbers are reproducible from the repo, and state the crawl date.",
+      "impact": 3,
+      "confidence": 5,
+      "effort": 3,
+      "status": "queued"
+    }
+  ]
+}

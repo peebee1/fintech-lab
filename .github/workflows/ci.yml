@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install
+        run: uv sync
+
+      - name: Tests
+        run: uv run pytest
+
+      - name: Dashboard is up to date
+        run: uv run python tools/render_readme.py --check
+
+      - name: Quality gates
+        run: |
+          found=0
+          for d in artifacts/*/; do
+            [ -d "$d" ] || continue
+            found=1
+            echo "::group::gate $d"
+            uv run python tools/gate.py "$d"
+            echo "::endgroup::"
+          done
+          if [ "$found" = "0" ]; then echo "no artifacts yet"; fi
