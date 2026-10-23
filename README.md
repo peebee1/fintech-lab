@@ -10,13 +10,13 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**3 ships** | **1 day streak** (best 1) | 1 new artifact | 2 fixs to existing repos
+**3 ships** | **1 day streak** (best 1) | 1 new artifact | 2 fixes to existing repos
 
 Latest: **Profile README: thesis first, proofs second** (2026-10-23)
 
 > A bare repo list became a one screen argument, with every claim linked.
 
-[Code and results](https://github.com/peebee1/peebee1)
+[Commit](https://github.com/peebee1/peebee1)
 
 ## Shipped
 

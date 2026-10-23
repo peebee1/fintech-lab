@@ -66,12 +66,13 @@ def dashboard(ledger: dict, today: date) -> str:
     builds = [s for s in shipped if s.get("lane") != "harden"]
     last = shipped[-1] if shipped else None
 
-    def plural(n: int, word: str) -> str:
-        return f"{n} {word}" if n == 1 else f"{n} {word}s"
+    def plural(n: int, singular: str, plural_form: str | None = None) -> str:
+        return f"{n} {singular}" if n == 1 else f"{n} {plural_form or singular + 's'}"
 
     lines = []
     lines.append(f"**{plural(len(shipped), 'ship')}** | **{current} day streak** (best {best}) | "
-                 f"{plural(len(builds), 'new artifact')} | {plural(len(harden), 'fix')} to existing repos\n")
+                 f"{plural(len(builds), 'new artifact')} | "
+                 f"{plural(len(harden), 'fix', 'fixes')} to existing repos\n")
 
     if last:
         lines.append(f"Latest: **{last['title']}** ({last['date']})")
@@ -79,7 +80,8 @@ def dashboard(ledger: dict, today: date) -> str:
             lines.append(f"\n> {last['thesis']}\n")
         link = last.get("url")
         if link:
-            lines.append(f"[Code and results]({link})\n")
+            label = "Code and results" if last.get("path") else "Commit"
+            lines.append(f"[{label}]({link})\n")
 
     lines.append("## Shipped\n")
     if not shipped:
