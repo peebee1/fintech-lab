@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**2 ships** | **1 day streak** (best 1) | 1 new artifact | 1 fix to existing repos
+**3 ships** | **1 day streak** (best 1) | 1 new artifact | 2 fixs to existing repos
 
-Latest: **Deterministic freshness in shopping-concierge** (2026-10-23)
+Latest: **Profile README: thesis first, proofs second** (2026-10-23)
 
-> A test that breaks itself 30 days after it is written is not a test. CI now catches it.
+> A bare repo list became a one screen argument, with every claim linked.
 
-[Code and results](https://github.com/peebee1/shopping-concierge/commit/986b085)
+[Code and results](https://github.com/peebee1/peebee1)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-10-23 | Profile README: thesis first, proofs second | A bare repo list became a one screen argument, with every claim linked. | n/a | n/a |
 | 2026-10-23 | Deterministic freshness in shopping-concierge | A test that breaks itself 30 days after it is written is not a test. CI now catches it. | 61 passed | n/a |
 | 2026-10-23 | [Settlement reconciliation that measures itself](artifacts/2026-10-23-recon/) | A recon engine that scores its own recall against injected breaks, and refuses to force a match. | 87 passed | 4.70 |
 

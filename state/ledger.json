@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 2,
+  "sequence": 3,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -34,6 +34,19 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/shopping-concierge/commit/986b085",
+      "promoted": false
+    },
+    {
+      "date": "2026-10-23",
+      "id": "h-profile-readme",
+      "lane": "harden",
+      "title": "Profile README: thesis first, proofs second",
+      "thesis": "A bare repo list became a one screen argument, with every claim linked.",
+      "path": "",
+      "theme": "positioning",
+      "score": null,
+      "tests": {},
+      "url": "https://github.com/peebee1/peebee1",
       "promoted": false
     }
   ],

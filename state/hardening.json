@@ -11,7 +11,8 @@
       "impact": 5,
       "confidence": 5,
       "effort": 2,
-      "status": "queued"
+      "status": "shipped",
+      "shipped": "2026-10-23"
     },
     {
       "id": "h-shopping-timebomb",
