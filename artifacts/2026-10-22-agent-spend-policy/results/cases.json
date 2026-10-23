@@ -1,0 +1,72 @@
+[
+  {
+    "name": "small charge within budget",
+    "amount": 4.5,
+    "merchant": "Blue Bottle",
+    "verdict": "allow",
+    "rule": "within budget"
+  },
+  {
+    "name": "over per transaction cap",
+    "amount": 620,
+    "merchant": "United Airlines",
+    "verdict": "deny",
+    "rule": "over per-transaction cap"
+  },
+  {
+    "name": "merchant not allowlisted",
+    "amount": 40,
+    "merchant": "Coinbase",
+    "verdict": "deny",
+    "rule": "merchant not on allowlist"
+  },
+  {
+    "name": "above approval threshold",
+    "amount": 149,
+    "merchant": "Notion",
+    "verdict": "pending",
+    "rule": "above approval threshold"
+  },
+  {
+    "name": "would exceed remaining budget",
+    "amount": 80,
+    "merchant": "Staples",
+    "verdict": "deny",
+    "rule": "would exceed daily budget"
+  },
+  {
+    "name": "velocity limit on repeat charges",
+    "amount": 80,
+    "merchant": "Staples",
+    "verdict": "deny",
+    "rule": "velocity limit hit"
+  },
+  {
+    "name": "outside settlement window",
+    "amount": 4.5,
+    "merchant": "Blue Bottle",
+    "verdict": "deny",
+    "rule": "outside settlement window"
+  },
+  {
+    "name": "exact per transaction cap is allowed",
+    "amount": 250,
+    "merchant": "Staples",
+    "verdict": "pending",
+    "rule": "above approval threshold"
+  },
+  {
+    "name": "exact approval threshold is allowed",
+    "amount": 100,
+    "merchant": "Staples",
+    "verdict": "allow",
+    "rule": "within budget"
+  },
+  {
+    "name": "one cent above threshold needs a human",
+    "amount": 100.01,
+    "merchant": "Staples",
+    "verdict": "pending",
+    "rule": "above approval threshold"
+  }
+]

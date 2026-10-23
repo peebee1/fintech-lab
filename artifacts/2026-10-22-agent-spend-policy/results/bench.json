@@ -1,0 +1,6 @@
+{
+  "runs": 200000,
+  "total_ms": 13.953,
+  "us_per_decision": 0.0698,
+  "decisions_per_second": 14334178
+}

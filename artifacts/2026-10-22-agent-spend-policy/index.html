@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spend policy engine · demo</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --panel:#fff; --ink:#111318; --muted:#5f6673; --faint:#8b93a1;
+    --line:#e3e6ec; --accent:#2f6feb; --ok:#0f8a4a; --warn:#b26a00; --bad:#c0392b;
+    --okbg:#eaf7f0; --warnbg:#fdf4e3; --badbg:#fdeceb;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif}
+  header{display:flex;align-items:center;justify-content:space-between;
+         padding:20px 28px;border-bottom:1px solid var(--line);background:var(--panel)}
+  h1{font-size:17px;margin:0;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:12.5px;margin-top:3px}
+  .pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);
+        border-radius:999px;padding:6px 12px;font-size:12px;color:var(--muted);background:#fbfcfd}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(15,138,74,.12)}
+  main{display:grid;grid-template-columns:330px minmax(0,1fr) 420px;gap:18px;padding:18px 28px 28px;align-items:start}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+  .card h2{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--faint);margin:0 0 12px}
+  .agents{display:grid;gap:8px}
+  button{font:inherit;cursor:pointer;border-radius:9px;border:1px solid var(--line);background:#fbfcfd;
+         color:var(--ink);padding:9px 11px;text-align:left;transition:.12s}
+  button:hover{border-color:#c9d2e0;background:#f4f7fc}
+  button:active{transform:translateY(1px)}
+  button.primary{background:var(--ink);color:#fff;border-color:var(--ink);justify-content:center;text-align:center}
+  button.primary:hover{background:#242833}
+  .agent b{display:block;font-size:13px}
+  .agent span{color:var(--muted);font-size:12px}
+  .row{display:flex;gap:8px}
+  input,select{font:inherit;width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:9px;background:#fbfcfd}
+  label{font-size:11.5px;color:var(--faint);display:block;margin:10px 0 4px;text-transform:uppercase;letter-spacing:.07em}
+  .budget{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:10px}
+  .big{font-size:32px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .big small{font-size:14px;color:var(--faint);letter-spacing:0}
+  .bar{height:10px;border-radius:999px;background:#eef1f5;overflow:hidden;display:flex}
+  .bar i{display:block;height:100%}
+  .seg-settled{background:var(--accent)}
+  .seg-reserved{background:#9db8f3}
+  .legend{display:flex;gap:14px;margin-top:9px;font-size:12px;color:var(--muted)}
+  .legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+  .stat{background:#fbfcfd;border:1px solid var(--line);border-radius:10px;padding:10px}
+  .stat b{display:block;font-size:19px;font-variant-numeric:tabular-nums}
+  .stat span{font-size:11.5px;color:var(--faint)}
+  table{width:100%;border-collapse:collapse;font-size:12.5px}
+  td,th{text-align:left;padding:7px 6px;border-bottom:1px solid #eef1f5}
+  th{color:var(--faint);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.07em}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  .tag{font-size:11px;padding:2px 8px;border-radius:999px;white-space:nowrap}
+  .t-allow{background:var(--okbg);color:var(--ok)}
+  .t-deny{background:var(--badbg);color:var(--bad)}
+  .t-pend{background:var(--warnbg);color:var(--warn)}
+  .feed{display:grid;gap:8px;max-height:330px;overflow:auto;padding-right:2px}
+  .item{border:1px solid var(--line);border-radius:11px;padding:10px 12px;background:#fcfdfe}
+  .item .top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+  .item .m{font-weight:600}
+  .item .why{color:var(--muted);font-size:12px;margin-top:3px}
+  .approvals{display:grid;gap:8px}
+  .ap{border:1px solid #f0d9a8;background:#fffdf7;border-radius:11px;padding:10px 12px}
+  .ap .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .ap .actions{display:flex;gap:6px;margin-top:8px}
+  .ap button{flex:1;text-align:center;padding:6px 8px;font-size:12.5px}
+  .ap .yes{background:var(--ok);color:#fff;border-color:var(--ok)}
+  .ap .no{background:#fff;color:var(--bad);border-color:#f2c9c4}
+  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:var(--faint)}
+  .empty{color:var(--faint);font-size:12.5px;padding:8px 2px}
+  footer{padding:0 28px 26px;color:var(--faint);font-size:11.5px}
+  .rule{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed #edf0f4;font-size:12.5px}
+  .rule:last-child{border-bottom:0}
+  .rule span:last-child{color:var(--muted);font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Spend policy engine</h1>
+    <div class="sub">Agent-initiated payments. Decide, reserve, record. Nothing reaches the rail without a decision.</div>
+  </div>
+  <div class="pill"><span class="dot"></span> policy v3 · live</div>
+</header>
+
+<main>
+  <!-- LEFT: agent console -->
+  <section class="card">
+    <h2>Agent console</h2>
+    <div class="agents" id="presets"></div>
+
+    <label for="m">Custom intent</label>
+    <input id="m" placeholder="merchant" value="Staples">
+    <div class="row" style="margin-top:8px">
+      <input id="a" type="number" step="0.01" value="80" placeholder="amount">
+      <select id="c">
+        <option>office</option><option>travel</option><option>software</option><option>food</option>
+      </select>
+    </div>
+    <div style="margin-top:10px"><button class="primary" style="width:100%" id="send" onclick="window.sendIntent()">Send intent</button></div>
+  </section>
+
+  <!-- CENTER: budget + rules -->
+  <section style="display:grid;gap:18px">
+    <div class="card">
+      <h2>Budget · agent "procurement-bot"</h2>
+      <div class="budget">
+        <div><div class="big" id="avail">300.00 <small>EUR available</small></div>
+             <div class="mono" id="of">of 300.00 daily</div></div>
+        <div class="mono" id="clock"></div>
+      </div>
+      <div class="bar">
+        <i class="seg-settled" id="bSet" style="width:0%"></i>
+        <i class="seg-reserved" id="bRes" style="width:0%"></i>
+      </div>
+      <div class="legend">
+        <span><i class="seg-settled"></i>settled <b id="lSet">0.00</b></span>
+        <span><i class="seg-reserved"></i>reserved <b id="lRes">0.00</b></span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b id="sDec">0</b><span>decisions</span></div>
+        <div class="stat"><b id="sDen">0</b><span>denied</span></div>
+        <div class="stat"><b id="sPre">0.00</b><span>EUR prevented</span></div>
+        <div class="stat"><b id="sP95">–</b><span>µs per decision</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Rules in force</h2>
+      <div class="rule"><span>Max per transaction</span><span>250.00 EUR</span></div>
+      <div class="rule"><span>Daily budget</span><span>300.00 EUR</span></div>
+      <div class="rule"><span>Human approval above</span><span>100.00 EUR</span></div>
+      <div class="rule"><span>Merchant allowlist</span><span id="alCount">6 merchants</span></div>
+      <div class="rule"><span>Velocity</span><span>3 same charges / 5 min</span></div>
+      <div class="rule"><span>Settlement window</span><span>06:00 to 23:00</span></div>
+    </div>
+  </section>
+
+  <!-- RIGHT: decisions -->
+  <section style="display:grid;gap:18px">
+    <div class="card">
+      <h2>Approval queue</h2>
+      <div class="approvals" id="approvals"><div class="empty">Nothing waiting.</div></div>
+    </div>
+    <div class="card">
+      <h2>Decision log</h2>
+      <div class="feed" id="feed"><div class="empty">No decisions yet.</div></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Demo rules are illustrative. Reservations are held at decision time, so parallel agents cannot overrun the same budget.
+</footer>
+
+<script type="module" src="./app.mjs"></script>
+</body>
+</html>

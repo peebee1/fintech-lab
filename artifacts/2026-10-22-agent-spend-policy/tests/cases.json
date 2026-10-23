@@ -1,0 +1,70 @@
+[
+  {
+    "name": "small charge within budget",
+    "intent": { "merchant": "Blue Bottle", "amount": 4.5 },
+    "ctx": { "hour": 12, "available": 300, "history": [] },
+    "expect": { "verdict": "allow", "rule": "within budget" }
+  },
+  {
+    "name": "over per transaction cap",
+    "intent": { "merchant": "United Airlines", "amount": 620 },
+    "ctx": { "hour": 12, "available": 300, "history": [] },
+    "expect": { "verdict": "deny", "rule": "over per-transaction cap" }
+  },
+  {
+    "name": "merchant not allowlisted",
+    "intent": { "merchant": "Coinbase", "amount": 40 },
+    "ctx": { "hour": 12, "available": 300, "history": [] },
+    "expect": { "verdict": "deny", "rule": "merchant not on allowlist" }
+  },
+  {
+    "name": "above approval threshold",
+    "intent": { "merchant": "Notion", "amount": 149 },
+    "ctx": { "hour": 12, "available": 300, "history": [] },
+    "expect": { "verdict": "pending", "rule": "above approval threshold" }
+  },
+  {
+    "name": "would exceed remaining budget",
+    "intent": { "merchant": "Staples", "amount": 80 },
+    "ctx": { "hour": 12, "available": 60, "history": [] },
+    "expect": { "verdict": "deny", "rule": "would exceed daily budget" }
+  },
+  {
+    "name": "velocity limit on repeat charges",
+    "intent": { "merchant": "Staples", "amount": 80 },
+    "ctx": {
+      "hour": 12,
+      "available": 300,
+      "history": [
+        { "merchant": "Staples", "amount": 80 },
+        { "merchant": "Staples", "amount": 80 },
+        { "merchant": "Staples", "amount": 80 }
+      ]
+    },
+    "expect": { "verdict": "deny", "rule": "velocity limit hit" }
+  },
+  {
+    "name": "outside settlement window",
+    "intent": { "merchant": "Blue Bottle", "amount": 4.5 },
+    "ctx": { "hour": 3, "available": 300, "history": [] },
+    "expect": { "verdict": "deny", "rule": "outside settlement window" }
+  },
+  {
+    "name": "exact per transaction cap is allowed",
+    "intent": { "merchant": "Staples", "amount": 250 },
+    "ctx": { "hour": 12, "available": 300, "history": [] },
+    "expect": { "verdict": "pending", "rule": "above approval threshold" }
+  },
+  {
+    "name": "exact approval threshold is allowed",
+    "intent": { "merchant": "Staples", "amount": 100 },
+    "ctx": { "hour": 12, "available": 300, "history": [] },
+    "expect": { "verdict": "allow", "rule": "within budget" }
+  },
+  {
+    "name": "one cent above threshold needs a human",
+    "intent": { "merchant": "Staples", "amount": 100.01 },
+    "ctx": { "hour": 12, "available": 300, "history": [] },
+    "expect": { "verdict": "pending", "rule": "above approval threshold" }
+  }
+]
