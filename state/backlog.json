@@ -8,8 +8,16 @@
       "thesis": "Agents can now check out on their own. Nobody can show you the policy layer that decides whether they should.",
       "theme": "agentic-commerce",
       "type": "artifact",
-      "status": "queued",
-      "scores": {"s1": 5, "s2": 4, "s3": 5, "s4": 5, "s5": 5, "s6": 5, "s7": 5},
+      "status": "shipped",
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 5,
+        "s4": 5,
+        "s5": 5,
+        "s6": 5,
+        "s7": 5
+      },
       "notes": "Closest to the existing ACP POC. Ship after the ACP repo has a distinct angle so this reads as a layer, not a repeat.",
       "added": "2026-10-23"
     },
@@ -20,7 +28,15 @@
       "theme": "money-movement",
       "type": "artifact",
       "status": "shipped",
-      "scores": {"s1": 5, "s2": 5, "s3": 4, "s4": 4, "s5": 5, "s6": 5, "s7": 5},
+      "scores": {
+        "s1": 5,
+        "s2": 5,
+        "s3": 4,
+        "s4": 4,
+        "s5": 5,
+        "s6": 5,
+        "s7": 5
+      },
       "notes": "First artifact. Break classes are injected with ground truth, so precision and recall are measured, not asserted.",
       "added": "2026-10-23"
     },
@@ -31,7 +47,15 @@
       "theme": "agentic-commerce",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 5, "s2": 4, "s3": 5, "s4": 5, "s5": 4, "s6": 5, "s7": 5},
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 5,
+        "s4": 5,
+        "s5": 4,
+        "s6": 5,
+        "s7": 5
+      },
       "notes": "Strongest novelty candidate. Needs a careful failure model: default, exposure, netting window.",
       "added": "2026-10-23"
     },
@@ -42,7 +66,15 @@
       "theme": "reliability",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 5, "s2": 5, "s3": 4, "s4": 4, "s5": 4, "s6": 5, "s7": 4},
+      "scores": {
+        "s1": 5,
+        "s2": 5,
+        "s3": 4,
+        "s4": 4,
+        "s5": 4,
+        "s6": 5,
+        "s7": 4
+      },
       "notes": "Adversarial replays: same key different body, crash between write and response, concurrent duplicates.",
       "added": "2026-10-23"
     },
@@ -53,7 +85,15 @@
       "theme": "money-movement",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 5, "s2": 5, "s3": 4, "s4": 4, "s5": 5, "s6": 5, "s7": 3},
+      "scores": {
+        "s1": 5,
+        "s2": 5,
+        "s3": 4,
+        "s4": 4,
+        "s5": 5,
+        "s6": 5,
+        "s7": 3
+      },
       "notes": "Largest remainder allocation, preservation invariant, property based tests with Hypothesis.",
       "added": "2026-10-23"
     },
@@ -64,7 +104,15 @@
       "theme": "risk",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 5, "s2": 5, "s3": 4, "s4": 4, "s5": 4, "s6": 4, "s7": 4},
+      "scores": {
+        "s1": 5,
+        "s2": 5,
+        "s3": 4,
+        "s4": 4,
+        "s5": 4,
+        "s6": 4,
+        "s7": 4
+      },
       "notes": "Synthetic list modeled on public OFAC structure. Report precision and recall at fixed review budget.",
       "added": "2026-10-23"
     },
@@ -75,7 +123,15 @@
       "theme": "acquiring",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 5, "s2": 4, "s3": 4, "s4": 5, "s5": 4, "s6": 5, "s7": 4},
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 4,
+        "s4": 5,
+        "s5": 4,
+        "s6": 5,
+        "s7": 4
+      },
       "notes": "Simulator with PSP-level latency, cost, and approval curves. Compare static rules, epsilon greedy, and Thompson sampling.",
       "added": "2026-10-23"
     },
@@ -86,7 +142,15 @@
       "theme": "recurring",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 5, "s2": 4, "s3": 4, "s4": 5, "s5": 4, "s6": 5, "s7": 5},
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 4,
+        "s4": 5,
+        "s5": 4,
+        "s6": 5,
+        "s7": 5
+      },
       "notes": "Model pre-debit notification windows, retry ladders, dunning outcomes, revocation lag.",
       "added": "2026-10-23"
     },
@@ -97,7 +161,15 @@
       "theme": "risk",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 5, "s2": 4, "s3": 4, "s4": 4, "s5": 4, "s6": 5, "s7": 4},
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 4,
+        "s4": 4,
+        "s5": 4,
+        "s6": 5,
+        "s7": 4
+      },
       "notes": "Network rule variants, evidence deadlines, liability shift, deadline breach simulation.",
       "added": "2026-10-23"
     },
@@ -108,7 +180,15 @@
       "theme": "market-infra",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 5, "s2": 4, "s3": 4, "s4": 4, "s5": 4, "s6": 5, "s7": 5},
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 4,
+        "s4": 4,
+        "s5": 4,
+        "s6": 5,
+        "s7": 5
+      },
       "notes": "Extends the Angel One repo into a reconciliation harness. Keep separate from recon to avoid theme repetition.",
       "added": "2026-10-23"
     },
@@ -119,7 +199,15 @@
       "theme": "money-movement",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 5, "s2": 4, "s3": 3, "s4": 4, "s5": 4, "s6": 5, "s7": 4},
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 3,
+        "s4": 4,
+        "s5": 4,
+        "s6": 5,
+        "s7": 4
+      },
       "notes": "Temporal queries, reversal only, period locks. Overlaps recon, sequence it after.",
       "added": "2026-10-23"
     },
@@ -130,7 +218,15 @@
       "theme": "credit",
       "type": "artifact",
       "status": "queued",
-      "scores": {"s1": 4, "s2": 5, "s3": 4, "s4": 4, "s5": 4, "s6": 3, "s7": 5},
+      "scores": {
+        "s1": 4,
+        "s2": 5,
+        "s3": 4,
+        "s4": 4,
+        "s5": 4,
+        "s6": 3,
+        "s7": 5
+      },
       "notes": "Needs a pinned model and a recorded fixture set so results stay reproducible offline.",
       "added": "2026-10-23"
     },
@@ -141,7 +237,15 @@
       "theme": "security",
       "type": "artifact",
       "status": "parked",
-      "scores": {"s1": 4, "s2": 3, "s3": 3, "s4": 3, "s5": 4, "s6": 5, "s7": 3},
+      "scores": {
+        "s1": 4,
+        "s2": 3,
+        "s3": 3,
+        "s4": 3,
+        "s5": 4,
+        "s6": 5,
+        "s7": 3
+      },
       "notes": "Useful but the public version is well covered by vendor docs. Low novelty.",
       "added": "2026-10-23"
     },
@@ -152,7 +256,15 @@
       "theme": "data",
       "type": "artifact",
       "status": "parked",
-      "scores": {"s1": 3, "s2": 3, "s3": 2, "s4": 2, "s5": 4, "s6": 4, "s7": 3},
+      "scores": {
+        "s1": 3,
+        "s2": 3,
+        "s3": 2,
+        "s4": 2,
+        "s5": 4,
+        "s6": 4,
+        "s7": 3
+      },
       "notes": "Crowded space, extraction quality is hard to prove without real statements, and real statements are PII.",
       "added": "2026-10-23"
     },
@@ -163,7 +275,15 @@
       "theme": "compliance",
       "type": "artifact",
       "status": "parked",
-      "scores": {"s1": 3, "s2": 2, "s3": 3, "s4": 3, "s5": 4, "s6": 3, "s7": 4},
+      "scores": {
+        "s1": 3,
+        "s2": 2,
+        "s3": 3,
+        "s4": 3,
+        "s5": 4,
+        "s6": 3,
+        "s7": 4
+      },
       "notes": "Better as a newsletter than a repo. Fails the measured gate without an evaluation set.",
       "added": "2026-10-23"
     }

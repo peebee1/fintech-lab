@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 3,
+  "sequence": 4,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -47,6 +47,24 @@
       "score": null,
       "tests": {},
       "url": "https://github.com/peebee1/peebee1",
+      "promoted": false
+    },
+    {
+      "date": "2026-10-23",
+      "id": "agent-spend-policy",
+      "lane": "build",
+      "title": "Spend policy engine for agent-initiated payments",
+      "thesis": "Agents can spend; nothing decides whether they should. Reserve at decision time and a burst cannot overrun the budget.",
+      "path": "artifacts/2026-10-22-agent-spend-policy",
+      "theme": "agentic-commerce",
+      "score": 4.3,
+      "tests": {
+        "cases": 10,
+        "passed": 10,
+        "us_per_decision": 0.0698,
+        "decisions_per_second": 14334178
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-22-agent-spend-policy",
       "promoted": false
     }
   ],

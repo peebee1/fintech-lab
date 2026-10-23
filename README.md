@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**3 ships** | **1 day streak** (best 1) | 1 new artifact | 2 fixes to existing repos
+**4 ships** | **1 day streak** (best 1) | 2 new artifacts | 2 fixes to existing repos
 
-Latest: **Profile README: thesis first, proofs second** (2026-10-23)
+Latest: **Spend policy engine for agent-initiated payments** (2026-10-23)
 
-> A bare repo list became a one screen argument, with every claim linked.
+> Agents can spend; nothing decides whether they should. Reserve at decision time and a burst cannot overrun the budget.
 
-[Commit](https://github.com/peebee1/peebee1)
+[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-22-agent-spend-policy)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-10-23 | [Spend policy engine for agent-initiated payments](artifacts/2026-10-22-agent-spend-policy) | Agents can spend; nothing decides whether they should. Reserve at decision time and a burst cannot overrun the budget. | 10 passed | 4.30 |
 | 2026-10-23 | Profile README: thesis first, proofs second | A bare repo list became a one screen argument, with every claim linked. | n/a | n/a |
 | 2026-10-23 | Deterministic freshness in shopping-concierge | A test that breaks itself 30 days after it is written is not a test. CI now catches it. | 61 passed | n/a |
 | 2026-10-23 | [Settlement reconciliation that measures itself](artifacts/2026-10-23-recon/) | A recon engine that scores its own recall against injected breaks, and refuses to force a match. | 87 passed | 4.70 |

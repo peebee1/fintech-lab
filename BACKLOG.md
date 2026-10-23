@@ -7,7 +7,6 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 
 | Score | Item | Theme | Claim |
 |---|---|---|---|
-| 4.80 | Spend policy engine for agent-initiated payments | agentic-commerce | Agents can now check out on their own. Nobody can show you the policy layer that decides whether they should. |
 | 4.70 | Agent-to-agent credit with exposure limits and netting | agentic-commerce | If agents transact with each other all day, someone has to underwrite the float between them. |
 | 4.55 | Subscription mandate simulator across rails | recurring | Card mandates, SEPA direct debit, and UPI autopay disagree about notifications, retries, and revocation. Most teams learn this in production. |
 | 4.50 | Money allocation and FX rounding engine | money-movement | The penny that goes missing when you split a payment across three parties is a real bug class, not a rounding footnote. |
@@ -23,6 +22,7 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 
 | Status | Item | Theme |
 |---|---|---|
+| shipped | Spend policy engine for agent-initiated payments | agentic-commerce |
 | shipped | Settlement reconciliation that balances to zero | money-movement |
 | parked | PAN vault with scoped detokenization | security |
 | parked | Bank statement to normalized ledger | data |
