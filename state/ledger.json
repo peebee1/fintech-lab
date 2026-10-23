@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 1,
+  "sequence": 2,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -13,8 +13,27 @@
       "path": "artifacts/2026-10-23-recon/",
       "theme": "money-movement",
       "score": 4.7,
-      "tests": {"passed": 87, "failed": 0},
+      "tests": {
+        "passed": 87,
+        "failed": 0
+      },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-23-recon",
+      "promoted": false
+    },
+    {
+      "date": "2026-10-23",
+      "id": "h-shopping-timebomb",
+      "lane": "harden",
+      "title": "Deterministic freshness in shopping-concierge",
+      "thesis": "A test that breaks itself 30 days after it is written is not a test. CI now catches it.",
+      "path": "",
+      "theme": "reliability",
+      "score": null,
+      "tests": {
+        "passed": 61,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/shopping-concierge/commit/986b085",
       "promoted": false
     }
   ],

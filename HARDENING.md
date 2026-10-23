@@ -5,8 +5,6 @@ Fixes to the repos people already see. Priority is impact x confidence / effort,
 
 | Priority | Repo | Fix | Defect |
 |---|---|---|---|
-| 20.0 | agentic-commerce-protocol-poc | Add CI to the ACP proof of concept | 39 tests pass locally, no workflow file exists. Nothing proves green on push. |
-| 20.0 | shopping-concierge | Add CI to shopping-concierge | 61 tests, 8 files, no workflow. The failing test would have been caught on day one. |
 | 16.0 | angelone-smartapi | Rewrite the Angel One README around risk, not returns | The README leads with the mandate size. It does not state what the agent proves, what the rails forbid, or what happened in the 60 days. |
 | 15.0 | all | Add repository topics and sharper descriptions | No repo topics on any public repo, and descriptions read like internal notes rather than a thesis. |
 | 12.5 | angelone-smartapi | Make the test suite runnable from a clean checkout | pytest is not in requirements.txt. uv run pytest fails with no such executable, so the 5 test files have never run in CI. |
@@ -20,3 +18,5 @@ Fixes to the repos people already see. Priority is impact x confidence / effort,
 | Repo | Fix |
 |---|---|
 | shopping-concierge | Fix the wall-clock test that broke on its own |
+| agentic-commerce-protocol-poc | Add CI to the ACP proof of concept |
+| shopping-concierge | Add CI to shopping-concierge |
