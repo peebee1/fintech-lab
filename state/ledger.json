@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "repo": "peebee1/fintech-lab",
+  "started": "2026-10-23",
+  "sequence": 1,
+  "shipped": [
+    {
+      "date": "2026-10-23",
+      "id": "recon",
+      "lane": "build",
+      "title": "Settlement reconciliation that measures itself",
+      "thesis": "A recon engine that scores its own recall against injected breaks, and refuses to force a match.",
+      "path": "artifacts/2026-10-23-recon/",
+      "theme": "money-movement",
+      "score": 4.7,
+      "tests": {"passed": 87, "failed": 0},
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-23-recon",
+      "promoted": false
+    }
+  ],
+  "parked": [],
+  "failed": []
+}

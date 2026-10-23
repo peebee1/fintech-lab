@@ -10,7 +10,7 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**1 ships** | **1 day streak** (best 1) | 1 new artifacts | 0 fixes to existing repos
+**1 ship** | **1 day streak** (best 1) | 1 new artifact | 0 fixs to existing repos
 
 Latest: **Settlement reconciliation that measures itself** (2026-10-23)
 
