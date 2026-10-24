@@ -128,6 +128,28 @@
       "confidence": 5,
       "effort": 3,
       "status": "queued"
+    },
+    {
+      "id": "h-angelone-publish-scope",
+      "repo": "angelone-smartapi",
+      "title": "Decide what leaves the machine before the mandate branch is public",
+      "defect": "The local feat/60-day-mandate branch is 19 commits ahead of origin/main and its mandate/state.json carries capital, positions, trade history, and registered_ip. None of it is public yet. Once pushed it is public permanently.",
+      "fintech_angle": "Publishing a live mandate is the story. Publishing the home IP and full book is not required for that story.",
+      "impact": 4,
+      "confidence": 5,
+      "effort": 2,
+      "status": "queued"
+    },
+    {
+      "id": "h-angelone-log-tokens",
+      "repo": "angelone-smartapi",
+      "title": "Stop the SDK from writing bearer tokens into logs",
+      "defect": "The Angel One smartConnect SDK logs the failing request, including the Authorization header, into logs/*/app.log on HTTP errors. 7 lines across 3 days contain full JWTs. Local only and gitignored, and the tokens expire at IST midnight, but the behavior repeats.",
+      "fintech_angle": "A token in a log file is a token in every backup and screen share. Filter the logger or disable SDK logging and purge existing logs.",
+      "impact": 3,
+      "confidence": 5,
+      "effort": 1,
+      "status": "queued"
     }
   ]
 }

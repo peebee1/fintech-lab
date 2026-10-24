@@ -6,7 +6,9 @@ Fixes to the repos people already see. Priority is impact x confidence / effort,
 | Priority | Repo | Fix | Defect |
 |---|---|---|---|
 | 16.0 | angelone-smartapi | Rewrite the Angel One README around risk, not returns | The README leads with the mandate size. It does not state what the agent proves, what the rails forbid, or what happened in the 60 days. |
+| 15.0 | angelone-smartapi | Stop the SDK from writing bearer tokens into logs | The Angel One smartConnect SDK logs the failing request, including the Authorization header, into logs/*/app.log on HTTP errors. 7 lines across 3 days contain full JWTs. Local only and gitignored, and the tokens expire at IST midnight, but the behavior repeats. |
 | 15.0 | all | Add repository topics and sharper descriptions | No repo topics on any public repo, and descriptions read like internal notes rather than a thesis. |
+| 10.0 | angelone-smartapi | Decide what leaves the machine before the mandate branch is public | The local feat/60-day-mandate branch is 19 commits ahead of origin/main and its mandate/state.json carries capital, positions, trade history, and registered_ip. None of it is public yet. Once pushed it is public permanently. |
 | 8.0 | agent-bazaar | Add CI and a frozen mock benchmark to agent-bazaar | 43 tests pass, no workflow. The README quotes LLM negotiation results that nobody can reproduce without the same model. |
 | 6.7 | angelone-smartapi | Decide what the public main branch of the trading agent should show | origin/main holds the day-0 skeleton: no mandate/ package, no test_mandate.py. The 60 day work lives only on feat/60-day-mandate, so a stranger cloning main sees a smaller repo than the README describes. |
 | 6.0 | agentic-commerce-protocol-poc | Make the ACP benchmark a committed results file | bench/results.md is prose. There is no machine-readable result and no threshold that fails a regression. |
