@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**4 ships** | **1 day streak** (best 1) | 2 new artifacts | 2 fixes to existing repos
+**5 ships** | **2 day streak** (best 2) | 2 new artifacts | 3 fixes to existing repos
 
-Latest: **Spend policy engine for agent-initiated payments** (2026-10-23)
+Latest: **CI on the trading agent, and the macOS crash it found** (2026-10-24)
 
-> Agents can spend; nothing decides whether they should. Reserve at decision time and a burst cannot overrun the budget.
+> The suite had never run outside one laptop. On Linux CI it failed 7 tests: every authenticated path crashed with FileNotFoundError security.
 
-[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-22-agent-spend-policy)
+[Commit](https://github.com/peebee1/angelone-smartapi/actions/runs/40072800762)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-10-24 | CI on the trading agent, and the macOS crash it found | The suite had never run outside one laptop. On Linux CI it failed 7 tests: every authenticated path crashed with FileNotFoundError security. | 72 passed | n/a |
 | 2026-10-23 | [Spend policy engine for agent-initiated payments](artifacts/2026-10-22-agent-spend-policy) | Agents can spend; nothing decides whether they should. Reserve at decision time and a burst cannot overrun the budget. | 10 passed | 4.30 |
 | 2026-10-23 | Profile README: thesis first, proofs second | A bare repo list became a one screen argument, with every claim linked. | n/a | n/a |
 | 2026-10-23 | Deterministic freshness in shopping-concierge | A test that breaks itself 30 days after it is written is not a test. CI now catches it. | 61 passed | n/a |

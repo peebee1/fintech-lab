@@ -35,7 +35,9 @@
       "impact": 5,
       "confidence": 5,
       "effort": 2,
-      "status": "queued"
+      "status": "shipped",
+      "shipped": "2026-10-24",
+      "resolution": "Filed diagnosis was wrong: the suite is unittest native (Makefile ran it), so pytest was a convenience, not the runner. The real gap was no workflow. Added CI on every branch, which then failed 7 tests on Linux with FileNotFoundError: security; get_secret now returns None without a Keychain. 72 tests green on ubuntu-latest, Python 3.12."
     },
     {
       "id": "h-ci-acp",
@@ -112,6 +114,17 @@
       "defect": "Committed data is 79 days old and the eval report quotes stale freshness labels.",
       "fintech_angle": "Refresh via the crawler so the numbers are reproducible from the repo, and state the crawl date.",
       "impact": 3,
+      "confidence": 5,
+      "effort": 3,
+      "status": "queued"
+    },
+    {
+      "id": "h-angelone-main",
+      "repo": "angelone-smartapi",
+      "title": "Decide what the public main branch of the trading agent should show",
+      "defect": "origin/main holds the day-0 skeleton: no mandate/ package, no test_mandate.py. The 60 day work lives only on feat/60-day-mandate, so a stranger cloning main sees a smaller repo than the README describes.",
+      "fintech_angle": "The argument of that repo is the mandate rails. If they are not on main, the public proof is missing.",
+      "impact": 4,
       "confidence": 5,
       "effort": 3,
       "status": "queued"

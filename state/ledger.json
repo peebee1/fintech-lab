@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 4,
+  "sequence": 5,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -65,6 +65,22 @@
         "decisions_per_second": 14334178
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-22-agent-spend-policy",
+      "promoted": false
+    },
+    {
+      "date": "2026-10-24",
+      "id": "h-angelone-ci",
+      "lane": "harden",
+      "title": "CI on the trading agent, and the macOS crash it found",
+      "thesis": "The suite had never run outside one laptop. On Linux CI it failed 7 tests: every authenticated path crashed with FileNotFoundError security.",
+      "path": "",
+      "theme": "reliability",
+      "score": null,
+      "tests": {
+        "passed": 72,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/angelone-smartapi/actions/runs/40072800762",
       "promoted": false
     }
   ],
