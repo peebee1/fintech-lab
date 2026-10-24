@@ -14,15 +14,15 @@ work that can be made public: the primitives, the failure modes, and the measure
 
 Latest: **CI on the trading agent, and the macOS crash it found** (2026-10-24)
 
-> The suite had never run outside one laptop. On Linux CI it failed 7 tests: every authenticated path crashed with FileNotFoundError security.
+> The suite had never run outside one laptop. On Linux CI it failed 7 tests: the client read the Keychain in its constructor, so every authenticated path crashed with FileNotFoundError security.
 
-[Commit](https://github.com/peebee1/angelone-smartapi/actions/runs/40072800762)
+[Commit](https://github.com/peebee1/angelone-smartapi/commit/d0e074c)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
-| 2026-10-24 | CI on the trading agent, and the macOS crash it found | The suite had never run outside one laptop. On Linux CI it failed 7 tests: every authenticated path crashed with FileNotFoundError security. | 72 passed | n/a |
+| 2026-10-24 | CI on the trading agent, and the macOS crash it found | The suite had never run outside one laptop. On Linux CI it failed 7 tests: the client read the Keychain in its constructor, so every authenticated path crashed with FileNotFoundError security. | 72 passed | n/a |
 | 2026-10-23 | [Spend policy engine for agent-initiated payments](artifacts/2026-10-22-agent-spend-policy) | Agents can spend; nothing decides whether they should. Reserve at decision time and a burst cannot overrun the budget. | 10 passed | 4.30 |
 | 2026-10-23 | Profile README: thesis first, proofs second | A bare repo list became a one screen argument, with every claim linked. | n/a | n/a |
 | 2026-10-23 | Deterministic freshness in shopping-concierge | A test that breaks itself 30 days after it is written is not a test. CI now catches it. | 61 passed | n/a |

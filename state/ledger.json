@@ -72,7 +72,7 @@
       "id": "h-angelone-ci",
       "lane": "harden",
       "title": "CI on the trading agent, and the macOS crash it found",
-      "thesis": "The suite had never run outside one laptop. On Linux CI it failed 7 tests: every authenticated path crashed with FileNotFoundError security.",
+      "thesis": "The suite had never run outside one laptop. On Linux CI it failed 7 tests: the client read the Keychain in its constructor, so every authenticated path crashed with FileNotFoundError security.",
       "path": "",
       "theme": "reliability",
       "score": null,
@@ -80,7 +80,7 @@
         "passed": 72,
         "failed": 0
       },
-      "url": "https://github.com/peebee1/angelone-smartapi/actions/runs/40072800762",
+      "url": "https://github.com/peebee1/angelone-smartapi/commit/d0e074c",
       "promoted": false
     }
   ],
