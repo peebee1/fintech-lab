@@ -1,5 +1,7 @@
 # Settlement reconciliation that measures itself
 
+Promoted to its own repo on 2026-10-25: [peebee1/settlement-recon](https://github.com/peebee1/settlement-recon). This directory stays as the historical record of the build.
+
 Every payments team says their recon is tight. Almost none can tell you their recall. This
 is a reconciliation engine that scores its own accuracy against breaks it injected on
 purpose, and refuses to force a match when the numbers do not agree.

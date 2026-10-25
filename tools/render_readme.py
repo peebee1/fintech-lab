@@ -99,6 +99,17 @@ def dashboard(ledger: dict, today: date) -> str:
             lines.append(f"| {s['date']} | {name} | {claim} | {tests_txt} | {score} |")
         lines.append("")
 
+    promoted = [s for s in shipped if s.get("promoted") and s.get("promoted_url")]
+    if promoted:
+        lines.append("## Promoted\n")
+        lines.append("An artifact moves to its own repo when it scores 4.2 or higher, its "
+                     "measurements reproduce, and its thesis survives without this lab.\n")
+        for s in promoted:
+            slug = s["promoted_url"].rstrip("/").rsplit("/", 1)[-1]
+            claim = (s.get("thesis") or "").replace("|", "/")
+            lines.append(f"- [{slug}]({s['promoted_url']}): {claim}")
+        lines.append("")
+
     return "\n".join(lines)
 
 

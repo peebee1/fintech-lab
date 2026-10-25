@@ -28,6 +28,12 @@ Latest: **CI on the trading agent, and the macOS crash it found** (2026-10-24)
 | 2026-10-23 | Deterministic freshness in shopping-concierge | A test that breaks itself 30 days after it is written is not a test. CI now catches it. | 61 passed | n/a |
 | 2026-10-23 | [Settlement reconciliation that measures itself](artifacts/2026-10-23-recon/) | A recon engine that scores its own recall against injected breaks, and refuses to force a match. | 87 passed | 4.70 |
 
+## Promoted
+
+An artifact moves to its own repo when it scores 4.2 or higher, its measurements reproduce, and its thesis survives without this lab.
+
+- [settlement-recon](https://github.com/peebee1/settlement-recon): A recon engine that scores its own recall against injected breaks, and refuses to force a match.
+
 <!-- DASHBOARD:END -->
 
 ## How this repo works

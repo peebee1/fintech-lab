@@ -18,7 +18,9 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-23-recon",
-      "promoted": false
+      "promoted": true,
+      "promoted_url": "https://github.com/peebee1/settlement-recon",
+      "promoted_date": "2026-10-25"
     },
     {
       "date": "2026-10-23",
