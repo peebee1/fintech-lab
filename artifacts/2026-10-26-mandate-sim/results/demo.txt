@@ -1,0 +1,37 @@
+Synthetic book: 2000 subscribers, 11630 invoices, 180 days, seed 7
+Card and SEPA bill in EUR, UPI in INR. No real customers, no network, no clock.
+
+mean of the three rail rates, basis points of each rail's billable amount
+planner          kept  exposed  reversed  declined  skipped  late p50   p90
+---------------------------------------------------------------------------
+naive            6903     3587      1973      1124        0         0     0
+notice_aware     9711        2         4       235       50         0     3
+rail_aware       9709        0         0       157      134         0     3
+
+per rail, naive planner
+  Card recurring      5924 invoices   kept  9948 bps   exposed       EUR 0.00   reversed       EUR 0.00   declined   EUR 2,103.86
+  SEPA direct debit   3538 invoices   kept  6074 bps   exposed EUR 139,353.46   reversed  EUR 72,665.41   declined  EUR 17,393.92
+  UPI autopay         2168 invoices   kept  4687 bps   exposed INR 2,744,031.00   reversed INR 1,611,029.00   declined INR 1,499,451.00
+
+per rail, rail aware planner
+  Card recurring      5924 invoices   kept  9948 bps   exposed       EUR 0.00   reversed       EUR 0.00   declined      EUR 19.98
+  SEPA direct debit   3538 invoices   kept  9711 bps   exposed       EUR 0.00   reversed       EUR 0.00   declined   EUR 1,188.88
+  UPI autopay         2168 invoices   kept  9468 bps   exposed       INR 0.00   reversed       INR 0.00   declined INR 245,492.00
+
+one invoice per rail, traced through all three planners
+Card recurring: S00000-0 EUR 19.99 issued d0 due d2
+  naive         d2 settled -> clean
+  notice_aware  d2 settled -> clean
+  rail_aware    d2 settled -> clean
+
+SEPA direct debit: S00002-0 EUR 19.99 issued d5 due d5
+  naive         d5 settled -> exposed (notice_short)
+  notice_aware  d19 settled -> clean
+  rail_aware    d19 settled -> clean
+
+UPI autopay: S00005-0 INR 4,999.00 issued d0 due d19
+  naive         d19 settled -> exposed (notice_short)
+  notice_aware  d19 settled -> clean
+  rail_aware    d19 settled -> clean
+
+reconciliation PASS
