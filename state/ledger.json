@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 5,
+  "sequence": 6,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -83,6 +83,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/angelone-smartapi/commit/d0e074c",
+      "promoted": false
+    },
+    {
+      "date": "2026-10-26",
+      "id": "mandate-sim",
+      "lane": "build",
+      "title": "Subscription mandate simulator across three rails",
+      "thesis": "One scheduler, three rails: 99.48% kept on cards, 60.74% on SEPA, 46.87% on UPI. The rail decides the outcome, not the code.",
+      "path": "artifacts/2026-10-26-mandate-sim/",
+      "theme": "recurring",
+      "score": 4.75,
+      "tests": {
+        "passed": 33,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-26-mandate-sim",
       "promoted": false
     }
   ],
