@@ -94,7 +94,9 @@
       "impact": 4,
       "confidence": 4,
       "effort": 1,
-      "status": "queued"
+      "status": "shipped",
+      "shipped": "2026-10-27",
+      "resolution": "README rewritten on feat/60-day-mandate, the branch the mandate lives on, because main still holds the day-0 skeleton and a README describing rails that main does not contain would be the h-angelone-main defect again. The defect as filed was also stale: neither README mentioned capital, they just never stated the rails at all. Now: the cannot-do table maps each rule to the function and the test that enforce it, then the run record. The numbers come from a new committed command, mandate/runlog.py, which classifies every intent as open, rail, broker or filled so a rail you wrote is never confused with a broker precondition you forgot. CI runs the tally on every push. Committed record: 8 intents, 0 fills, 4 refused AG7002, 1 stopped by the 25% NAV cap. 82 tests."
     },
     {
       "id": "h-acp-bench",
@@ -133,7 +135,7 @@
       "id": "h-angelone-publish-scope",
       "repo": "angelone-smartapi",
       "title": "Decide what leaves the machine before the mandate branch is public",
-      "defect": "The local feat/60-day-mandate branch is 19 commits ahead of origin/main and its mandate/state.json carries capital, positions, trade history, and registered_ip. None of it is public yet. Once pushed it is public permanently.",
+      "defect": "PREMISE CORRECTED 2026-10-27: feat/60-day-mandate is already pushed to origin, so mandate/state.json and its registered_ip are public now, not at some future push. The file still carries the home IP and the live book. Remaining work: purge registered_ip from the tracked state, history included, and decide whether the branch becomes main.",
       "fintech_angle": "Publishing a live mandate is the story. Publishing the home IP and full book is not required for that story.",
       "impact": 4,
       "confidence": 5,

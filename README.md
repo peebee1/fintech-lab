@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**6 ships** | **1 day streak** (best 2) | 3 new artifacts | 3 fixes to existing repos
+**7 ships** | **2 day streak** (best 2) | 3 new artifacts | 4 fixes to existing repos
 
-Latest: **Subscription mandate simulator across three rails** (2026-10-26)
+Latest: **Rewrite the trading agent README around what it cannot do** (2026-10-27)
 
-> One scheduler, three rails: 99.48% kept on cards, 60.74% on SEPA, 46.87% on UPI. The rail decides the outcome, not the code.
+> A rail someone wrote stopped one order and a rule nobody wrote down stopped four. The README now leads with the enforced checks and prints the run record from a committed command.
 
-[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-26-mandate-sim)
+[Commit](https://github.com/peebee1/angelone-smartapi/commit/e0c6383)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-10-27 | Rewrite the trading agent README around what it cannot do | A rail someone wrote stopped one order and a rule nobody wrote down stopped four. The README now leads with the enforced checks and prints the run record from a committed command. | 82 passed | n/a |
 | 2026-10-26 | [Subscription mandate simulator across three rails](artifacts/2026-10-26-mandate-sim/) | One scheduler, three rails: 99.48% kept on cards, 60.74% on SEPA, 46.87% on UPI. The rail decides the outcome, not the code. | 33 passed | 4.75 |
 | 2026-10-24 | CI on the trading agent, and the macOS crash it found | The suite had never run outside one laptop. On Linux CI it failed 7 tests: the client read the Keychain in its constructor, so every authenticated path crashed with FileNotFoundError security. | 72 passed | n/a |
 | 2026-10-23 | [Spend policy engine for agent-initiated payments](artifacts/2026-10-22-agent-spend-policy) | Agents can spend; nothing decides whether they should. Reserve at decision time and a burst cannot overrun the budget. | 10 passed | 4.30 |

@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 6,
+  "sequence": 7,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -99,6 +99,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-26-mandate-sim",
+      "promoted": false
+    },
+    {
+      "date": "2026-10-27",
+      "id": "h-angelone-readme",
+      "lane": "harden",
+      "title": "Rewrite the trading agent README around what it cannot do",
+      "thesis": "A rail someone wrote stopped one order and a rule nobody wrote down stopped four. The README now leads with the enforced checks and prints the run record from a committed command.",
+      "path": "",
+      "theme": "positioning",
+      "score": null,
+      "tests": {
+        "passed": 82,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/angelone-smartapi/commit/e0c6383",
       "promoted": false
     }
   ],
