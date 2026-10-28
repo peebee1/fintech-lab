@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**7 ships** | **2 day streak** (best 2) | 3 new artifacts | 4 fixes to existing repos
+**8 ships** | **3 day streak** (best 3) | 4 new artifacts | 4 fixes to existing repos
 
-Latest: **Rewrite the trading agent README around what it cannot do** (2026-10-27)
+Latest: **Money allocation and FX rounding engine** (2026-10-28)
 
-> A rail someone wrote stopped one order and a rule nobody wrote down stopped four. The README now leads with the enforced checks and prints the run record from a committed command.
+> One in five payouts did not add up: 621 of 3,000 per share rounded payouts were off, by up to 2 minor units. Largest remainder balanced every one, and all 3,374 cases of an exhaustive sweep.
 
-[Commit](https://github.com/peebee1/angelone-smartapi/commit/e0c6383)
+[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-28-fx-rounding)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-10-28 | [Money allocation and FX rounding engine](artifacts/2026-10-28-fx-rounding/) | One in five payouts did not add up: 621 of 3,000 per share rounded payouts were off, by up to 2 minor units. Largest remainder balanced every one, and all 3,374 cases of an exhaustive sweep. | 83 passed | 4.60 |
 | 2026-10-27 | Rewrite the trading agent README around what it cannot do | A rail someone wrote stopped one order and a rule nobody wrote down stopped four. The README now leads with the enforced checks and prints the run record from a committed command. | 82 passed | n/a |
 | 2026-10-26 | [Subscription mandate simulator across three rails](artifacts/2026-10-26-mandate-sim/) | One scheduler, three rails: 99.48% kept on cards, 60.74% on SEPA, 46.87% on UPI. The rail decides the outcome, not the code. | 33 passed | 4.75 |
 | 2026-10-24 | CI on the trading agent, and the macOS crash it found | The suite had never run outside one laptop. On Linux CI it failed 7 tests: the client read the Keychain in its constructor, so every authenticated path crashed with FileNotFoundError security. | 72 passed | n/a |

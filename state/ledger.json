@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 7,
+  "sequence": 8,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -115,6 +115,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/angelone-smartapi/commit/e0c6383",
+      "promoted": false
+    },
+    {
+      "date": "2026-10-28",
+      "id": "fx-rounding",
+      "lane": "build",
+      "title": "Money allocation and FX rounding engine",
+      "thesis": "One in five payouts did not add up: 621 of 3,000 per share rounded payouts were off, by up to 2 minor units. Largest remainder balanced every one, and all 3,374 cases of an exhaustive sweep.",
+      "path": "artifacts/2026-10-28-fx-rounding/",
+      "theme": "money-movement",
+      "score": 4.6,
+      "tests": {
+        "passed": 83,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-28-fx-rounding",
       "promoted": false
     }
   ],
