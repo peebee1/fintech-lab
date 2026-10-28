@@ -1,0 +1,223 @@
+{
+  "by_currency": {
+    "JPY": {
+      "methods": {
+        "floor_to_largest": {
+          "abs_residual_total": 0,
+          "max_abs_residual": 0,
+          "mean_abs_residual": 0.0,
+          "mismatch_pct": 0.0,
+          "mismatched": 0,
+          "overpaid": 0,
+          "overpaid_pct": 0.0,
+          "payouts": 1012,
+          "reconciliation_violations": 0,
+          "underpaid": 0
+        },
+        "largest_remainder": {
+          "abs_residual_total": 0,
+          "max_abs_residual": 0,
+          "mean_abs_residual": 0.0,
+          "mismatch_pct": 0.0,
+          "mismatched": 0,
+          "overpaid": 0,
+          "overpaid_pct": 0.0,
+          "payouts": 1012,
+          "reconciliation_violations": 0,
+          "underpaid": 0
+        },
+        "naive_half_even": {
+          "abs_residual_total": 228,
+          "max_abs_residual": 1,
+          "mean_abs_residual": 1.0,
+          "mismatch_pct": 22.53,
+          "mismatched": 228,
+          "overpaid": 110,
+          "overpaid_pct": 10.87,
+          "payouts": 1012,
+          "reconciliation_violations": 0,
+          "underpaid": 118
+        },
+        "naive_half_up": {
+          "abs_residual_total": 227,
+          "max_abs_residual": 1,
+          "mean_abs_residual": 1.0,
+          "mismatch_pct": 22.43,
+          "mismatched": 227,
+          "overpaid": 111,
+          "overpaid_pct": 10.97,
+          "payouts": 1012,
+          "reconciliation_violations": 0,
+          "underpaid": 116
+        }
+      },
+      "minor_digits": 0,
+      "payouts": 1012
+    },
+    "KWD": {
+      "methods": {
+        "floor_to_largest": {
+          "abs_residual_total": 0,
+          "max_abs_residual": 0,
+          "mean_abs_residual": 0.0,
+          "mismatch_pct": 0.0,
+          "mismatched": 0,
+          "overpaid": 0,
+          "overpaid_pct": 0.0,
+          "payouts": 949,
+          "reconciliation_violations": 0,
+          "underpaid": 0
+        },
+        "largest_remainder": {
+          "abs_residual_total": 0,
+          "max_abs_residual": 0,
+          "mean_abs_residual": 0.0,
+          "mismatch_pct": 0.0,
+          "mismatched": 0,
+          "overpaid": 0,
+          "overpaid_pct": 0.0,
+          "payouts": 949,
+          "reconciliation_violations": 0,
+          "underpaid": 0
+        },
+        "naive_half_even": {
+          "abs_residual_total": 193,
+          "max_abs_residual": 2,
+          "mean_abs_residual": 1.0105,
+          "mismatch_pct": 20.13,
+          "mismatched": 191,
+          "overpaid": 95,
+          "overpaid_pct": 10.01,
+          "payouts": 949,
+          "reconciliation_violations": 0,
+          "underpaid": 96
+        },
+        "naive_half_up": {
+          "abs_residual_total": 192,
+          "max_abs_residual": 2,
+          "mean_abs_residual": 1.0105,
+          "mismatch_pct": 20.02,
+          "mismatched": 190,
+          "overpaid": 95,
+          "overpaid_pct": 10.01,
+          "payouts": 949,
+          "reconciliation_violations": 0,
+          "underpaid": 95
+        }
+      },
+      "minor_digits": 3,
+      "payouts": 949
+    },
+    "USD": {
+      "methods": {
+        "floor_to_largest": {
+          "abs_residual_total": 0,
+          "max_abs_residual": 0,
+          "mean_abs_residual": 0.0,
+          "mismatch_pct": 0.0,
+          "mismatched": 0,
+          "overpaid": 0,
+          "overpaid_pct": 0.0,
+          "payouts": 1039,
+          "reconciliation_violations": 0,
+          "underpaid": 0
+        },
+        "largest_remainder": {
+          "abs_residual_total": 0,
+          "max_abs_residual": 0,
+          "mean_abs_residual": 0.0,
+          "mismatch_pct": 0.0,
+          "mismatched": 0,
+          "overpaid": 0,
+          "overpaid_pct": 0.0,
+          "payouts": 1039,
+          "reconciliation_violations": 0,
+          "underpaid": 0
+        },
+        "naive_half_even": {
+          "abs_residual_total": 204,
+          "max_abs_residual": 2,
+          "mean_abs_residual": 1.0049,
+          "mismatch_pct": 19.54,
+          "mismatched": 203,
+          "overpaid": 110,
+          "overpaid_pct": 10.59,
+          "payouts": 1039,
+          "reconciliation_violations": 0,
+          "underpaid": 93
+        },
+        "naive_half_up": {
+          "abs_residual_total": 205,
+          "max_abs_residual": 2,
+          "mean_abs_residual": 1.0049,
+          "mismatch_pct": 19.63,
+          "mismatched": 204,
+          "overpaid": 111,
+          "overpaid_pct": 10.68,
+          "payouts": 1039,
+          "reconciliation_violations": 0,
+          "underpaid": 93
+        }
+      },
+      "minor_digits": 2,
+      "payouts": 1039
+    }
+  },
+  "currencies": [
+    "USD",
+    "JPY",
+    "KWD"
+  ],
+  "methods": {
+    "floor_to_largest": {
+      "abs_residual_total": 0,
+      "max_abs_residual": 0,
+      "mean_abs_residual": 0.0,
+      "mismatch_pct": 0.0,
+      "mismatched": 0,
+      "overpaid": 0,
+      "overpaid_pct": 0.0,
+      "payouts": 3000,
+      "reconciliation_violations": 0,
+      "underpaid": 0
+    },
+    "largest_remainder": {
+      "abs_residual_total": 0,
+      "max_abs_residual": 0,
+      "mean_abs_residual": 0.0,
+      "mismatch_pct": 0.0,
+      "mismatched": 0,
+      "overpaid": 0,
+      "overpaid_pct": 0.0,
+      "payouts": 3000,
+      "reconciliation_violations": 0,
+      "underpaid": 0
+    },
+    "naive_half_even": {
+      "abs_residual_total": 625,
+      "max_abs_residual": 2,
+      "mean_abs_residual": 1.0048,
+      "mismatch_pct": 20.73,
+      "mismatched": 622,
+      "overpaid": 315,
+      "overpaid_pct": 10.5,
+      "payouts": 3000,
+      "reconciliation_violations": 0,
+      "underpaid": 307
+    },
+    "naive_half_up": {
+      "abs_residual_total": 624,
+      "max_abs_residual": 2,
+      "mean_abs_residual": 1.0048,
+      "mismatch_pct": 20.7,
+      "mismatched": 621,
+      "overpaid": 317,
+      "overpaid_pct": 10.57,
+      "payouts": 3000,
+      "reconciliation_violations": 0,
+      "underpaid": 304
+    }
+  },
+  "seed": 20261028,
+  "trials": 3000
+}

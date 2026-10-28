@@ -1,0 +1,38 @@
+{
+  "methods": {
+    "floor_to_largest": {
+      "largest_party_overpaid": 2871,
+      "largest_party_overpaid_pct": 95.7,
+      "max_excess_bps": 876.57,
+      "max_excess_minor": 3.299138,
+      "mean_excess_bps": 0.84,
+      "payouts": 3000
+    },
+    "largest_remainder": {
+      "largest_party_overpaid": 1413,
+      "largest_party_overpaid_pct": 47.1,
+      "max_excess_bps": 38.2,
+      "max_excess_minor": 0.757019,
+      "mean_excess_bps": -0.01,
+      "payouts": 3000
+    },
+    "naive_half_even": {
+      "largest_party_overpaid": 1394,
+      "largest_party_overpaid_pct": 46.47,
+      "max_excess_bps": 38.2,
+      "max_excess_minor": 0.5,
+      "mean_excess_bps": 0.01,
+      "payouts": 3000
+    },
+    "naive_half_up": {
+      "largest_party_overpaid": 1399,
+      "largest_party_overpaid_pct": 46.63,
+      "max_excess_bps": 38.2,
+      "max_excess_minor": 0.5,
+      "mean_excess_bps": 0.01,
+      "payouts": 3000
+    }
+  },
+  "seed": 20261033,
+  "trials": 3000
+}

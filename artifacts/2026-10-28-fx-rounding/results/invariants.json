@@ -1,0 +1,16 @@
+{
+  "cases": 3374,
+  "largest_remainder": {
+    "deviation_violations": 0,
+    "reconciliation_violations": 0,
+    "total_violations": 0,
+    "worst_party_deviation": 0.8,
+    "zero_weight_violations": 0
+  },
+  "naive_half_up": {
+    "unbalanced_cases": 1571,
+    "unbalanced_pct": 46.56
+  },
+  "totals_checked": 241,
+  "weight_families": 14
+}

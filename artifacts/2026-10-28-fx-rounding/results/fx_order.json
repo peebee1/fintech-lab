@@ -1,0 +1,46 @@
+{
+  "by_target": {
+    "JPY": {
+      "abs_total": 333,
+      "disagreed": 324,
+      "disagreed_pct": 32.5,
+      "max_abs": 2,
+      "mean_abs_gap": 1.0278,
+      "over": 158,
+      "payouts": 997,
+      "under": 166
+    },
+    "KWD": {
+      "abs_total": 329,
+      "disagreed": 326,
+      "disagreed_pct": 32.73,
+      "max_abs": 2,
+      "mean_abs_gap": 1.0092,
+      "over": 160,
+      "payouts": 996,
+      "under": 166
+    },
+    "USD": {
+      "abs_total": 342,
+      "disagreed": 338,
+      "disagreed_pct": 33.57,
+      "max_abs": 2,
+      "mean_abs_gap": 1.0118,
+      "over": 174,
+      "payouts": 1007,
+      "under": 164
+    }
+  },
+  "disagreed": 988,
+  "disagreed_pct": 32.93,
+  "max_abs_gap": 2,
+  "payouts": 3000,
+  "rates": {
+    "JPY": "163.87",
+    "KWD": "0.33371",
+    "USD": "1.0842"
+  },
+  "seed": 20261029,
+  "source": "EUR",
+  "trials": 3000
+}

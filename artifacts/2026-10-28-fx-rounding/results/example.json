@@ -1,0 +1,51 @@
+{
+  "currency": "USD",
+  "rows": [
+    {
+      "method": "largest_remainder",
+      "parts": [
+        3334,
+        3333,
+        3333
+      ],
+      "residual": 0,
+      "sum": 10000
+    },
+    {
+      "method": "floor_to_largest",
+      "parts": [
+        3334,
+        3333,
+        3333
+      ],
+      "residual": 0,
+      "sum": 10000
+    },
+    {
+      "method": "naive_half_up",
+      "parts": [
+        3333,
+        3333,
+        3333
+      ],
+      "residual": 1,
+      "sum": 9999
+    },
+    {
+      "method": "naive_half_even",
+      "parts": [
+        3333,
+        3333,
+        3333
+      ],
+      "residual": 1,
+      "sum": 9999
+    }
+  ],
+  "total_minor": 10000,
+  "weights": [
+    1,
+    1,
+    1
+  ]
+}
