@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 8,
+  "sequence": 9,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -131,6 +131,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-28-fx-rounding",
+      "promoted": false
+    },
+    {
+      "date": "2026-10-29",
+      "id": "h-angelone-log-tokens",
+      "lane": "harden",
+      "title": "Keep tokens and the API key out of the SDK log files",
+      "thesis": "The SDK's own ERROR handler wrote the bearer token and the API key into logs/ where loglevel() could not reach. A filter on the logger covers the handler the SDK attaches later.",
+      "path": "",
+      "theme": "security",
+      "score": null,
+      "tests": {
+        "passed": 101,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/angelone-smartapi/commit/48196f1",
       "promoted": false
     }
   ],

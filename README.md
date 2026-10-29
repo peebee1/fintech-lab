@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**8 ships** | **3 day streak** (best 3) | 4 new artifacts | 4 fixes to existing repos
+**9 ships** | **4 day streak** (best 4) | 4 new artifacts | 5 fixes to existing repos
 
-Latest: **Money allocation and FX rounding engine** (2026-10-28)
+Latest: **Keep tokens and the API key out of the SDK log files** (2026-10-29)
 
-> One in five payouts did not add up: 621 of 3,000 per share rounded payouts were off, by up to 2 minor units. Largest remainder balanced every one, and all 3,374 cases of an exhaustive sweep.
+> The SDK's own ERROR handler wrote the bearer token and the API key into logs/ where loglevel() could not reach. A filter on the logger covers the handler the SDK attaches later.
 
-[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-28-fx-rounding)
+[Commit](https://github.com/peebee1/angelone-smartapi/commit/48196f1)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-10-29 | Keep tokens and the API key out of the SDK log files | The SDK's own ERROR handler wrote the bearer token and the API key into logs/ where loglevel() could not reach. A filter on the logger covers the handler the SDK attaches later. | 101 passed | n/a |
 | 2026-10-28 | [Money allocation and FX rounding engine](artifacts/2026-10-28-fx-rounding/) | One in five payouts did not add up: 621 of 3,000 per share rounded payouts were off, by up to 2 minor units. Largest remainder balanced every one, and all 3,374 cases of an exhaustive sweep. | 83 passed | 4.60 |
 | 2026-10-27 | Rewrite the trading agent README around what it cannot do | A rail someone wrote stopped one order and a rule nobody wrote down stopped four. The README now leads with the enforced checks and prints the run record from a committed command. | 82 passed | n/a |
 | 2026-10-26 | [Subscription mandate simulator across three rails](artifacts/2026-10-26-mandate-sim/) | One scheduler, three rails: 99.48% kept on cards, 60.74% on SEPA, 46.87% on UPI. The rail decides the outcome, not the code. | 33 passed | 4.75 |

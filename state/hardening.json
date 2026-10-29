@@ -151,7 +151,9 @@
       "impact": 3,
       "confidence": 5,
       "effort": 1,
-      "status": "queued"
+      "status": "shipped",
+      "shipped": "2026-10-29",
+      "resolution": "The leak was wider than filed: not just the Authorization header but X-PrivateKey, the refreshToken body, the public IP and the MAC address, because smartConnect logs the whole failing request at ERROR and attaches its own file handler in logs/<date>/app.log, which logzero.loglevel(50) cannot reach. redact.py filters at the logger instead of a handler, so the handler the SDK attaches in __init__ is covered too; it rewrites a JWT, a bearer token, any value under a secret key, and masks host identifiers to their network. scripts/purge_log_secrets.py applies the same function to files already written and --check exits 1 while any remain. Before: 39 credential values across 32 lines in 6 log files. After: 0 in 12 files. 101 tests, 0 failures, CI green on 48196f1 (feat/60-day-mandate, where the client actually runs; main is still the day-0 skeleton, which is h-angelone-main). tools/gate.py was run and is not applicable here: it is an artifact gate, so G2 fails on flat-module imports, G3 wants a results/ dir, G6 bans the requests import that is this repo's entire function, and G7 caps python lines at 1500 against a 3,247 line live client. The repo's own suite, which is what CI runs, is the gate for a harden item."
     }
   ]
 }

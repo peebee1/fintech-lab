@@ -5,7 +5,6 @@ Fixes to the repos people already see. Priority is impact x confidence / effort,
 
 | Priority | Repo | Fix | Defect |
 |---|---|---|---|
-| 15.0 | angelone-smartapi | Stop the SDK from writing bearer tokens into logs | The Angel One smartConnect SDK logs the failing request, including the Authorization header, into logs/*/app.log on HTTP errors. 7 lines across 3 days contain full JWTs. Local only and gitignored, and the tokens expire at IST midnight, but the behavior repeats. |
 | 15.0 | all | Add repository topics and sharper descriptions | No repo topics on any public repo, and descriptions read like internal notes rather than a thesis. |
 | 10.0 | angelone-smartapi | Decide what leaves the machine before the mandate branch is public | PREMISE CORRECTED 2026-10-27: feat/60-day-mandate is already pushed to origin, so mandate/state.json and its registered_ip are public now, not at some future push. The file still carries the home IP and the live book. Remaining work: purge registered_ip from the tracked state, history included, and decide whether the branch becomes main. |
 | 8.0 | agent-bazaar | Add CI and a frozen mock benchmark to agent-bazaar | 43 tests pass, no workflow. The README quotes LLM negotiation results that nobody can reproduce without the same model. |
@@ -23,3 +22,4 @@ Fixes to the repos people already see. Priority is impact x confidence / effort,
 | agentic-commerce-protocol-poc | Add CI to the ACP proof of concept |
 | shopping-concierge | Add CI to shopping-concierge |
 | angelone-smartapi | Rewrite the Angel One README around risk, not returns |
+| angelone-smartapi | Stop the SDK from writing bearer tokens into logs |
