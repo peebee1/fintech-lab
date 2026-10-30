@@ -46,7 +46,7 @@
       "thesis": "If agents transact with each other all day, someone has to underwrite the float between them.",
       "theme": "agentic-commerce",
       "type": "artifact",
-      "status": "queued",
+      "status": "shipped",
       "scores": {
         "s1": 5,
         "s2": 4,
@@ -57,7 +57,8 @@
         "s7": 5
       },
       "notes": "Strongest novelty candidate. Needs a careful failure model: default, exposure, netting window.",
-      "added": "2026-10-23"
+      "added": "2026-10-23",
+      "shipped": "2026-10-30"
     },
     {
       "id": "idempotency-conformance",

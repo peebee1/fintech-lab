@@ -148,6 +148,22 @@
       },
       "url": "https://github.com/peebee1/angelone-smartapi/commit/48196f1",
       "promoted": false
+    },
+    {
+      "date": "2026-10-30",
+      "id": "agent-credit",
+      "lane": "build",
+      "title": "Agent-to-agent credit with exposure limits and netting",
+      "thesis": "A $200 cap on gross outflow carried 21.26% of the value, a $200 cap on net debit carried 97.84%, with the same worst case loss. Multilateral netting removed 94.59% of the flow.",
+      "path": "artifacts/2026-10-30-agent-credit/",
+      "theme": "agentic-commerce",
+      "score": 4.65,
+      "tests": {
+        "passed": 44,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-30-agent-credit",
+      "promoted": false
     }
   ],
   "parked": [],

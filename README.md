@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**9 ships** | **4 day streak** (best 4) | 4 new artifacts | 5 fixes to existing repos
+**10 ships** | **5 day streak** (best 5) | 5 new artifacts | 5 fixes to existing repos
 
-Latest: **Keep tokens and the API key out of the SDK log files** (2026-10-29)
+Latest: **Agent-to-agent credit with exposure limits and netting** (2026-10-30)
 
-> The SDK's own ERROR handler wrote the bearer token and the API key into logs/ where loglevel() could not reach. A filter on the logger covers the handler the SDK attaches later.
+> A $200 cap on gross outflow carried 21.26% of the value, a $200 cap on net debit carried 97.84%, with the same worst case loss. Multilateral netting removed 94.59% of the flow.
 
-[Commit](https://github.com/peebee1/angelone-smartapi/commit/48196f1)
+[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-30-agent-credit)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-10-30 | [Agent-to-agent credit with exposure limits and netting](artifacts/2026-10-30-agent-credit/) | A $200 cap on gross outflow carried 21.26% of the value, a $200 cap on net debit carried 97.84%, with the same worst case loss. Multilateral netting removed 94.59% of the flow. | 44 passed | 4.65 |
 | 2026-10-29 | Keep tokens and the API key out of the SDK log files | The SDK's own ERROR handler wrote the bearer token and the API key into logs/ where loglevel() could not reach. A filter on the logger covers the handler the SDK attaches later. | 101 passed | n/a |
 | 2026-10-28 | [Money allocation and FX rounding engine](artifacts/2026-10-28-fx-rounding/) | One in five payouts did not add up: 621 of 3,000 per share rounded payouts were off, by up to 2 minor units. Largest remainder balanced every one, and all 3,374 cases of an exhaustive sweep. | 83 passed | 4.60 |
 | 2026-10-27 | Rewrite the trading agent README around what it cannot do | A rail someone wrote stopped one order and a rule nobody wrote down stopped four. The README now leads with the enforced checks and prints the run record from a committed command. | 82 passed | n/a |
