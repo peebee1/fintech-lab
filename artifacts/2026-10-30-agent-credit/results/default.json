@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "seed": 20261030,
+    "scenarios": 20,
+    "members": 12,
+    "reference_limit": 60000,
+    "reference_limit_display": "$600.00",
+    "limits": [
+      20000,
+      40000,
+      60000,
+      90000,
+      150000
+    ],
+    "synthetic": true,
+    "note": "Synthetic agent flows. No real counterparties, no real credit data."
+  },
+  "default": {
+    "victim_is_largest_net_debtor": true,
+    "mean_victim_net_debit": 21720,
+    "mean_victim_gross_outflow": 93580,
+    "mean_close_out_ratio": 4.81,
+    "reference_fund_needed": 42033,
+    "unlimited_fund_needed": 42033,
+    "limit_covers_worst_loss": true
+  },
+  "reference_limit": 60000
+}

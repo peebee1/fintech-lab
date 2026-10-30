@@ -1,0 +1,272 @@
+{
+  "meta": {
+    "seed": 20261030,
+    "scenarios": 20,
+    "members": 12,
+    "reference_limit": 60000,
+    "reference_limit_display": "$600.00",
+    "limits": [
+      20000,
+      40000,
+      60000,
+      90000,
+      150000
+    ],
+    "synthetic": true,
+    "note": "Synthetic agent flows. No real counterparties, no real credit data."
+  },
+  "reference": {
+    "limit": 60000,
+    "limit_display": "$600.00",
+    "rules": {
+      "unlimited": {
+        "admitted_obligations": 3000,
+        "admitted_value": 21594519,
+        "rejected_obligations": 0,
+        "rejected_value": 0,
+        "admitted_share_pct": 100.0,
+        "settled_value": 1168743,
+        "worst_net_debit": 42033,
+        "windows_over_limit": 0,
+        "total_default_loss": 434401,
+        "worst_default_loss": 42033
+      },
+      "gross_cap": {
+        "admitted_obligations": 1697,
+        "admitted_value": 13817137,
+        "rejected_obligations": 1303,
+        "rejected_value": 7777382,
+        "admitted_share_pct": 63.98,
+        "settled_value": 2158990,
+        "worst_net_debit": 52047,
+        "windows_over_limit": 0,
+        "total_default_loss": 305457,
+        "worst_default_loss": 39031
+      },
+      "net_cap": {
+        "admitted_obligations": 3000,
+        "admitted_value": 21594519,
+        "rejected_obligations": 0,
+        "rejected_value": 0,
+        "admitted_share_pct": 100.0,
+        "settled_value": 1168743,
+        "worst_net_debit": 42033,
+        "windows_over_limit": 0,
+        "total_default_loss": 434401,
+        "worst_default_loss": 42033
+      }
+    }
+  },
+  "sweep": [
+    {
+      "limit": 20000,
+      "limit_display": "$200.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 10,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 743,
+          "admitted_value": 4590597,
+          "rejected_obligations": 2257,
+          "rejected_value": 17003922,
+          "admitted_share_pct": 21.26,
+          "settled_value": 1228459,
+          "worst_net_debit": 19823,
+          "windows_over_limit": 0,
+          "total_default_loss": 119390,
+          "worst_default_loss": 19667
+        },
+        "net_cap": {
+          "admitted_obligations": 2931,
+          "admitted_value": 21128382,
+          "rejected_obligations": 69,
+          "rejected_value": 466137,
+          "admitted_share_pct": 97.84,
+          "settled_value": 1054787,
+          "worst_net_debit": 19714,
+          "windows_over_limit": 0,
+          "total_default_loss": 261936,
+          "worst_default_loss": 19714
+        }
+      }
+    },
+    {
+      "limit": 40000,
+      "limit_display": "$400.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 1,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 1187,
+          "admitted_value": 9324771,
+          "rejected_obligations": 1813,
+          "rejected_value": 12269748,
+          "admitted_share_pct": 43.18,
+          "settled_value": 1893430,
+          "worst_net_debit": 37845,
+          "windows_over_limit": 0,
+          "total_default_loss": 227947,
+          "worst_default_loss": 32115
+        },
+        "net_cap": {
+          "admitted_obligations": 2999,
+          "admitted_value": 21592019,
+          "rejected_obligations": 1,
+          "rejected_value": 2500,
+          "admitted_share_pct": 99.99,
+          "settled_value": 1167797,
+          "worst_net_debit": 39533,
+          "windows_over_limit": 0,
+          "total_default_loss": 431901,
+          "worst_default_loss": 39533
+        }
+      }
+    },
+    {
+      "limit": 60000,
+      "limit_display": "$600.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 1697,
+          "admitted_value": 13817137,
+          "rejected_obligations": 1303,
+          "rejected_value": 7777382,
+          "admitted_share_pct": 63.98,
+          "settled_value": 2158990,
+          "worst_net_debit": 52047,
+          "windows_over_limit": 0,
+          "total_default_loss": 305457,
+          "worst_default_loss": 39031
+        },
+        "net_cap": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        }
+      }
+    },
+    {
+      "limit": 90000,
+      "limit_display": "$900.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 2485,
+          "admitted_value": 18898376,
+          "rejected_obligations": 515,
+          "rejected_value": 2696143,
+          "admitted_share_pct": 87.51,
+          "settled_value": 1725720,
+          "worst_net_debit": 47433,
+          "windows_over_limit": 0,
+          "total_default_loss": 431662,
+          "worst_default_loss": 45839
+        },
+        "net_cap": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        }
+      }
+    },
+    {
+      "limit": 150000,
+      "limit_display": "$1,500.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 2987,
+          "admitted_value": 21547470,
+          "rejected_obligations": 13,
+          "rejected_value": 47049,
+          "admitted_share_pct": 99.78,
+          "settled_value": 1180537,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 444851,
+          "worst_default_loss": 42033
+        },
+        "net_cap": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        }
+      }
+    }
+  ]
+}

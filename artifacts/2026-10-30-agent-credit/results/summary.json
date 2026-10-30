@@ -1,0 +1,472 @@
+{
+  "meta": {
+    "seed": 20261030,
+    "scenarios": 20,
+    "members": 12,
+    "reference_limit": 60000,
+    "reference_limit_display": "$600.00",
+    "limits": [
+      20000,
+      40000,
+      60000,
+      90000,
+      150000
+    ],
+    "synthetic": true,
+    "note": "Synthetic agent flows. No real counterparties, no real credit data."
+  },
+  "netting": {
+    "gross_value": 21594519,
+    "bilateral_value": 6746548,
+    "multilateral_value": 1168743,
+    "multilateral_reduction_pct": 94.59,
+    "bilateral_reduction_pct": 68.76,
+    "all_windows_balanced": true,
+    "mean_reduction_pct": 94.58
+  },
+  "reference": {
+    "limit": 60000,
+    "limit_display": "$600.00",
+    "rules": {
+      "unlimited": {
+        "admitted_obligations": 3000,
+        "admitted_value": 21594519,
+        "rejected_obligations": 0,
+        "rejected_value": 0,
+        "admitted_share_pct": 100.0,
+        "settled_value": 1168743,
+        "worst_net_debit": 42033,
+        "windows_over_limit": 0,
+        "total_default_loss": 434401,
+        "worst_default_loss": 42033
+      },
+      "gross_cap": {
+        "admitted_obligations": 1697,
+        "admitted_value": 13817137,
+        "rejected_obligations": 1303,
+        "rejected_value": 7777382,
+        "admitted_share_pct": 63.98,
+        "settled_value": 2158990,
+        "worst_net_debit": 52047,
+        "windows_over_limit": 0,
+        "total_default_loss": 305457,
+        "worst_default_loss": 39031
+      },
+      "net_cap": {
+        "admitted_obligations": 3000,
+        "admitted_value": 21594519,
+        "rejected_obligations": 0,
+        "rejected_value": 0,
+        "admitted_share_pct": 100.0,
+        "settled_value": 1168743,
+        "worst_net_debit": 42033,
+        "windows_over_limit": 0,
+        "total_default_loss": 434401,
+        "worst_default_loss": 42033
+      }
+    }
+  },
+  "sweep": [
+    {
+      "limit": 20000,
+      "limit_display": "$200.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 10,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 743,
+          "admitted_value": 4590597,
+          "rejected_obligations": 2257,
+          "rejected_value": 17003922,
+          "admitted_share_pct": 21.26,
+          "settled_value": 1228459,
+          "worst_net_debit": 19823,
+          "windows_over_limit": 0,
+          "total_default_loss": 119390,
+          "worst_default_loss": 19667
+        },
+        "net_cap": {
+          "admitted_obligations": 2931,
+          "admitted_value": 21128382,
+          "rejected_obligations": 69,
+          "rejected_value": 466137,
+          "admitted_share_pct": 97.84,
+          "settled_value": 1054787,
+          "worst_net_debit": 19714,
+          "windows_over_limit": 0,
+          "total_default_loss": 261936,
+          "worst_default_loss": 19714
+        }
+      }
+    },
+    {
+      "limit": 40000,
+      "limit_display": "$400.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 1,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 1187,
+          "admitted_value": 9324771,
+          "rejected_obligations": 1813,
+          "rejected_value": 12269748,
+          "admitted_share_pct": 43.18,
+          "settled_value": 1893430,
+          "worst_net_debit": 37845,
+          "windows_over_limit": 0,
+          "total_default_loss": 227947,
+          "worst_default_loss": 32115
+        },
+        "net_cap": {
+          "admitted_obligations": 2999,
+          "admitted_value": 21592019,
+          "rejected_obligations": 1,
+          "rejected_value": 2500,
+          "admitted_share_pct": 99.99,
+          "settled_value": 1167797,
+          "worst_net_debit": 39533,
+          "windows_over_limit": 0,
+          "total_default_loss": 431901,
+          "worst_default_loss": 39533
+        }
+      }
+    },
+    {
+      "limit": 60000,
+      "limit_display": "$600.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 1697,
+          "admitted_value": 13817137,
+          "rejected_obligations": 1303,
+          "rejected_value": 7777382,
+          "admitted_share_pct": 63.98,
+          "settled_value": 2158990,
+          "worst_net_debit": 52047,
+          "windows_over_limit": 0,
+          "total_default_loss": 305457,
+          "worst_default_loss": 39031
+        },
+        "net_cap": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        }
+      }
+    },
+    {
+      "limit": 90000,
+      "limit_display": "$900.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 2485,
+          "admitted_value": 18898376,
+          "rejected_obligations": 515,
+          "rejected_value": 2696143,
+          "admitted_share_pct": 87.51,
+          "settled_value": 1725720,
+          "worst_net_debit": 47433,
+          "windows_over_limit": 0,
+          "total_default_loss": 431662,
+          "worst_default_loss": 45839
+        },
+        "net_cap": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        }
+      }
+    },
+    {
+      "limit": 150000,
+      "limit_display": "$1,500.00",
+      "rules": {
+        "unlimited": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        },
+        "gross_cap": {
+          "admitted_obligations": 2987,
+          "admitted_value": 21547470,
+          "rejected_obligations": 13,
+          "rejected_value": 47049,
+          "admitted_share_pct": 99.78,
+          "settled_value": 1180537,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 444851,
+          "worst_default_loss": 42033
+        },
+        "net_cap": {
+          "admitted_obligations": 3000,
+          "admitted_value": 21594519,
+          "rejected_obligations": 0,
+          "rejected_value": 0,
+          "admitted_share_pct": 100.0,
+          "settled_value": 1168743,
+          "worst_net_debit": 42033,
+          "windows_over_limit": 0,
+          "total_default_loss": 434401,
+          "worst_default_loss": 42033
+        }
+      }
+    }
+  ],
+  "default": {
+    "victim_is_largest_net_debtor": true,
+    "mean_victim_net_debit": 21720,
+    "mean_victim_gross_outflow": 93580,
+    "mean_close_out_ratio": 4.81,
+    "reference_fund_needed": 42033,
+    "unlimited_fund_needed": 42033,
+    "limit_covers_worst_loss": true
+  },
+  "windows": [
+    {
+      "scenario": 0,
+      "offered": 150,
+      "gross_value": 1138594,
+      "bilateral_value": 340834,
+      "multilateral_value": 56884,
+      "reduction_pct": 95.0,
+      "imbalance": 0
+    },
+    {
+      "scenario": 1,
+      "offered": 150,
+      "gross_value": 1025805,
+      "bilateral_value": 310662,
+      "multilateral_value": 39688,
+      "reduction_pct": 96.13,
+      "imbalance": 0
+    },
+    {
+      "scenario": 2,
+      "offered": 150,
+      "gross_value": 948935,
+      "bilateral_value": 289618,
+      "multilateral_value": 50597,
+      "reduction_pct": 94.67,
+      "imbalance": 0
+    },
+    {
+      "scenario": 3,
+      "offered": 150,
+      "gross_value": 1151909,
+      "bilateral_value": 361538,
+      "multilateral_value": 56597,
+      "reduction_pct": 95.09,
+      "imbalance": 0
+    },
+    {
+      "scenario": 4,
+      "offered": 150,
+      "gross_value": 1051653,
+      "bilateral_value": 312951,
+      "multilateral_value": 62571,
+      "reduction_pct": 94.05,
+      "imbalance": 0
+    },
+    {
+      "scenario": 5,
+      "offered": 150,
+      "gross_value": 1172492,
+      "bilateral_value": 376071,
+      "multilateral_value": 58640,
+      "reduction_pct": 95.0,
+      "imbalance": 0
+    },
+    {
+      "scenario": 6,
+      "offered": 150,
+      "gross_value": 1101701,
+      "bilateral_value": 339055,
+      "multilateral_value": 78553,
+      "reduction_pct": 92.87,
+      "imbalance": 0
+    },
+    {
+      "scenario": 7,
+      "offered": 150,
+      "gross_value": 1102059,
+      "bilateral_value": 398371,
+      "multilateral_value": 64260,
+      "reduction_pct": 94.17,
+      "imbalance": 0
+    },
+    {
+      "scenario": 8,
+      "offered": 150,
+      "gross_value": 1178813,
+      "bilateral_value": 403356,
+      "multilateral_value": 75620,
+      "reduction_pct": 93.59,
+      "imbalance": 0
+    },
+    {
+      "scenario": 9,
+      "offered": 150,
+      "gross_value": 1036867,
+      "bilateral_value": 254667,
+      "multilateral_value": 51821,
+      "reduction_pct": 95.0,
+      "imbalance": 0
+    },
+    {
+      "scenario": 10,
+      "offered": 150,
+      "gross_value": 1047465,
+      "bilateral_value": 267202,
+      "multilateral_value": 42769,
+      "reduction_pct": 95.92,
+      "imbalance": 0
+    },
+    {
+      "scenario": 11,
+      "offered": 150,
+      "gross_value": 1276470,
+      "bilateral_value": 406500,
+      "multilateral_value": 57992,
+      "reduction_pct": 95.46,
+      "imbalance": 0
+    },
+    {
+      "scenario": 12,
+      "offered": 150,
+      "gross_value": 1053541,
+      "bilateral_value": 306757,
+      "multilateral_value": 53716,
+      "reduction_pct": 94.9,
+      "imbalance": 0
+    },
+    {
+      "scenario": 13,
+      "offered": 150,
+      "gross_value": 886891,
+      "bilateral_value": 279652,
+      "multilateral_value": 57706,
+      "reduction_pct": 93.49,
+      "imbalance": 0
+    },
+    {
+      "scenario": 14,
+      "offered": 150,
+      "gross_value": 1092821,
+      "bilateral_value": 363424,
+      "multilateral_value": 56770,
+      "reduction_pct": 94.81,
+      "imbalance": 0
+    },
+    {
+      "scenario": 15,
+      "offered": 150,
+      "gross_value": 991383,
+      "bilateral_value": 304007,
+      "multilateral_value": 50045,
+      "reduction_pct": 94.95,
+      "imbalance": 0
+    },
+    {
+      "scenario": 16,
+      "offered": 150,
+      "gross_value": 1148000,
+      "bilateral_value": 397888,
+      "multilateral_value": 61131,
+      "reduction_pct": 94.67,
+      "imbalance": 0
+    },
+    {
+      "scenario": 17,
+      "offered": 150,
+      "gross_value": 1070012,
+      "bilateral_value": 347214,
+      "multilateral_value": 68988,
+      "reduction_pct": 93.55,
+      "imbalance": 0
+    },
+    {
+      "scenario": 18,
+      "offered": 150,
+      "gross_value": 1081329,
+      "bilateral_value": 342425,
+      "multilateral_value": 61101,
+      "reduction_pct": 94.35,
+      "imbalance": 0
+    },
+    {
+      "scenario": 19,
+      "offered": 150,
+      "gross_value": 1037779,
+      "bilateral_value": 344356,
+      "multilateral_value": 63294,
+      "reduction_pct": 93.9,
+      "imbalance": 0
+    }
+  ]
+}

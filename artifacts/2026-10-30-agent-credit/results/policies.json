@@ -1,0 +1,57 @@
+{
+  "meta": {
+    "seed": 20261030,
+    "scenarios": 20,
+    "members": 12,
+    "reference_limit": 60000,
+    "reference_limit_display": "$600.00",
+    "limits": [
+      20000,
+      40000,
+      60000,
+      90000,
+      150000
+    ],
+    "synthetic": true,
+    "note": "Synthetic agent flows. No real counterparties, no real credit data."
+  },
+  "reference_limit": 60000,
+  "policies": {
+    "unlimited": {
+      "admitted_obligations": 3000,
+      "admitted_value": 21594519,
+      "rejected_obligations": 0,
+      "rejected_value": 0,
+      "admitted_share_pct": 100.0,
+      "settled_value": 1168743,
+      "worst_net_debit": 42033,
+      "windows_over_limit": 0,
+      "total_default_loss": 434401,
+      "worst_default_loss": 42033
+    },
+    "gross_cap": {
+      "admitted_obligations": 1697,
+      "admitted_value": 13817137,
+      "rejected_obligations": 1303,
+      "rejected_value": 7777382,
+      "admitted_share_pct": 63.98,
+      "settled_value": 2158990,
+      "worst_net_debit": 52047,
+      "windows_over_limit": 0,
+      "total_default_loss": 305457,
+      "worst_default_loss": 39031
+    },
+    "net_cap": {
+      "admitted_obligations": 3000,
+      "admitted_value": 21594519,
+      "rejected_obligations": 0,
+      "rejected_value": 0,
+      "admitted_share_pct": 100.0,
+      "settled_value": 1168743,
+      "worst_net_debit": 42033,
+      "windows_over_limit": 0,
+      "total_default_loss": 434401,
+      "worst_default_loss": 42033
+    }
+  }
+}
