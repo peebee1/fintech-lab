@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**10 ships** | **5 day streak** (best 5) | 5 new artifacts | 5 fixes to existing repos
+**11 ships** | **6 day streak** (best 6) | 5 new artifacts | 6 fixes to existing repos
 
-Latest: **Agent-to-agent credit with exposure limits and netting** (2026-10-30)
+Latest: **Declare the public surface of every public repo, and check it** (2026-10-31)
 
-> A $200 cap on gross outflow carried 21.26% of the value, a $200 cap on net debit carried 97.84%, with the same worst case loss. Multilateral netting removed 94.59% of the flow.
+> Metadata maintained by hand drifts. 5 of 7 public repos carried no topics and 4 descriptions had grown into feature piles. Desired state now lives in the repo and a committed tool fails on drift.
 
-[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-30-agent-credit)
+[Commit](https://github.com/peebee1/fintech-lab/commit/ec6ba0f)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-10-31 | Declare the public surface of every public repo, and check it | Metadata maintained by hand drifts. 5 of 7 public repos carried no topics and 4 descriptions had grown into feature piles. Desired state now lives in the repo and a committed tool fails on drift. | 266 passed | n/a |
 | 2026-10-30 | [Agent-to-agent credit with exposure limits and netting](artifacts/2026-10-30-agent-credit/) | A $200 cap on gross outflow carried 21.26% of the value, a $200 cap on net debit carried 97.84%, with the same worst case loss. Multilateral netting removed 94.59% of the flow. | 44 passed | 4.65 |
 | 2026-10-29 | Keep tokens and the API key out of the SDK log files | The SDK's own ERROR handler wrote the bearer token and the API key into logs/ where loglevel() could not reach. A filter on the logger covers the handler the SDK attaches later. | 101 passed | n/a |
 | 2026-10-28 | [Money allocation and FX rounding engine](artifacts/2026-10-28-fx-rounding/) | One in five payouts did not add up: 621 of 3,000 per share rounded payouts were off, by up to 2 minor units. Largest remainder balanced every one, and all 3,374 cases of an exhaustive sweep. | 83 passed | 4.60 |

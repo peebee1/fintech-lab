@@ -83,7 +83,9 @@
       "impact": 3,
       "confidence": 5,
       "effort": 1,
-      "status": "queued"
+      "status": "shipped",
+      "shipped": "2026-10-31",
+      "resolution": "The filed defect was partly stale: fintech-lab and shopping-concierge already had topics, the other 5 public repos had none, and 4 descriptions were feature piles (acp-poc listed 6 components, agent-bazaar listed 5). Fixed as declared state rather than a one time gh command, because hand edits are what drifted: state/repo_meta.json holds one description and one topic list per public repo, tools/repo_meta.py validates it offline, --live compares it to GitHub and exits 1 on drift, --apply writes it via the REST API. Topics compare as sets, and an unreadable repo counts as drift so a rename or delete cannot pass silently. Before: 5 of 7 public repos with 0 topics, 13 topics total. After: 7 of 7, 39 topics, repo_meta.py --live exits 0 and a separate gh repo list read back agrees. mishika.de description also lost its em dash, which is a repo wide rule in this lab. Private repos (angelone-smartapi, cc-skills, mg-bd) are out of scope: the defect is discovery by a stranger. 266 tests, 0 failures, tests dir added to testpaths so the tool suite runs in CI at all. tools/gate.py is not applicable here: it gates artifacts directories, so this item is gated by the repo suite that CI runs."
     },
     {
       "id": "h-angelone-readme",

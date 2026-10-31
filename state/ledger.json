@@ -164,6 +164,22 @@
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-30-agent-credit",
       "promoted": false
+    },
+    {
+      "date": "2026-10-31",
+      "id": "h-topics",
+      "lane": "harden",
+      "title": "Declare the public surface of every public repo, and check it",
+      "thesis": "Metadata maintained by hand drifts. 5 of 7 public repos carried no topics and 4 descriptions had grown into feature piles. Desired state now lives in the repo and a committed tool fails on drift.",
+      "path": "",
+      "theme": "discovery",
+      "score": null,
+      "tests": {
+        "passed": 266,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/commit/ec6ba0f",
+      "promoted": false
     }
   ],
   "parked": [],
