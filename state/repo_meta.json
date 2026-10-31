@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "note": "Desired public surface for every public repo on peebee1. state is the source of truth; tools/repo_meta.py validates it, --live compares it to GitHub, --apply writes it. Private repos are out of scope: the point is discovery by a stranger, and a private repo is not discovered.",
+  "repos": [
+    {
+      "repo": "fintech-lab",
+      "description": "Daily, tested artifacts on AI native fintech infrastructure. Each one ships with code, deterministic tests, and a number produced by the committed code.",
+      "topics": ["agentic-commerce", "ai-agents", "fintech", "ledger", "payments", "python", "reconciliation"]
+    },
+    {
+      "repo": "settlement-recon",
+      "description": "Settlement reconciliation that scores its own recall against injected breaks, never forces a match, and proves every line was accounted for exactly once.",
+      "topics": ["double-entry", "fintech", "payments", "python", "reconciliation", "settlement"]
+    },
+    {
+      "repo": "peebee1",
+      "description": "Parth Batra, Product Group Lead at Klarna. Building agentic commerce and payments systems in the open, with the numbers attached.",
+      "topics": ["agentic-commerce", "ai-agents", "fintech", "payments"]
+    },
+    {
+      "repo": "agentic-commerce-protocol-poc",
+      "description": "Reference implementation of the Agentic Commerce Protocol (spec 2026-04-17): merchant checkout over REST and MCP, a mock PSP with delegated payments and 3DS, signed order webhooks, 39 conformance tests.",
+      "topics": ["agentic-commerce", "acp", "mcp", "payments", "protocol", "python", "webhooks"]
+    },
+    {
+      "repo": "shopping-concierge",
+      "description": "Ask for a product in plain English, get a ranked, reasoned shortlist. An agentic commerce demo: understand, retrieve, rank, with a trace.",
+      "topics": ["agentic-commerce", "ai-agents", "fastapi", "llm", "python", "shopping"]
+    },
+    {
+      "repo": "agent-bazaar",
+      "description": "Agent-to-agent price negotiation where every LLM judgment sits inside a typed protocol, with private guards, traces, and a reproducible eval harness.",
+      "topics": ["agentic-commerce", "ai-agents", "llm", "negotiation", "protocol", "python"]
+    },
+    {
+      "repo": "mishika.de",
+      "description": "Personal site for Mishika Gupta, strategy and business consultant.",
+      "topics": ["consulting", "personal-website", "portfolio"]
+    }
+  ]
+}

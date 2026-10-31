@@ -9,5 +9,5 @@ dependencies = []
 dev = ["pytest>=8.0"]
 
 [tool.pytest.ini_options]
-testpaths = ["artifacts"]
+testpaths = ["artifacts", "tests"]
 addopts = "-q --import-mode=importlib"
