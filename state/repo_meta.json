@@ -13,6 +13,11 @@
       "topics": ["double-entry", "fintech", "payments", "python", "reconciliation", "settlement"]
     },
     {
+      "repo": "mandate-rails",
+      "description": "One subscription, three rails. A scheduler policy simulator for card recurring, SEPA direct debit, and UPI autopay, with refund exposure counted apart from revenue.",
+      "topics": ["fintech", "mandates", "payments", "python", "sepa", "subscriptions", "upi"]
+    },
+    {
       "repo": "peebee1",
       "description": "Parth Batra, Product Group Lead at Klarna. Building agentic commerce and payments systems in the open, with the numbers attached.",
       "topics": ["agentic-commerce", "ai-agents", "fintech", "payments"]

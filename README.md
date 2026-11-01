@@ -39,6 +39,7 @@ Latest: **Declare the public surface of every public repo, and check it** (2026-
 An artifact moves to its own repo when it scores 4.2 or higher, its measurements reproduce, and its thesis survives without this lab.
 
 - [settlement-recon](https://github.com/peebee1/settlement-recon): A recon engine that scores its own recall against injected breaks, and refuses to force a match.
+- [mandate-rails](https://github.com/peebee1/mandate-rails): One scheduler, three rails: 99.48% kept on cards, 60.74% on SEPA, 46.87% on UPI. The rail decides the outcome, not the code.
 
 <!-- DASHBOARD:END -->
 

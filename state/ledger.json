@@ -99,7 +99,10 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-10-26-mandate-sim",
-      "promoted": false
+      "promoted": true,
+      "promoted_url": "https://github.com/peebee1/mandate-rails",
+      "promoted_date": "2026-11-01",
+      "promoted_tests": 33
     },
     {
       "date": "2026-10-27",
