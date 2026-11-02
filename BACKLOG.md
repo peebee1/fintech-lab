@@ -7,7 +7,6 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 
 | Score | Item | Theme | Claim |
 |---|---|---|---|
-| 4.50 | Idempotency conformance suite for payment APIs | reliability | A payments API is not idempotent until a buyer can replay it and get the same answer. Most cannot. |
 | 4.45 | Sanctions screening that cuts false positives | risk | Screening is not a search box. It is entity resolution, and the cost of a false positive is a frozen customer. |
 | 4.45 | Authorization-rate aware payment routing | acquiring | Routing on cost alone leaves money on the table. Routing on approval probability is where the margin is. |
 | 4.40 | Broker order, fill, and position reconciliation | market-infra | Retail trading apps fail quietly at the seam between the broker, the exchange, and the books. |
@@ -22,6 +21,7 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 | shipped | Spend policy engine for agent-initiated payments | agentic-commerce |
 | shipped | Settlement reconciliation that balances to zero | money-movement |
 | shipped | Agent-to-agent credit with exposure limits and netting | agentic-commerce |
+| shipped | Idempotency conformance suite for payment APIs | reliability |
 | shipped | Money allocation and FX rounding engine | money-movement |
 | shipped | Subscription mandate simulator across rails | recurring |
 | parked | PAN vault with scoped detokenization | security |

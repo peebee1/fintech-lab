@@ -66,18 +66,19 @@
       "thesis": "A payments API is not idempotent until a buyer can replay it and get the same answer. Most cannot.",
       "theme": "reliability",
       "type": "artifact",
-      "status": "queued",
+      "status": "shipped",
       "scores": {
         "s1": 5,
         "s2": 5,
         "s3": 4,
         "s4": 4,
-        "s5": 4,
+        "s5": 5,
         "s6": 5,
         "s7": 4
       },
-      "notes": "Adversarial replays: same key different body, crash between write and response, concurrent duplicates.",
-      "added": "2026-10-23"
+      "notes": "Shipped 2026-11-02, re-scored 4.60. Five implementations of one charge endpoint, 11 checks, named violation codes. store_after passes 6 of 11 with 7 excess charges; reserve passes 11 of 11. Promotion candidate on 4.6, but the HTTP adapter is what makes it useful to a buyer: promote after that.",
+      "added": "2026-10-23",
+      "shipped": "2026-11-02"
     },
     {
       "id": "fx-rounding",

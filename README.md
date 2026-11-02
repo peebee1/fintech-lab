@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**11 ships** | **6 day streak** (best 6) | 5 new artifacts | 6 fixes to existing repos
+**12 ships** | **1 day streak** (best 6) | 6 new artifacts | 6 fixes to existing repos
 
-Latest: **Declare the public surface of every public repo, and check it** (2026-10-31)
+Latest: **Idempotency conformance suite for payment APIs** (2026-11-02)
 
-> Metadata maintained by hand drifts. 5 of 7 public repos carried no topics and 4 descriptions had grown into feature piles. Desired state now lives in the repo and a committed tool fails on drift.
+> A key store is not idempotency. Storing the response after the charge passes 6 of 11 checks and creates 7 charges that should not exist; reserving the key first passes 11 of 11.
 
-[Commit](https://github.com/peebee1/fintech-lab/commit/ec6ba0f)
+[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-02-idempotency-conformance)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-11-02 | [Idempotency conformance suite for payment APIs](artifacts/2026-11-02-idempotency-conformance/) | A key store is not idempotency. Storing the response after the charge passes 6 of 11 checks and creates 7 charges that should not exist; reserving the key first passes 11 of 11. | 46 passed | 4.60 |
 | 2026-10-31 | Declare the public surface of every public repo, and check it | Metadata maintained by hand drifts. 5 of 7 public repos carried no topics and 4 descriptions had grown into feature piles. Desired state now lives in the repo and a committed tool fails on drift. | 266 passed | n/a |
 | 2026-10-30 | [Agent-to-agent credit with exposure limits and netting](artifacts/2026-10-30-agent-credit/) | A $200 cap on gross outflow carried 21.26% of the value, a $200 cap on net debit carried 97.84%, with the same worst case loss. Multilateral netting removed 94.59% of the flow. | 44 passed | 4.65 |
 | 2026-10-29 | Keep tokens and the API key out of the SDK log files | The SDK's own ERROR handler wrote the bearer token and the API key into logs/ where loglevel() could not reach. A filter on the logger covers the handler the SDK attaches later. | 101 passed | n/a |

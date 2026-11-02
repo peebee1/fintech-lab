@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 9,
+  "sequence": 10,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -182,6 +182,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/commit/ec6ba0f",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-02",
+      "id": "idempotency-conformance",
+      "lane": "build",
+      "title": "Idempotency conformance suite for payment APIs",
+      "thesis": "A key store is not idempotency. Storing the response after the charge passes 6 of 11 checks and creates 7 charges that should not exist; reserving the key first passes 11 of 11.",
+      "path": "artifacts/2026-11-02-idempotency-conformance/",
+      "theme": "reliability",
+      "score": 4.6,
+      "tests": {
+        "passed": 46,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-02-idempotency-conformance",
       "promoted": false
     }
   ],
