@@ -1,0 +1,930 @@
+{
+  "meta": {
+    "command": "PYTHONPATH=. uv run python -m idemconform.cli run",
+    "checks": 11,
+    "modes": [
+      "naive",
+      "global_key",
+      "store_after",
+      "error_cached",
+      "reserve"
+    ],
+    "amount_minor": 1250,
+    "currency": "EUR",
+    "lease_seconds": 30,
+    "ttl_seconds": 86400
+  },
+  "implementations": [
+    {
+      "mode": "naive",
+      "checks_passed": 3,
+      "checks_total": 11,
+      "excess_charges": 11,
+      "excess_value_minor": 13750,
+      "violation_classes": {
+        "burst_double_charged": 1,
+        "burst_multiple_charges": 1,
+        "charged_without_key": 1,
+        "conflict_changed_amount": 1,
+        "conflict_not_refused": 1,
+        "conflict_re_executed": 1,
+        "crash_double_charged": 1,
+        "expired_key_not_refused": 1,
+        "expired_wrong_error": 1,
+        "expiry_double_charged": 1,
+        "lease_no_retry_after": 1,
+        "lease_not_enforced": 1,
+        "lease_replay_double_charged": 1,
+        "lease_wrong_error": 1,
+        "missing_key_accepted": 1,
+        "overlap_double_charged": 1,
+        "overlap_second_charged": 1,
+        "overlap_second_executed": 1,
+        "recovery_not_marked_replay": 1,
+        "recovery_returned_other_charge": 1,
+        "replay_body_differs": 1,
+        "replay_double_charged": 1,
+        "replay_header_missing": 1,
+        "replay_not_marked": 1
+      },
+      "results": [
+        {
+          "check": "missing_key",
+          "title": "A missing key is refused",
+          "passed": false,
+          "violations": [
+            "missing_key_accepted",
+            "charged_without_key"
+          ],
+          "charges": 1,
+          "expected_charges": 0,
+          "value_minor": 1250,
+          "proves": "No charge exists without a key."
+        },
+        {
+          "check": "replay_same_body",
+          "title": "Replay returns the first answer",
+          "passed": false,
+          "violations": [
+            "replay_not_marked",
+            "replay_header_missing",
+            "replay_body_differs",
+            "replay_double_charged"
+          ],
+          "charges": 2,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "One charge, identical body, marked replayed."
+        },
+        {
+          "check": "replay_different_body",
+          "title": "Key reuse with a new body is a conflict",
+          "passed": false,
+          "violations": [
+            "conflict_not_refused",
+            "conflict_re_executed",
+            "conflict_changed_amount"
+          ],
+          "charges": 2,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "422, and the original charge stands."
+        },
+        {
+          "check": "overlap_two",
+          "title": "Two overlapping requests, one charge",
+          "passed": false,
+          "violations": [
+            "overlap_second_executed",
+            "overlap_second_charged",
+            "overlap_double_charged"
+          ],
+          "charges": 2,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Second is 409 with a lease, ledger has one row."
+        },
+        {
+          "check": "burst_five",
+          "title": "Five overlapping retries, one charge",
+          "passed": false,
+          "violations": [
+            "burst_multiple_charges",
+            "burst_double_charged"
+          ],
+          "charges": 5,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "A retry storm cannot open five charges."
+        },
+        {
+          "check": "crash_after_effect",
+          "title": "Crash after the charge, before the response",
+          "passed": false,
+          "violations": [
+            "recovery_not_marked_replay",
+            "recovery_returned_other_charge",
+            "crash_double_charged"
+          ],
+          "charges": 2,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The replay returns that charge."
+        },
+        {
+          "check": "in_lease_replay",
+          "title": "A live lease blocks the replay",
+          "passed": false,
+          "violations": [
+            "lease_not_enforced",
+            "lease_wrong_error",
+            "lease_no_retry_after",
+            "lease_replay_double_charged"
+          ],
+          "charges": 2,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 while the lease runs, one charge."
+        },
+        {
+          "check": "crash_before_effect",
+          "title": "Crash before the charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Stale claim is released, exactly one charge results."
+        },
+        {
+          "check": "error_then_retry",
+          "title": "A processor error is not a final answer",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The key is released and the retry runs."
+        },
+        {
+          "check": "expiry",
+          "title": "An expired key refuses instead of re-running",
+          "passed": false,
+          "violations": [
+            "expired_key_not_refused",
+            "expired_wrong_error",
+            "expiry_double_charged"
+          ],
+          "charges": 2,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 expired, no second charge."
+        },
+        {
+          "check": "key_scope",
+          "title": "A key belongs to an account",
+          "passed": true,
+          "violations": [],
+          "charges": 2,
+          "expected_charges": 2,
+          "value_minor": 800,
+          "proves": "Two accounts, same key, two charges."
+        }
+      ]
+    },
+    {
+      "mode": "global_key",
+      "checks_passed": 10,
+      "checks_total": 11,
+      "excess_charges": 0,
+      "excess_value_minor": 0,
+      "violation_classes": {
+        "charge_leaked_to_other_account": 1,
+        "cross_account_collision": 1,
+        "scope_charge_count": 1,
+        "scope_wrong_total": 1
+      },
+      "results": [
+        {
+          "check": "missing_key",
+          "title": "A missing key is refused",
+          "passed": true,
+          "violations": [],
+          "charges": 0,
+          "expected_charges": 0,
+          "value_minor": 1250,
+          "proves": "No charge exists without a key."
+        },
+        {
+          "check": "replay_same_body",
+          "title": "Replay returns the first answer",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "One charge, identical body, marked replayed."
+        },
+        {
+          "check": "replay_different_body",
+          "title": "Key reuse with a new body is a conflict",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "422, and the original charge stands."
+        },
+        {
+          "check": "overlap_two",
+          "title": "Two overlapping requests, one charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Second is 409 with a lease, ledger has one row."
+        },
+        {
+          "check": "burst_five",
+          "title": "Five overlapping retries, one charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "A retry storm cannot open five charges."
+        },
+        {
+          "check": "crash_after_effect",
+          "title": "Crash after the charge, before the response",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The replay returns that charge."
+        },
+        {
+          "check": "in_lease_replay",
+          "title": "A live lease blocks the replay",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 while the lease runs, one charge."
+        },
+        {
+          "check": "crash_before_effect",
+          "title": "Crash before the charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Stale claim is released, exactly one charge results."
+        },
+        {
+          "check": "error_then_retry",
+          "title": "A processor error is not a final answer",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The key is released and the retry runs."
+        },
+        {
+          "check": "expiry",
+          "title": "An expired key refuses instead of re-running",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 expired, no second charge."
+        },
+        {
+          "check": "key_scope",
+          "title": "A key belongs to an account",
+          "passed": false,
+          "violations": [
+            "cross_account_collision",
+            "charge_leaked_to_other_account",
+            "scope_charge_count",
+            "scope_wrong_total"
+          ],
+          "charges": 1,
+          "expected_charges": 2,
+          "value_minor": 800,
+          "proves": "Two accounts, same key, two charges."
+        }
+      ]
+    },
+    {
+      "mode": "store_after",
+      "checks_passed": 6,
+      "checks_total": 11,
+      "excess_charges": 7,
+      "excess_value_minor": 8750,
+      "violation_classes": {
+        "burst_double_charged": 1,
+        "burst_multiple_charges": 1,
+        "crash_double_charged": 1,
+        "expired_key_not_refused": 1,
+        "expired_wrong_error": 1,
+        "lease_no_retry_after": 1,
+        "lease_not_enforced": 1,
+        "lease_replay_double_charged": 1,
+        "lease_wrong_error": 1,
+        "overlap_double_charged": 1,
+        "overlap_second_charged": 1,
+        "overlap_second_executed": 1,
+        "recovery_not_marked_replay": 1,
+        "recovery_returned_other_charge": 1
+      },
+      "results": [
+        {
+          "check": "missing_key",
+          "title": "A missing key is refused",
+          "passed": true,
+          "violations": [],
+          "charges": 0,
+          "expected_charges": 0,
+          "value_minor": 1250,
+          "proves": "No charge exists without a key."
+        },
+        {
+          "check": "replay_same_body",
+          "title": "Replay returns the first answer",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "One charge, identical body, marked replayed."
+        },
+        {
+          "check": "replay_different_body",
+          "title": "Key reuse with a new body is a conflict",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "422, and the original charge stands."
+        },
+        {
+          "check": "overlap_two",
+          "title": "Two overlapping requests, one charge",
+          "passed": false,
+          "violations": [
+            "overlap_second_executed",
+            "overlap_second_charged",
+            "overlap_double_charged"
+          ],
+          "charges": 2,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Second is 409 with a lease, ledger has one row."
+        },
+        {
+          "check": "burst_five",
+          "title": "Five overlapping retries, one charge",
+          "passed": false,
+          "violations": [
+            "burst_multiple_charges",
+            "burst_double_charged"
+          ],
+          "charges": 5,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "A retry storm cannot open five charges."
+        },
+        {
+          "check": "crash_after_effect",
+          "title": "Crash after the charge, before the response",
+          "passed": false,
+          "violations": [
+            "recovery_not_marked_replay",
+            "recovery_returned_other_charge",
+            "crash_double_charged"
+          ],
+          "charges": 2,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The replay returns that charge."
+        },
+        {
+          "check": "in_lease_replay",
+          "title": "A live lease blocks the replay",
+          "passed": false,
+          "violations": [
+            "lease_not_enforced",
+            "lease_wrong_error",
+            "lease_no_retry_after",
+            "lease_replay_double_charged"
+          ],
+          "charges": 2,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 while the lease runs, one charge."
+        },
+        {
+          "check": "crash_before_effect",
+          "title": "Crash before the charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Stale claim is released, exactly one charge results."
+        },
+        {
+          "check": "error_then_retry",
+          "title": "A processor error is not a final answer",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The key is released and the retry runs."
+        },
+        {
+          "check": "expiry",
+          "title": "An expired key refuses instead of re-running",
+          "passed": false,
+          "violations": [
+            "expired_key_not_refused",
+            "expired_wrong_error"
+          ],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 expired, no second charge."
+        },
+        {
+          "check": "key_scope",
+          "title": "A key belongs to an account",
+          "passed": true,
+          "violations": [],
+          "charges": 2,
+          "expected_charges": 2,
+          "value_minor": 800,
+          "proves": "Two accounts, same key, two charges."
+        }
+      ]
+    },
+    {
+      "mode": "error_cached",
+      "checks_passed": 10,
+      "checks_total": 11,
+      "excess_charges": 0,
+      "excess_value_minor": 0,
+      "violation_classes": {
+        "error_cached_as_final": 1,
+        "error_retry_charge_count": 1,
+        "retry_not_executed": 1
+      },
+      "results": [
+        {
+          "check": "missing_key",
+          "title": "A missing key is refused",
+          "passed": true,
+          "violations": [],
+          "charges": 0,
+          "expected_charges": 0,
+          "value_minor": 1250,
+          "proves": "No charge exists without a key."
+        },
+        {
+          "check": "replay_same_body",
+          "title": "Replay returns the first answer",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "One charge, identical body, marked replayed."
+        },
+        {
+          "check": "replay_different_body",
+          "title": "Key reuse with a new body is a conflict",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "422, and the original charge stands."
+        },
+        {
+          "check": "overlap_two",
+          "title": "Two overlapping requests, one charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Second is 409 with a lease, ledger has one row."
+        },
+        {
+          "check": "burst_five",
+          "title": "Five overlapping retries, one charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "A retry storm cannot open five charges."
+        },
+        {
+          "check": "crash_after_effect",
+          "title": "Crash after the charge, before the response",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The replay returns that charge."
+        },
+        {
+          "check": "in_lease_replay",
+          "title": "A live lease blocks the replay",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 while the lease runs, one charge."
+        },
+        {
+          "check": "crash_before_effect",
+          "title": "Crash before the charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Stale claim is released, exactly one charge results."
+        },
+        {
+          "check": "error_then_retry",
+          "title": "A processor error is not a final answer",
+          "passed": false,
+          "violations": [
+            "error_cached_as_final",
+            "retry_not_executed",
+            "error_retry_charge_count"
+          ],
+          "charges": 0,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The key is released and the retry runs."
+        },
+        {
+          "check": "expiry",
+          "title": "An expired key refuses instead of re-running",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 expired, no second charge."
+        },
+        {
+          "check": "key_scope",
+          "title": "A key belongs to an account",
+          "passed": true,
+          "violations": [],
+          "charges": 2,
+          "expected_charges": 2,
+          "value_minor": 800,
+          "proves": "Two accounts, same key, two charges."
+        }
+      ]
+    },
+    {
+      "mode": "reserve",
+      "checks_passed": 11,
+      "checks_total": 11,
+      "excess_charges": 0,
+      "excess_value_minor": 0,
+      "violation_classes": {},
+      "results": [
+        {
+          "check": "missing_key",
+          "title": "A missing key is refused",
+          "passed": true,
+          "violations": [],
+          "charges": 0,
+          "expected_charges": 0,
+          "value_minor": 1250,
+          "proves": "No charge exists without a key."
+        },
+        {
+          "check": "replay_same_body",
+          "title": "Replay returns the first answer",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "One charge, identical body, marked replayed."
+        },
+        {
+          "check": "replay_different_body",
+          "title": "Key reuse with a new body is a conflict",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "422, and the original charge stands."
+        },
+        {
+          "check": "overlap_two",
+          "title": "Two overlapping requests, one charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Second is 409 with a lease, ledger has one row."
+        },
+        {
+          "check": "burst_five",
+          "title": "Five overlapping retries, one charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "A retry storm cannot open five charges."
+        },
+        {
+          "check": "crash_after_effect",
+          "title": "Crash after the charge, before the response",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The replay returns that charge."
+        },
+        {
+          "check": "in_lease_replay",
+          "title": "A live lease blocks the replay",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 while the lease runs, one charge."
+        },
+        {
+          "check": "crash_before_effect",
+          "title": "Crash before the charge",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "Stale claim is released, exactly one charge results."
+        },
+        {
+          "check": "error_then_retry",
+          "title": "A processor error is not a final answer",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "The key is released and the retry runs."
+        },
+        {
+          "check": "expiry",
+          "title": "An expired key refuses instead of re-running",
+          "passed": true,
+          "violations": [],
+          "charges": 1,
+          "expected_charges": 1,
+          "value_minor": 1250,
+          "proves": "409 expired, no second charge."
+        },
+        {
+          "check": "key_scope",
+          "title": "A key belongs to an account",
+          "passed": true,
+          "violations": [],
+          "charges": 2,
+          "expected_charges": 2,
+          "value_minor": 800,
+          "proves": "Two accounts, same key, two charges."
+        }
+      ]
+    }
+  ],
+  "violations": {
+    "burst_double_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "burst_multiple_charges": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "charge_leaked_to_other_account": {
+      "count": 1,
+      "modes": [
+        "global_key"
+      ]
+    },
+    "charged_without_key": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "conflict_changed_amount": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "conflict_not_refused": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "conflict_re_executed": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "crash_double_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "cross_account_collision": {
+      "count": 1,
+      "modes": [
+        "global_key"
+      ]
+    },
+    "error_cached_as_final": {
+      "count": 1,
+      "modes": [
+        "error_cached"
+      ]
+    },
+    "error_retry_charge_count": {
+      "count": 1,
+      "modes": [
+        "error_cached"
+      ]
+    },
+    "expired_key_not_refused": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "expired_wrong_error": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "expiry_double_charged": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "lease_no_retry_after": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "lease_not_enforced": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "lease_replay_double_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "lease_wrong_error": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "missing_key_accepted": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "overlap_double_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "overlap_second_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "overlap_second_executed": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "recovery_not_marked_replay": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "recovery_returned_other_charge": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "replay_body_differs": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "replay_double_charged": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "replay_header_missing": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "replay_not_marked": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "retry_not_executed": {
+      "count": 1,
+      "modes": [
+        "error_cached"
+      ]
+    },
+    "scope_charge_count": {
+      "count": 1,
+      "modes": [
+        "global_key"
+      ]
+    },
+    "scope_wrong_total": {
+      "count": 1,
+      "modes": [
+        "global_key"
+      ]
+    }
+  }
+}

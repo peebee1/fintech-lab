@@ -1,0 +1,10 @@
+{
+  "n": 20000,
+  "unit": "microseconds per request, amortised, this machine",
+  "modes": {
+    "naive": 2.98,
+    "store_after": 14.52,
+    "reserve": 20.19,
+    "overhead_vs_naive_us": 17.21
+  }
+}

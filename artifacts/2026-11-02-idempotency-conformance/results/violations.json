@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "command": "PYTHONPATH=. uv run python -m idemconform.cli run",
+    "checks": 11,
+    "modes": [
+      "naive",
+      "global_key",
+      "store_after",
+      "error_cached",
+      "reserve"
+    ],
+    "amount_minor": 1250,
+    "currency": "EUR",
+    "lease_seconds": 30,
+    "ttl_seconds": 86400
+  },
+  "violations": {
+    "burst_double_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "burst_multiple_charges": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "charge_leaked_to_other_account": {
+      "count": 1,
+      "modes": [
+        "global_key"
+      ]
+    },
+    "charged_without_key": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "conflict_changed_amount": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "conflict_not_refused": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "conflict_re_executed": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "crash_double_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "cross_account_collision": {
+      "count": 1,
+      "modes": [
+        "global_key"
+      ]
+    },
+    "error_cached_as_final": {
+      "count": 1,
+      "modes": [
+        "error_cached"
+      ]
+    },
+    "error_retry_charge_count": {
+      "count": 1,
+      "modes": [
+        "error_cached"
+      ]
+    },
+    "expired_key_not_refused": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "expired_wrong_error": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "expiry_double_charged": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "lease_no_retry_after": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "lease_not_enforced": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "lease_replay_double_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "lease_wrong_error": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "missing_key_accepted": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "overlap_double_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "overlap_second_charged": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "overlap_second_executed": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "recovery_not_marked_replay": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "recovery_returned_other_charge": {
+      "count": 2,
+      "modes": [
+        "naive",
+        "store_after"
+      ]
+    },
+    "replay_body_differs": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "replay_double_charged": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "replay_header_missing": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "replay_not_marked": {
+      "count": 1,
+      "modes": [
+        "naive"
+      ]
+    },
+    "retry_not_executed": {
+      "count": 1,
+      "modes": [
+        "error_cached"
+      ]
+    },
+    "scope_charge_count": {
+      "count": 1,
+      "modes": [
+        "global_key"
+      ]
+    },
+    "scope_wrong_total": {
+      "count": 1,
+      "modes": [
+        "global_key"
+      ]
+    }
+  }
+}
