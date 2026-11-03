@@ -199,6 +199,22 @@
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-02-idempotency-conformance",
       "promoted": false
+    },
+    {
+      "date": "2026-11-03",
+      "id": "h-angelone-publish-scope",
+      "lane": "harden",
+      "title": "Stop publishing the host address and the live book",
+      "thesis": "The filed defect was one field in a tracked state file. The scan found 11 host identifiers across 7 tracked files, including two more addresses inside committed broker refusals. The state file is now untracked, fixtures use documentation ranges, and a committed guard fails CI when one grows back.",
+      "path": "",
+      "theme": "security",
+      "score": null,
+      "tests": {
+        "passed": 113,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/angelone-smartapi/commit/da60709",
+      "promoted": false
     }
   ],
   "parked": [],
