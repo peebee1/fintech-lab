@@ -105,7 +105,7 @@
       "thesis": "Screening is not a search box. It is entity resolution, and the cost of a false positive is a frozen customer.",
       "theme": "risk",
       "type": "artifact",
-      "status": "queued",
+      "status": "shipped",
       "scores": {
         "s1": 5,
         "s2": 5,
@@ -115,8 +115,9 @@
         "s6": 4,
         "s7": 4
       },
-      "notes": "Synthetic list modeled on public OFAC structure. Report precision and recall at fixed review budget.",
-      "added": "2026-10-23"
+      "notes": "Shipped 2026-11-04, re-scored 4.60. 2400 customers, 26 entries, 36 injected true matches, 110 namesakes, fixed review budget. At 48 reviews: name-only caught 11 of 36 and spent 36 reviews on namesakes; entity resolution caught 33 with 11 namesakes and no ranking loss. 130 customers tie at the top name score, so the baseline queue is decided by a tie break. Three customers listed only under a kunya are missed by every policy, which caps recall at 0.917.",
+      "added": "2026-10-23",
+      "shipped": "2026-11-04"
     },
     {
       "id": "payment-routing",

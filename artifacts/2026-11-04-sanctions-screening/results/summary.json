@@ -1,0 +1,561 @@
+{
+  "meta": {
+    "seed": 20261104,
+    "dataset_sha256": "69a476fdd30f3a7bb6b8e161327a0d185bc38a4a361b372588422da91d108fc4",
+    "listed_entries": 26,
+    "book_size": 2400,
+    "true_matches": 36,
+    "namesakes": 110,
+    "review_budget": 48,
+    "review_budget_share": 0.02,
+    "synthetic": true,
+    "command": "PYTHONPATH=artifacts/2026-11-04-sanctions-screening uv run python -m screenlab.cli screen"
+  },
+  "policies": {
+    "exact_name": {
+      "alert_pairs": 130,
+      "queued_customers": 130,
+      "reviewed": 48,
+      "true_hits": 11,
+      "namesake_reviews": 36,
+      "designated_alerted": 28,
+      "ranking_loss": 17,
+      "precision": 0.2292,
+      "recall": 0.3056,
+      "f1": 0.2619,
+      "missed": 25,
+      "top_score": 1.0,
+      "customers_at_top_score": 130,
+      "queue_days": 2.71,
+      "frozen_customers_per_catch": 3.27
+    },
+    "name_only": {
+      "alert_pairs": 574,
+      "queued_customers": 553,
+      "reviewed": 48,
+      "true_hits": 11,
+      "namesake_reviews": 36,
+      "designated_alerted": 28,
+      "ranking_loss": 17,
+      "precision": 0.2292,
+      "recall": 0.3056,
+      "f1": 0.2619,
+      "missed": 25,
+      "top_score": 1.0,
+      "customers_at_top_score": 130,
+      "queue_days": 11.52,
+      "frozen_customers_per_catch": 3.27
+    },
+    "name_country": {
+      "alert_pairs": 148,
+      "queued_customers": 144,
+      "reviewed": 48,
+      "true_hits": 21,
+      "namesake_reviews": 11,
+      "designated_alerted": 21,
+      "ranking_loss": 0,
+      "precision": 0.4375,
+      "recall": 0.5833,
+      "f1": 0.5,
+      "missed": 15,
+      "top_score": 1.0,
+      "customers_at_top_score": 32,
+      "queue_days": 3.0,
+      "frozen_customers_per_catch": 0.52
+    },
+    "entity_resolution": {
+      "alert_pairs": 196,
+      "queued_customers": 196,
+      "reviewed": 48,
+      "true_hits": 33,
+      "namesake_reviews": 11,
+      "designated_alerted": 33,
+      "ranking_loss": 0,
+      "precision": 0.6875,
+      "recall": 0.9167,
+      "f1": 0.7857,
+      "missed": 3,
+      "top_score": 1.0,
+      "customers_at_top_score": 30,
+      "queue_days": 4.08,
+      "frozen_customers_per_catch": 0.33
+    }
+  },
+  "by_kind": {
+    "exact_name": {
+      "exact": {
+        "population": 7,
+        "caught": 1,
+        "recall": 0.1429
+      },
+      "alias": {
+        "population": 14,
+        "caught": 8,
+        "recall": 0.5714
+      },
+      "year_only": {
+        "population": 3,
+        "caught": 0,
+        "recall": 0.0
+      },
+      "relocated": {
+        "population": 6,
+        "caught": 0,
+        "recall": 0.0
+      },
+      "thin_kyc": {
+        "population": 3,
+        "caught": 2,
+        "recall": 0.6667
+      },
+      "kunya": {
+        "population": 3,
+        "caught": 0,
+        "recall": 0.0
+      }
+    },
+    "name_only": {
+      "exact": {
+        "population": 7,
+        "caught": 1,
+        "recall": 0.1429
+      },
+      "alias": {
+        "population": 14,
+        "caught": 8,
+        "recall": 0.5714
+      },
+      "year_only": {
+        "population": 3,
+        "caught": 0,
+        "recall": 0.0
+      },
+      "relocated": {
+        "population": 6,
+        "caught": 0,
+        "recall": 0.0
+      },
+      "thin_kyc": {
+        "population": 3,
+        "caught": 2,
+        "recall": 0.6667
+      },
+      "kunya": {
+        "population": 3,
+        "caught": 0,
+        "recall": 0.0
+      }
+    },
+    "name_country": {
+      "exact": {
+        "population": 7,
+        "caught": 7,
+        "recall": 1.0
+      },
+      "alias": {
+        "population": 14,
+        "caught": 11,
+        "recall": 0.7857
+      },
+      "year_only": {
+        "population": 3,
+        "caught": 3,
+        "recall": 1.0
+      },
+      "relocated": {
+        "population": 6,
+        "caught": 0,
+        "recall": 0.0
+      },
+      "thin_kyc": {
+        "population": 3,
+        "caught": 0,
+        "recall": 0.0
+      },
+      "kunya": {
+        "population": 3,
+        "caught": 0,
+        "recall": 0.0
+      }
+    },
+    "entity_resolution": {
+      "exact": {
+        "population": 7,
+        "caught": 7,
+        "recall": 1.0
+      },
+      "alias": {
+        "population": 14,
+        "caught": 14,
+        "recall": 1.0
+      },
+      "year_only": {
+        "population": 3,
+        "caught": 3,
+        "recall": 1.0
+      },
+      "relocated": {
+        "population": 6,
+        "caught": 6,
+        "recall": 1.0
+      },
+      "thin_kyc": {
+        "population": 3,
+        "caught": 3,
+        "recall": 1.0
+      },
+      "kunya": {
+        "population": 3,
+        "caught": 0,
+        "recall": 0.0
+      }
+    }
+  },
+  "budget_sweep": {
+    "exact_name": [
+      {
+        "budget": 24,
+        "alert_pairs": 130,
+        "queued_customers": 130,
+        "reviewed": 24,
+        "true_hits": 6,
+        "namesake_reviews": 18,
+        "designated_alerted": 28,
+        "ranking_loss": 22,
+        "precision": 0.25,
+        "recall": 0.1667,
+        "f1": 0.2,
+        "missed": 30,
+        "top_score": 1.0,
+        "customers_at_top_score": 130,
+        "queue_days": 5.42,
+        "frozen_customers_per_catch": 3.0
+      },
+      {
+        "budget": 48,
+        "alert_pairs": 130,
+        "queued_customers": 130,
+        "reviewed": 48,
+        "true_hits": 11,
+        "namesake_reviews": 36,
+        "designated_alerted": 28,
+        "ranking_loss": 17,
+        "precision": 0.2292,
+        "recall": 0.3056,
+        "f1": 0.2619,
+        "missed": 25,
+        "top_score": 1.0,
+        "customers_at_top_score": 130,
+        "queue_days": 2.71,
+        "frozen_customers_per_catch": 3.27
+      },
+      {
+        "budget": 96,
+        "alert_pairs": 130,
+        "queued_customers": 130,
+        "reviewed": 96,
+        "true_hits": 21,
+        "namesake_reviews": 74,
+        "designated_alerted": 28,
+        "ranking_loss": 7,
+        "precision": 0.2188,
+        "recall": 0.5833,
+        "f1": 0.3182,
+        "missed": 15,
+        "top_score": 1.0,
+        "customers_at_top_score": 130,
+        "queue_days": 1.35,
+        "frozen_customers_per_catch": 3.52
+      },
+      {
+        "budget": 192,
+        "alert_pairs": 130,
+        "queued_customers": 130,
+        "reviewed": 130,
+        "true_hits": 28,
+        "namesake_reviews": 101,
+        "designated_alerted": 28,
+        "ranking_loss": 0,
+        "precision": 0.2154,
+        "recall": 0.7778,
+        "f1": 0.3373,
+        "missed": 8,
+        "top_score": 1.0,
+        "customers_at_top_score": 130,
+        "queue_days": 0.68,
+        "frozen_customers_per_catch": 3.61
+      }
+    ],
+    "name_only": [
+      {
+        "budget": 24,
+        "alert_pairs": 574,
+        "queued_customers": 553,
+        "reviewed": 24,
+        "true_hits": 6,
+        "namesake_reviews": 18,
+        "designated_alerted": 28,
+        "ranking_loss": 22,
+        "precision": 0.25,
+        "recall": 0.1667,
+        "f1": 0.2,
+        "missed": 30,
+        "top_score": 1.0,
+        "customers_at_top_score": 130,
+        "queue_days": 23.04,
+        "frozen_customers_per_catch": 3.0
+      },
+      {
+        "budget": 48,
+        "alert_pairs": 574,
+        "queued_customers": 553,
+        "reviewed": 48,
+        "true_hits": 11,
+        "namesake_reviews": 36,
+        "designated_alerted": 28,
+        "ranking_loss": 17,
+        "precision": 0.2292,
+        "recall": 0.3056,
+        "f1": 0.2619,
+        "missed": 25,
+        "top_score": 1.0,
+        "customers_at_top_score": 130,
+        "queue_days": 11.52,
+        "frozen_customers_per_catch": 3.27
+      },
+      {
+        "budget": 96,
+        "alert_pairs": 574,
+        "queued_customers": 553,
+        "reviewed": 96,
+        "true_hits": 21,
+        "namesake_reviews": 74,
+        "designated_alerted": 28,
+        "ranking_loss": 7,
+        "precision": 0.2188,
+        "recall": 0.5833,
+        "f1": 0.3182,
+        "missed": 15,
+        "top_score": 1.0,
+        "customers_at_top_score": 130,
+        "queue_days": 5.76,
+        "frozen_customers_per_catch": 3.52
+      },
+      {
+        "budget": 192,
+        "alert_pairs": 574,
+        "queued_customers": 553,
+        "reviewed": 192,
+        "true_hits": 28,
+        "namesake_reviews": 103,
+        "designated_alerted": 28,
+        "ranking_loss": 0,
+        "precision": 0.1458,
+        "recall": 0.7778,
+        "f1": 0.2456,
+        "missed": 8,
+        "top_score": 1.0,
+        "customers_at_top_score": 130,
+        "queue_days": 2.88,
+        "frozen_customers_per_catch": 3.68
+      }
+    ],
+    "name_country": [
+      {
+        "budget": 24,
+        "alert_pairs": 148,
+        "queued_customers": 144,
+        "reviewed": 24,
+        "true_hits": 15,
+        "namesake_reviews": 9,
+        "designated_alerted": 21,
+        "ranking_loss": 6,
+        "precision": 0.625,
+        "recall": 0.4167,
+        "f1": 0.5,
+        "missed": 21,
+        "top_score": 1.0,
+        "customers_at_top_score": 32,
+        "queue_days": 6.0,
+        "frozen_customers_per_catch": 0.6
+      },
+      {
+        "budget": 48,
+        "alert_pairs": 148,
+        "queued_customers": 144,
+        "reviewed": 48,
+        "true_hits": 21,
+        "namesake_reviews": 11,
+        "designated_alerted": 21,
+        "ranking_loss": 0,
+        "precision": 0.4375,
+        "recall": 0.5833,
+        "f1": 0.5,
+        "missed": 15,
+        "top_score": 1.0,
+        "customers_at_top_score": 32,
+        "queue_days": 3.0,
+        "frozen_customers_per_catch": 0.52
+      },
+      {
+        "budget": 96,
+        "alert_pairs": 148,
+        "queued_customers": 144,
+        "reviewed": 96,
+        "true_hits": 21,
+        "namesake_reviews": 11,
+        "designated_alerted": 21,
+        "ranking_loss": 0,
+        "precision": 0.2188,
+        "recall": 0.5833,
+        "f1": 0.3182,
+        "missed": 15,
+        "top_score": 1.0,
+        "customers_at_top_score": 32,
+        "queue_days": 1.5,
+        "frozen_customers_per_catch": 0.52
+      },
+      {
+        "budget": 192,
+        "alert_pairs": 148,
+        "queued_customers": 144,
+        "reviewed": 144,
+        "true_hits": 21,
+        "namesake_reviews": 11,
+        "designated_alerted": 21,
+        "ranking_loss": 0,
+        "precision": 0.1458,
+        "recall": 0.5833,
+        "f1": 0.2333,
+        "missed": 15,
+        "top_score": 1.0,
+        "customers_at_top_score": 32,
+        "queue_days": 0.75,
+        "frozen_customers_per_catch": 0.52
+      }
+    ],
+    "entity_resolution": [
+      {
+        "budget": 24,
+        "alert_pairs": 196,
+        "queued_customers": 196,
+        "reviewed": 24,
+        "true_hits": 24,
+        "namesake_reviews": 0,
+        "designated_alerted": 33,
+        "ranking_loss": 9,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "missed": 12,
+        "top_score": 1.0,
+        "customers_at_top_score": 30,
+        "queue_days": 8.17,
+        "frozen_customers_per_catch": 0.0
+      },
+      {
+        "budget": 48,
+        "alert_pairs": 196,
+        "queued_customers": 196,
+        "reviewed": 48,
+        "true_hits": 33,
+        "namesake_reviews": 11,
+        "designated_alerted": 33,
+        "ranking_loss": 0,
+        "precision": 0.6875,
+        "recall": 0.9167,
+        "f1": 0.7857,
+        "missed": 3,
+        "top_score": 1.0,
+        "customers_at_top_score": 30,
+        "queue_days": 4.08,
+        "frozen_customers_per_catch": 0.33
+      },
+      {
+        "budget": 96,
+        "alert_pairs": 196,
+        "queued_customers": 196,
+        "reviewed": 96,
+        "true_hits": 33,
+        "namesake_reviews": 57,
+        "designated_alerted": 33,
+        "ranking_loss": 0,
+        "precision": 0.3438,
+        "recall": 0.9167,
+        "f1": 0.5,
+        "missed": 3,
+        "top_score": 1.0,
+        "customers_at_top_score": 30,
+        "queue_days": 2.04,
+        "frozen_customers_per_catch": 1.73
+      },
+      {
+        "budget": 192,
+        "alert_pairs": 196,
+        "queued_customers": 196,
+        "reviewed": 192,
+        "true_hits": 33,
+        "namesake_reviews": 103,
+        "designated_alerted": 33,
+        "ranking_loss": 0,
+        "precision": 0.1719,
+        "recall": 0.9167,
+        "f1": 0.2895,
+        "missed": 3,
+        "top_score": 1.0,
+        "customers_at_top_score": 30,
+        "queue_days": 1.02,
+        "frozen_customers_per_catch": 3.12
+      }
+    ]
+  },
+  "rules": {
+    "id_exact": {
+      "alerts": 10,
+      "true": 10,
+      "precision": 1.0
+    },
+    "name_close_dob": {
+      "alerts": 5,
+      "true": 4,
+      "precision": 0.8
+    },
+    "name_exact_dob": {
+      "alerts": 16,
+      "true": 16,
+      "precision": 1.0
+    },
+    "name_no_dob": {
+      "alerts": 3,
+      "true": 3,
+      "precision": 1.0
+    },
+    "name_over_dob_conflict": {
+      "alerts": 162,
+      "true": 0,
+      "precision": 0.0
+    }
+  },
+  "suppressed": {
+    "weak_name_dob_conflict": 85
+  },
+  "tie_break": {
+    "exact_name": {
+      "ascending_id": 11,
+      "descending_id": 12
+    },
+    "name_only": {
+      "ascending_id": 11,
+      "descending_id": 12
+    },
+    "name_country": {
+      "ascending_id": 21,
+      "descending_id": 21
+    },
+    "entity_resolution": {
+      "ascending_id": 33,
+      "descending_id": 33
+    }
+  },
+  "headline": "at 48 reviews, entity resolution catches 33 of 36 designated customers and name-only catches 11"
+}

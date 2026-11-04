@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 10,
+  "sequence": 11,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -214,6 +214,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/angelone-smartapi/commit/da60709",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-04",
+      "id": "sanctions-screening",
+      "lane": "build",
+      "title": "Sanctions screening that survives a review budget",
+      "thesis": "A name screen alerted on 28 of the 36 listed customers in the book and delivered 11, because 130 customers share its top score. Dates, countries and identity numbers pushed 33 through the same 48 reviews.",
+      "path": "artifacts/2026-11-04-sanctions-screening/",
+      "theme": "risk",
+      "score": 4.6,
+      "tests": {
+        "passed": 31,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-04-sanctions-screening",
       "promoted": false
     }
   ],
