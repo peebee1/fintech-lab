@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**14 ships** | **3 day streak** (best 6) | 7 new artifacts | 7 fixes to existing repos
+**15 ships** | **4 day streak** (best 6) | 7 new artifacts | 8 fixes to existing repos
 
-Latest: **Sanctions screening that survives a review budget** (2026-11-04)
+Latest: **A reproducible bench and CI for agent-bazaar** (2026-11-05)
 
-> A name screen alerted on 28 of the 36 listed customers in the book and delivered 11, because 130 customers share its top score. Dates, countries and identity numbers pushed 33 through the same 48 reviews.
+> The mock could not stand in for the model run, it prints four identical rows. Nine scripted hostile proposers give a table that moves, and the first run found 34 price commitments outside the proposer's own limit.
 
-[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-04-sanctions-screening)
+[Commit](https://github.com/peebee1/agent-bazaar/commit/213fb27)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-11-05 | A reproducible bench and CI for agent-bazaar | The mock could not stand in for the model run, it prints four identical rows. Nine scripted hostile proposers give a table that moves, and the first run found 34 price commitments outside the proposer's own limit. | 50 passed | n/a |
 | 2026-11-04 | [Sanctions screening that survives a review budget](artifacts/2026-11-04-sanctions-screening/) | A name screen alerted on 28 of the 36 listed customers in the book and delivered 11, because 130 customers share its top score. Dates, countries and identity numbers pushed 33 through the same 48 reviews. | 31 passed | 4.60 |
 | 2026-11-03 | Stop publishing the host address and the live book | The filed defect was one field in a tracked state file. The scan found 11 host identifiers across 7 tracked files, including two more addresses inside committed broker refusals. The state file is now untracked, fixtures use documentation ranges, and a committed guard fails CI when one grows back. | 113 passed | n/a |
 | 2026-11-02 | [Idempotency conformance suite for payment APIs](artifacts/2026-11-02-idempotency-conformance/) | A key store is not idempotency. Storing the response after the charge passes 6 of 11 checks and creates 7 charges that should not exist; reserving the key first passes 11 of 11. | 46 passed | 4.60 |

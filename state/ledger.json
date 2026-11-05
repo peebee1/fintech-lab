@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 11,
+  "sequence": 12,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -230,6 +230,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-04-sanctions-screening",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-05",
+      "id": "h-ci-bazaar",
+      "lane": "harden",
+      "title": "A reproducible bench and CI for agent-bazaar",
+      "thesis": "The mock could not stand in for the model run, it prints four identical rows. Nine scripted hostile proposers give a table that moves, and the first run found 34 price commitments outside the proposer's own limit.",
+      "path": "",
+      "theme": "agentic-commerce",
+      "score": null,
+      "tests": {
+        "passed": 50,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/agent-bazaar/commit/213fb27",
       "promoted": false
     }
   ],

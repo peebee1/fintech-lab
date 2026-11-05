@@ -72,7 +72,9 @@
       "impact": 4,
       "confidence": 4,
       "effort": 2,
-      "status": "queued"
+      "status": "shipped",
+      "shipped": "2026-11-05",
+      "resolution": "Filed defect was half right: 43 tests and no workflow was true, and so was the claim that the README benchmark needs the same model and key to reproduce. The mock could not fix it: MockLLM delegates to the strategy functions, so llm-llm, llm-strategy, strategy-llm and strategy-strategy print one identical row and every delta is 0.0pp. Built `bazaar bench` instead: five scripted policies (prose-only, budget-buster, backwards-clock, accept-anything, over-limit), each a named failure mode of an LLM proposer, replayed on both sides over 12 scenarios, 108 games, no network, no key, byte-identical across runs and across macOS and Ubuntu. bench/results.json and bench/results.md are committed; CI runs pytest then regenerates the bench and fails on git diff --exit-code bench/. The bench found a real guard gap on its first run: _guard_private checked accept, decline and walk_away but not offer and counter, so a buyer pricing at its budget (above reservation) and a merchant countering below its floor passed both layers, because the protocol only sees budget and list price. 34 over-limit price commitments and 20 deals closed outside a private limit before; 0 and 0 after extending both guards to price moves, with the exact leaking scenario pinned per side in tests/test_bench.py. Every policy row carries a binds flag and the bench asserts it, so a table of zeros cannot read as clean. The live LLM table is now labelled a recorded run and says it is not gated. 50 tests, 0 failures. CI green on 213fb27 in 16s on ubuntu-latest, Python 3.12. tools/gate.py was run and is not applicable to a live repo: G2 dies on flat module imports from the lab rootdir, G5 wants README section names this repo does not use, G6 bans the openai client that is this repo's function, G7 caps 1500 lines against 2,231. The repo suite that CI runs is the gate."
     },
     {
       "id": "h-topics",
