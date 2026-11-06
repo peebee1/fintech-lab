@@ -125,7 +125,7 @@
       "thesis": "Routing on cost alone leaves money on the table. Routing on approval probability is where the margin is.",
       "theme": "acquiring",
       "type": "artifact",
-      "status": "queued",
+      "status": "shipped",
       "scores": {
         "s1": 5,
         "s2": 4,
@@ -135,8 +135,9 @@
         "s6": 5,
         "s7": 4
       },
-      "notes": "Simulator with PSP-level latency, cost, and approval curves. Compare static rules, epsilon greedy, and Thompson sampling.",
-      "added": "2026-10-23"
+      "notes": "Simulator with PSP-level latency, cost, and approval curves. Compare static rules, epsilon greedy, and Thompson sampling. Shipped 2026-11-06, re-scored 4.60. 50,000 synthetic transactions, 12 segments, hidden per-segment approval. Fee-only routing: 88.9% auth, 124.4 bps, $38,271 per 1,000. Reference: 94.3% auth, 151.3 bps, $39,802 (+4.0%). A three-line rule table recovers 4.06%, Thompson lands 0.06% below the reference, epsilon greedy 0.9% below. After a 0.90 logit shift against bravo on debit, rules lose 0.90% and all-history Thompson 1.25% against the reference, a 300 attempt window is level. Retry depth moves the gap from $2,689 to $1,151.",
+      "added": "2026-10-23",
+      "shipped": "2026-11-06"
     },
     {
       "id": "mandate-sim",

@@ -1,0 +1,897 @@
+{
+  "meta": {
+    "transactions": 50000,
+    "seed": 20261106,
+    "outcome_seed": 99,
+    "margin_bps": 1500,
+    "ops_cents": 2,
+    "max_retries": 1,
+    "book_digest": "eb0f27f3d9be0528",
+    "providers": [
+      {
+        "name": "alpha",
+        "bps": 120,
+        "fixed_cents": 8
+      },
+      {
+        "name": "bravo",
+        "bps": 155,
+        "fixed_cents": 4
+      },
+      {
+        "name": "charlie",
+        "bps": 185,
+        "fixed_cents": 0
+      }
+    ]
+  },
+  "policies": [
+    {
+      "policy": "cheapest",
+      "transactions": 50000,
+      "attempts": 55262,
+      "attempts_per_txn": 1.105,
+      "auth_rate": 0.8889,
+      "hard_declines": 3854,
+      "settled_cents": 1391898970,
+      "fees_cents": 17319578,
+      "ops_cents": 110524,
+      "gross_cents": 208786012,
+      "net_cents": 191355910,
+      "net_per_1000_cents": 3827118,
+      "fee_bps": 124.4,
+      "avg_ticket_cents": 31317,
+      "vs_cheapest_cents": 0,
+      "vs_cheapest_pct": 0.0
+    },
+    {
+      "policy": "static_rules",
+      "transactions": 50000,
+      "attempts": 52672,
+      "attempts_per_txn": 1.053,
+      "auth_rate": 0.9427,
+      "hard_declines": 1955,
+      "settled_cents": 1476496901,
+      "fees_cents": 22247615,
+      "ops_cents": 105344,
+      "gross_cents": 221475800,
+      "net_cents": 199122841,
+      "net_per_1000_cents": 3982457,
+      "fee_bps": 150.7,
+      "avg_ticket_cents": 31326,
+      "vs_cheapest_cents": 155339,
+      "vs_cheapest_pct": 4.06
+    },
+    {
+      "policy": "epsilon_greedy",
+      "transactions": 50000,
+      "attempts": 53609,
+      "attempts_per_txn": 1.072,
+      "auth_rate": 0.9227,
+      "hard_declines": 2658,
+      "settled_cents": 1463296834,
+      "fees_cents": 22181879,
+      "ops_cents": 107218,
+      "gross_cents": 219495738,
+      "net_cents": 197206641,
+      "net_per_1000_cents": 3944133,
+      "fee_bps": 151.6,
+      "avg_ticket_cents": 31718,
+      "vs_cheapest_cents": 117015,
+      "vs_cheapest_pct": 3.06
+    },
+    {
+      "policy": "thompson",
+      "transactions": 50000,
+      "attempts": 52840,
+      "attempts_per_txn": 1.057,
+      "auth_rate": 0.9391,
+      "hard_declines": 2091,
+      "settled_cents": 1474209080,
+      "fees_cents": 22135368,
+      "ops_cents": 105680,
+      "gross_cents": 221132608,
+      "net_cents": 198891560,
+      "net_per_1000_cents": 3977831,
+      "fee_bps": 150.2,
+      "avg_ticket_cents": 31397,
+      "vs_cheapest_cents": 150713,
+      "vs_cheapest_pct": 3.94
+    },
+    {
+      "policy": "thompson_window",
+      "transactions": 50000,
+      "attempts": 53372,
+      "attempts_per_txn": 1.067,
+      "auth_rate": 0.9289,
+      "hard_declines": 2433,
+      "settled_cents": 1440268177,
+      "fees_cents": 19982280,
+      "ops_cents": 106744,
+      "gross_cents": 216041443,
+      "net_cents": 195952419,
+      "net_per_1000_cents": 3919048,
+      "fee_bps": 138.7,
+      "avg_ticket_cents": 31009,
+      "vs_cheapest_cents": 91930,
+      "vs_cheapest_pct": 2.4
+    },
+    {
+      "policy": "oracle",
+      "transactions": 50000,
+      "attempts": 52693,
+      "attempts_per_txn": 1.054,
+      "auth_rate": 0.9426,
+      "hard_declines": 1983,
+      "settled_cents": 1476363448,
+      "fees_cents": 22341193,
+      "ops_cents": 105386,
+      "gross_cents": 221455787,
+      "net_cents": 199009208,
+      "net_per_1000_cents": 3980184,
+      "fee_bps": 151.3,
+      "avg_ticket_cents": 31325,
+      "vs_cheapest_cents": 153066,
+      "vs_cheapest_pct": 4.0
+    }
+  ],
+  "segments": [
+    {
+      "context": "credit/cross_border/large",
+      "transactions": 1496,
+      "mean_ticket_cents": 85658,
+      "expected_net": {
+        "alpha": 9566,
+        "bravo": 9498,
+        "charlie": 10585
+      },
+      "best_arm": "charlie",
+      "fee_only_arm": "alpha",
+      "fee_only_is_best": false,
+      "fee_only_is_worst": false,
+      "gap_cents": 1019
+    },
+    {
+      "context": "credit/cross_border/micro",
+      "transactions": 1253,
+      "mean_ticket_cents": 1663,
+      "expected_net": {
+        "alpha": 176,
+        "bravo": 184,
+        "charlie": 195
+      },
+      "best_arm": "charlie",
+      "fee_only_arm": "charlie",
+      "fee_only_is_best": true,
+      "fee_only_is_worst": false,
+      "gap_cents": 0
+    },
+    {
+      "context": "credit/cross_border/mid",
+      "transactions": 2169,
+      "mean_ticket_cents": 11648,
+      "expected_net": {
+        "alpha": 1306,
+        "bravo": 1309,
+        "charlie": 1419
+      },
+      "best_arm": "charlie",
+      "fee_only_arm": "alpha",
+      "fee_only_is_best": false,
+      "fee_only_is_worst": true,
+      "gap_cents": 113
+    },
+    {
+      "context": "credit/domestic/large",
+      "transactions": 5305,
+      "mean_ticket_cents": 85241,
+      "expected_net": {
+        "alpha": 10632,
+        "bravo": 9833,
+        "charlie": 9684
+      },
+      "best_arm": "alpha",
+      "fee_only_arm": "alpha",
+      "fee_only_is_best": true,
+      "fee_only_is_worst": false,
+      "gap_cents": 0
+    },
+    {
+      "context": "credit/domestic/micro",
+      "transactions": 4362,
+      "mean_ticket_cents": 1666,
+      "expected_net": {
+        "alpha": 198,
+        "bravo": 191,
+        "charlie": 170
+      },
+      "best_arm": "alpha",
+      "fee_only_arm": "charlie",
+      "fee_only_is_best": false,
+      "fee_only_is_worst": true,
+      "gap_cents": 28
+    },
+    {
+      "context": "credit/domestic/mid",
+      "transactions": 7815,
+      "mean_ticket_cents": 11474,
+      "expected_net": {
+        "alpha": 1430,
+        "bravo": 1337,
+        "charlie": 1264
+      },
+      "best_arm": "alpha",
+      "fee_only_arm": "alpha",
+      "fee_only_is_best": true,
+      "fee_only_is_worst": false,
+      "gap_cents": 0
+    },
+    {
+      "context": "debit/cross_border/large",
+      "transactions": 1841,
+      "mean_ticket_cents": 84758,
+      "expected_net": {
+        "alpha": 8063,
+        "bravo": 10151,
+        "charlie": 10562
+      },
+      "best_arm": "charlie",
+      "fee_only_arm": "alpha",
+      "fee_only_is_best": false,
+      "fee_only_is_worst": true,
+      "gap_cents": 2500
+    },
+    {
+      "context": "debit/cross_border/micro",
+      "transactions": 1504,
+      "mean_ticket_cents": 1657,
+      "expected_net": {
+        "alpha": 148,
+        "bravo": 196,
+        "charlie": 197
+      },
+      "best_arm": "charlie",
+      "fee_only_arm": "alpha",
+      "fee_only_is_best": false,
+      "fee_only_is_worst": true,
+      "gap_cents": 49
+    },
+    {
+      "context": "debit/cross_border/mid",
+      "transactions": 2719,
+      "mean_ticket_cents": 11726,
+      "expected_net": {
+        "alpha": 1126,
+        "bravo": 1414,
+        "charlie": 1443
+      },
+      "best_arm": "charlie",
+      "fee_only_arm": "alpha",
+      "fee_only_is_best": false,
+      "fee_only_is_worst": true,
+      "gap_cents": 317
+    },
+    {
+      "context": "debit/domestic/large",
+      "transactions": 6462,
+      "mean_ticket_cents": 84904,
+      "expected_net": {
+        "alpha": 9740,
+        "bravo": 10420,
+        "charlie": 9832
+      },
+      "best_arm": "bravo",
+      "fee_only_arm": "alpha",
+      "fee_only_is_best": false,
+      "fee_only_is_worst": true,
+      "gap_cents": 680
+    },
+    {
+      "context": "debit/domestic/micro",
+      "transactions": 5346,
+      "mean_ticket_cents": 1666,
+      "expected_net": {
+        "alpha": 181,
+        "bravo": 201,
+        "charlie": 175
+      },
+      "best_arm": "bravo",
+      "fee_only_arm": "charlie",
+      "fee_only_is_best": false,
+      "fee_only_is_worst": true,
+      "gap_cents": 26
+    },
+    {
+      "context": "debit/domestic/mid",
+      "transactions": 9728,
+      "mean_ticket_cents": 11431,
+      "expected_net": {
+        "alpha": 1315,
+        "bravo": 1410,
+        "charlie": 1288
+      },
+      "best_arm": "bravo",
+      "fee_only_arm": "alpha",
+      "fee_only_is_best": false,
+      "fee_only_is_worst": false,
+      "gap_cents": 95
+    }
+  ],
+  "checks": {
+    "segments": 12,
+    "fee_only_not_best": 9,
+    "fee_only_worst": 7,
+    "expected_gap_cents_per_1000": 257742
+  },
+  "retry_sweep": [
+    {
+      "max_retries": 0,
+      "policies": {
+        "cheapest": {
+          "auth_rate": 0.8366,
+          "attempts_per_txn": 1.0,
+          "fee_bps": 122.5,
+          "net_per_1000_cents": 3610930
+        },
+        "static_rules": {
+          "auth_rate": 0.9178,
+          "attempts_per_txn": 1.0,
+          "fee_bps": 151.1,
+          "net_per_1000_cents": 3879966
+        },
+        "thompson": {
+          "auth_rate": 0.912,
+          "attempts_per_txn": 1.0,
+          "fee_bps": 150.3,
+          "net_per_1000_cents": 3860905
+        },
+        "oracle": {
+          "auth_rate": 0.917,
+          "attempts_per_txn": 1.0,
+          "fee_bps": 151.0,
+          "net_per_1000_cents": 3879808
+        }
+      },
+      "gap_cheapest_vs_oracle": 268878
+    },
+    {
+      "max_retries": 1,
+      "policies": {
+        "cheapest": {
+          "auth_rate": 0.8889,
+          "attempts_per_txn": 1.105,
+          "fee_bps": 124.4,
+          "net_per_1000_cents": 3827118
+        },
+        "static_rules": {
+          "auth_rate": 0.9427,
+          "attempts_per_txn": 1.053,
+          "fee_bps": 150.7,
+          "net_per_1000_cents": 3982457
+        },
+        "thompson": {
+          "auth_rate": 0.9391,
+          "attempts_per_txn": 1.057,
+          "fee_bps": 150.2,
+          "net_per_1000_cents": 3977831
+        },
+        "oracle": {
+          "auth_rate": 0.9426,
+          "attempts_per_txn": 1.054,
+          "fee_bps": 151.3,
+          "net_per_1000_cents": 3980184
+        }
+      },
+      "gap_cheapest_vs_oracle": 153066
+    },
+    {
+      "max_retries": 2,
+      "policies": {
+        "cheapest": {
+          "auth_rate": 0.9053,
+          "attempts_per_txn": 1.139,
+          "fee_bps": 125.6,
+          "net_per_1000_cents": 3896250
+        },
+        "static_rules": {
+          "auth_rate": 0.9512,
+          "attempts_per_txn": 1.072,
+          "fee_bps": 150.9,
+          "net_per_1000_cents": 4018018
+        },
+        "thompson": {
+          "auth_rate": 0.9447,
+          "attempts_per_txn": 1.081,
+          "fee_bps": 157.5,
+          "net_per_1000_cents": 3951272
+        },
+        "oracle": {
+          "auth_rate": 0.9505,
+          "attempts_per_txn": 1.072,
+          "fee_bps": 151.3,
+          "net_per_1000_cents": 4011328
+        }
+      },
+      "gap_cheapest_vs_oracle": 115078
+    }
+  ],
+  "margin_sweep": [
+    {
+      "margin_bps": 1000,
+      "cheapest_net_per_1000_cents": 2435242,
+      "oracle_net_per_1000_cents": 2506260,
+      "gap_cents": 71018,
+      "gap_pct": 2.92
+    },
+    {
+      "margin_bps": 1500,
+      "cheapest_net_per_1000_cents": 3827118,
+      "oracle_net_per_1000_cents": 3980184,
+      "gap_cents": 153066,
+      "gap_pct": 4.0
+    },
+    {
+      "margin_bps": 2200,
+      "cheapest_net_per_1000_cents": 5775761,
+      "oracle_net_per_1000_cents": 6047132,
+      "gap_cents": 271371,
+      "gap_pct": 4.7
+    }
+  ],
+  "learning": {
+    "blocks": [
+      {
+        "block": 1,
+        "transactions": 5000,
+        "auth_rate": 0.9332,
+        "net_per_1000_cents": 3855065
+      },
+      {
+        "block": 2,
+        "transactions": 5000,
+        "auth_rate": 0.9446,
+        "net_per_1000_cents": 4051489
+      },
+      {
+        "block": 3,
+        "transactions": 5000,
+        "auth_rate": 0.9366,
+        "net_per_1000_cents": 3988318
+      },
+      {
+        "block": 4,
+        "transactions": 5000,
+        "auth_rate": 0.9408,
+        "net_per_1000_cents": 3987525
+      },
+      {
+        "block": 5,
+        "transactions": 5000,
+        "auth_rate": 0.9424,
+        "net_per_1000_cents": 3996090
+      },
+      {
+        "block": 6,
+        "transactions": 5000,
+        "auth_rate": 0.9386,
+        "net_per_1000_cents": 4021846
+      },
+      {
+        "block": 7,
+        "transactions": 5000,
+        "auth_rate": 0.9382,
+        "net_per_1000_cents": 4077704
+      },
+      {
+        "block": 8,
+        "transactions": 5000,
+        "auth_rate": 0.94,
+        "net_per_1000_cents": 3857680
+      },
+      {
+        "block": 9,
+        "transactions": 5000,
+        "auth_rate": 0.9384,
+        "net_per_1000_cents": 4054596
+      },
+      {
+        "block": 10,
+        "transactions": 5000,
+        "auth_rate": 0.938,
+        "net_per_1000_cents": 3887999
+      }
+    ]
+  },
+  "oracle_learning": {
+    "blocks": [
+      {
+        "block": 1,
+        "transactions": 5000,
+        "auth_rate": 0.9414,
+        "net_per_1000_cents": 3882041
+      },
+      {
+        "block": 2,
+        "transactions": 5000,
+        "auth_rate": 0.9452,
+        "net_per_1000_cents": 4033614
+      },
+      {
+        "block": 3,
+        "transactions": 5000,
+        "auth_rate": 0.9402,
+        "net_per_1000_cents": 3996603
+      },
+      {
+        "block": 4,
+        "transactions": 5000,
+        "auth_rate": 0.9426,
+        "net_per_1000_cents": 4002834
+      },
+      {
+        "block": 5,
+        "transactions": 5000,
+        "auth_rate": 0.947,
+        "net_per_1000_cents": 4005680
+      },
+      {
+        "block": 6,
+        "transactions": 5000,
+        "auth_rate": 0.9426,
+        "net_per_1000_cents": 4038038
+      },
+      {
+        "block": 7,
+        "transactions": 5000,
+        "auth_rate": 0.9424,
+        "net_per_1000_cents": 4068232
+      },
+      {
+        "block": 8,
+        "transactions": 5000,
+        "auth_rate": 0.941,
+        "net_per_1000_cents": 3858543
+      },
+      {
+        "block": 9,
+        "transactions": 5000,
+        "auth_rate": 0.9412,
+        "net_per_1000_cents": 4040491
+      },
+      {
+        "block": 10,
+        "transactions": 5000,
+        "auth_rate": 0.9426,
+        "net_per_1000_cents": 3875766
+      }
+    ]
+  },
+  "drift": {
+    "at": 25000,
+    "psp": "bravo",
+    "delta": -0.9,
+    "token": "channel:debit",
+    "policies": {
+      "cheapest": {
+        "before": {
+          "transactions": 25000,
+          "auth_rate": 0.8892,
+          "net_per_1000_cents": 3806660
+        },
+        "after": {
+          "transactions": 25000,
+          "auth_rate": 0.8852,
+          "net_per_1000_cents": 3834104
+        },
+        "blocks": [
+          {
+            "block": 1,
+            "auth_rate": 0.8852,
+            "net_per_1000_cents": 3719596
+          },
+          {
+            "block": 2,
+            "auth_rate": 0.8938,
+            "net_per_1000_cents": 3873606
+          },
+          {
+            "block": 3,
+            "auth_rate": 0.8838,
+            "net_per_1000_cents": 3804848
+          },
+          {
+            "block": 4,
+            "auth_rate": 0.8862,
+            "net_per_1000_cents": 3795043
+          },
+          {
+            "block": 5,
+            "auth_rate": 0.8968,
+            "net_per_1000_cents": 3840208
+          },
+          {
+            "block": 6,
+            "auth_rate": 0.8906,
+            "net_per_1000_cents": 3937515
+          },
+          {
+            "block": 7,
+            "auth_rate": 0.8854,
+            "net_per_1000_cents": 3890889
+          },
+          {
+            "block": 8,
+            "auth_rate": 0.8786,
+            "net_per_1000_cents": 3731329
+          },
+          {
+            "block": 9,
+            "auth_rate": 0.8808,
+            "net_per_1000_cents": 3871267
+          },
+          {
+            "block": 10,
+            "auth_rate": 0.8904,
+            "net_per_1000_cents": 3739519
+          }
+        ]
+      },
+      "static_rules": {
+        "before": {
+          "transactions": 25000,
+          "auth_rate": 0.943,
+          "net_per_1000_cents": 3978914
+        },
+        "after": {
+          "transactions": 25000,
+          "auth_rate": 0.9123,
+          "net_per_1000_cents": 3861872
+        },
+        "blocks": [
+          {
+            "block": 1,
+            "auth_rate": 0.9414,
+            "net_per_1000_cents": 3889598
+          },
+          {
+            "block": 2,
+            "auth_rate": 0.9458,
+            "net_per_1000_cents": 4039523
+          },
+          {
+            "block": 3,
+            "auth_rate": 0.9396,
+            "net_per_1000_cents": 3985755
+          },
+          {
+            "block": 4,
+            "auth_rate": 0.9418,
+            "net_per_1000_cents": 3985815
+          },
+          {
+            "block": 5,
+            "auth_rate": 0.9466,
+            "net_per_1000_cents": 3993879
+          },
+          {
+            "block": 6,
+            "auth_rate": 0.913,
+            "net_per_1000_cents": 3897599
+          },
+          {
+            "block": 7,
+            "auth_rate": 0.9148,
+            "net_per_1000_cents": 3945401
+          },
+          {
+            "block": 8,
+            "auth_rate": 0.91,
+            "net_per_1000_cents": 3759916
+          },
+          {
+            "block": 9,
+            "auth_rate": 0.9118,
+            "net_per_1000_cents": 3949434
+          },
+          {
+            "block": 10,
+            "auth_rate": 0.9118,
+            "net_per_1000_cents": 3757010
+          }
+        ]
+      },
+      "thompson": {
+        "before": {
+          "transactions": 25000,
+          "auth_rate": 0.9395,
+          "net_per_1000_cents": 3975697
+        },
+        "after": {
+          "transactions": 25000,
+          "auth_rate": 0.904,
+          "net_per_1000_cents": 3848139
+        },
+        "blocks": [
+          {
+            "block": 1,
+            "auth_rate": 0.9332,
+            "net_per_1000_cents": 3855065
+          },
+          {
+            "block": 2,
+            "auth_rate": 0.9446,
+            "net_per_1000_cents": 4051489
+          },
+          {
+            "block": 3,
+            "auth_rate": 0.9366,
+            "net_per_1000_cents": 3988318
+          },
+          {
+            "block": 4,
+            "auth_rate": 0.9408,
+            "net_per_1000_cents": 3987525
+          },
+          {
+            "block": 5,
+            "auth_rate": 0.9424,
+            "net_per_1000_cents": 3996090
+          },
+          {
+            "block": 6,
+            "auth_rate": 0.9034,
+            "net_per_1000_cents": 3879431
+          },
+          {
+            "block": 7,
+            "auth_rate": 0.9066,
+            "net_per_1000_cents": 3930232
+          },
+          {
+            "block": 8,
+            "auth_rate": 0.9026,
+            "net_per_1000_cents": 3755764
+          },
+          {
+            "block": 9,
+            "auth_rate": 0.902,
+            "net_per_1000_cents": 3932637
+          },
+          {
+            "block": 10,
+            "auth_rate": 0.9056,
+            "net_per_1000_cents": 3742631
+          }
+        ]
+      },
+      "thompson_window": {
+        "before": {
+          "transactions": 25000,
+          "auth_rate": 0.9287,
+          "net_per_1000_cents": 3903095
+        },
+        "after": {
+          "transactions": 25000,
+          "auth_rate": 0.9028,
+          "net_per_1000_cents": 3898756
+        },
+        "blocks": [
+          {
+            "block": 1,
+            "auth_rate": 0.9224,
+            "net_per_1000_cents": 3779271
+          },
+          {
+            "block": 2,
+            "auth_rate": 0.9294,
+            "net_per_1000_cents": 3958352
+          },
+          {
+            "block": 3,
+            "auth_rate": 0.926,
+            "net_per_1000_cents": 3921163
+          },
+          {
+            "block": 4,
+            "auth_rate": 0.9334,
+            "net_per_1000_cents": 3919208
+          },
+          {
+            "block": 5,
+            "auth_rate": 0.9324,
+            "net_per_1000_cents": 3937482
+          },
+          {
+            "block": 6,
+            "auth_rate": 0.9062,
+            "net_per_1000_cents": 4008295
+          },
+          {
+            "block": 7,
+            "auth_rate": 0.9054,
+            "net_per_1000_cents": 3959776
+          },
+          {
+            "block": 8,
+            "auth_rate": 0.8994,
+            "net_per_1000_cents": 3772288
+          },
+          {
+            "block": 9,
+            "auth_rate": 0.8978,
+            "net_per_1000_cents": 3958531
+          },
+          {
+            "block": 10,
+            "auth_rate": 0.905,
+            "net_per_1000_cents": 3794891
+          }
+        ]
+      },
+      "oracle": {
+        "before": {
+          "transactions": 25000,
+          "auth_rate": 0.9433,
+          "net_per_1000_cents": 3984154
+        },
+        "after": {
+          "transactions": 25000,
+          "auth_rate": 0.9184,
+          "net_per_1000_cents": 3896957
+        },
+        "blocks": [
+          {
+            "block": 1,
+            "auth_rate": 0.9414,
+            "net_per_1000_cents": 3882041
+          },
+          {
+            "block": 2,
+            "auth_rate": 0.9452,
+            "net_per_1000_cents": 4033614
+          },
+          {
+            "block": 3,
+            "auth_rate": 0.9402,
+            "net_per_1000_cents": 3996603
+          },
+          {
+            "block": 4,
+            "auth_rate": 0.9426,
+            "net_per_1000_cents": 4002834
+          },
+          {
+            "block": 5,
+            "auth_rate": 0.947,
+            "net_per_1000_cents": 4005680
+          },
+          {
+            "block": 6,
+            "auth_rate": 0.9262,
+            "net_per_1000_cents": 4006190
+          },
+          {
+            "block": 7,
+            "auth_rate": 0.9158,
+            "net_per_1000_cents": 3941884
+          },
+          {
+            "block": 8,
+            "auth_rate": 0.914,
+            "net_per_1000_cents": 3787140
+          },
+          {
+            "block": 9,
+            "auth_rate": 0.919,
+            "net_per_1000_cents": 3955727
+          },
+          {
+            "block": 10,
+            "auth_rate": 0.9168,
+            "net_per_1000_cents": 3793844
+          }
+        ]
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 12,
+  "sequence": 13,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -246,6 +246,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/agent-bazaar/commit/213fb27",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-06",
+      "id": "payment-routing",
+      "lane": "build",
+      "title": "Authorization-rate aware payment routing",
+      "thesis": "Routing on the lowest published fee collects 26.9 basis points less in fees and still gives up 4.0 percent of net margin, $1,531 per 1,000 transactions, because the cheapest provider is the worst in 7 of 12 segments. A three-line rule table recovers nearly all of it; learned routing only earns its keep when a provider's approval rate moves, and the all-history posterior then misses the shift while a 300 attempt window tracks it.",
+      "path": "artifacts/2026-11-06-payment-routing/",
+      "theme": "acquiring",
+      "score": 4.6,
+      "tests": {
+        "passed": 34,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-06-payment-routing",
       "promoted": false
     }
   ],
