@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 13,
+  "sequence": 14,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -262,6 +262,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-06-payment-routing",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-07",
+      "id": "h-angelone-main",
+      "lane": "harden",
+      "title": "Make main the mandate, not the day-0 skeleton",
+      "thesis": "The default branch held 2 commits and none of the work: no mandate package, no rails, no run record. Main now carries the 23 commits that built them, merged rather than replayed, so the repo a reader opens is the repo the README describes.",
+      "path": "",
+      "theme": "positioning",
+      "score": null,
+      "tests": {
+        "passed": 113,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/angelone-smartapi/commit/80176f0",
       "promoted": false
     }
   ],

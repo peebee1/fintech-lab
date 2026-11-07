@@ -133,7 +133,9 @@
       "impact": 4,
       "confidence": 5,
       "effort": 3,
-      "status": "queued"
+      "status": "shipped",
+      "shipped": "2026-11-07",
+      "resolution": "Premise corrected in one respect: peebee1/angelone-smartapi is a PRIVATE repo, so no stranger can clone it at all. The defect survives the correction because the default branch is the first thing any reader with access sees, and every clone starts there: origin/main held 2 commits (the skeleton and a license) while the 23 commits that built mandate/, tests/test_mandate.py, docs/60day-plan.md and the CI workflow sat on feat/60-day-mandate. Fix: merged the branch into main with --no-ff rather than squashing or cherry picking, because the refusals and the hardening commits are the record the README points at, and the LICENSE commit from main is preserved by the merge. Order was the one docs/publish-scope.md required: the host-identifier purge (da60709) landed first, so the promoted branch carries no tracked state file. docs/publish-scope.md now records the merge as done and states the residual plainly: 3 of the commits reachable from main still carry an address in their diffs, and removing them needs a force push, which this lab forbids. Verified on the merged tree, not assumed: 113 unittest, 113 pytest, 0 failures; scripts/check_public_surface.py scans 47 tracked files and finds 0 host identifiers; python -m mandate.runlog still tallies 8 intents, 0 fills, 4 broker refusals and 1 rail refusal. CI green on main at 80176f0 (run 42353749125). tools/gate.py was run and is not applicable: G2 dies on flat module imports from the lab rootdir, G3 wants a results/ directory, G5 wants a README section this repo does not use, G6 bans the urllib that this broker client is, G7 caps 1500 python lines against 3,520. The repo suite that CI runs is the gate for a harden item. Left alone on purpose: feat/60-day-mandate still exists as the branch the live agent runs on, and the local working tree still holds uncommitted runtime intent files (the day's research output), which are not part of this change."
     },
     {
       "id": "h-angelone-publish-scope",
