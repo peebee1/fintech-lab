@@ -7,7 +7,6 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 
 | Score | Item | Theme | Claim |
 |---|---|---|---|
-| 4.40 | Broker order, fill, and position reconciliation | market-infra | Retail trading apps fail quietly at the seam between the broker, the exchange, and the books. |
 | 4.30 | Chargeback representment state machine | risk | Every dispute is a clock. The product is knowing which clock is running and what evidence still matters. |
 | 4.25 | LLM underwriting judged by calibration, not vibes | credit | An underwriting model is good when its probabilities mean something. Brier score does not care how confident the prompt sounded. |
 | 4.15 | Append only ledger with a provable close | money-movement | Closing the books is a testable property, not a monthly meeting. |
@@ -24,6 +23,7 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 | shipped | Sanctions screening that cuts false positives | risk |
 | shipped | Authorization-rate aware payment routing | acquiring |
 | shipped | Subscription mandate simulator across rails | recurring |
+| shipped | Broker order, fill, and position reconciliation | market-infra |
 | parked | PAN vault with scoped detokenization | security |
 | parked | Bank statement to normalized ledger | data |
 | parked | Regulatory change watcher for PSD3, RBI, MiCA | compliance |

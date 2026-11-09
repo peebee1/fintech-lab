@@ -1,0 +1,153 @@
+{
+  "config": {
+    "seed": 11,
+    "orders": 1200,
+    "per_class": 40,
+    "review_budget": 60,
+    "symbols": [
+      "RELIANCE",
+      "INFY",
+      "TCS",
+      "HDFCBANK",
+      "ICICIBANK",
+      "SBIN",
+      "BHARTIARTL",
+      "ITC",
+      "LT",
+      "AXISBANK",
+      "KOTAKBANK",
+      "MARUTI"
+    ]
+  },
+  "session": {
+    "fills": 1668,
+    "orders_with_fills": 992,
+    "app_fills": 1708,
+    "injected_breaks": 286,
+    "orders_flagged": 280
+  },
+  "policies": [
+    {
+      "policy": "broker_only",
+      "breaks_detected": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "position_gap_shares": 844,
+      "position_gap_rupees": 2720292.3,
+      "cash_gap_rupees": null
+    },
+    {
+      "policy": "broker_vs_app",
+      "breaks_detected": 206,
+      "precision": 0.4272,
+      "recall": 0.3077,
+      "f1": 0.3577,
+      "position_gap_shares": 1424,
+      "position_gap_rupees": 3303825.99,
+      "cash_gap_rupees": null
+    },
+    {
+      "policy": "stream_replay",
+      "breaks_detected": 40,
+      "precision": 1.0,
+      "recall": 0.1399,
+      "f1": 0.2454,
+      "position_gap_shares": 1779,
+      "position_gap_rupees": 3434396.14,
+      "cash_gap_rupees": -554078.48
+    },
+    {
+      "policy": "tape_three_way",
+      "breaks_detected": 286,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "position_gap_shares": 0,
+      "position_gap_rupees": 0.0,
+      "cash_gap_rupees": 0.0
+    }
+  ],
+  "classes": [
+    {
+      "class": "duplicate_fill",
+      "truth": 40,
+      "detected": 40,
+      "correct": 40,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "class": "missing_fill",
+      "truth": 40,
+      "detected": 40,
+      "correct": 40,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "class": "price_drift",
+      "truth": 40,
+      "detected": 40,
+      "correct": 40,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "class": "qty_mismatch",
+      "truth": 40,
+      "detected": 40,
+      "correct": 40,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "class": "broker_qty_lag",
+      "truth": 40,
+      "detected": 40,
+      "correct": 40,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "class": "fill_after_cancel",
+      "truth": 40,
+      "detected": 40,
+      "correct": 40,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "class": "orphan_fill",
+      "truth": 40,
+      "detected": 40,
+      "correct": 40,
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    {
+      "class": "phantom_position",
+      "truth": 6,
+      "detected": 6,
+      "correct": 6,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  ],
+  "invariants": {
+    "symbols_checked": 6,
+    "max_share_gap": 0,
+    "max_share_gap_with_flipped_sign": 302,
+    "cash_gap_paise": 0,
+    "total_explained_shares": 1231
+  },
+  "triage": {
+    "budget": 60,
+    "breaks": 286,
+    "impact_paise": 1474985670,
+    "coverage_by_impact": 0.8712,
+    "coverage_by_arrival": 0.2562,
+    "coverage_random": 0.2043,
+    "top_ten_share": 0.4099
+  }
+}

@@ -279,6 +279,22 @@
       },
       "url": "https://github.com/peebee1/angelone-smartapi/commit/80176f0",
       "promoted": false
+    },
+    {
+      "date": "2026-11-09",
+      "id": "exchange-recon",
+      "lane": "build",
+      "title": "Broker order, fill, and position reconciliation",
+      "thesis": "A book reconciled to the broker snapshot alone sits 844 shares and 27.2 lakh rupees away from the exchange tape on a 1,200 order session and reports zero breaks, because it has nothing to compare against. Reconciling the app to the broker flags 206 items at 43 percent precision and still leaves 1,424 shares off. Naming every break from the tape closes the gap to zero, and ranking the 286 breaks by rupee impact puts 87 percent of the exposure inside 60 review tickets against 26 percent in arrival order.",
+      "path": "artifacts/2026-11-09-exchange-recon/",
+      "theme": "market-infra",
+      "score": 4.7,
+      "tests": {
+        "passed": 24,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-09-exchange-recon",
+      "promoted": false
     }
   ],
   "parked": [],

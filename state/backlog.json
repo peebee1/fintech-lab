@@ -183,7 +183,7 @@
       "thesis": "Retail trading apps fail quietly at the seam between the broker, the exchange, and the books.",
       "theme": "market-infra",
       "type": "artifact",
-      "status": "queued",
+      "status": "shipped",
       "scores": {
         "s1": 5,
         "s2": 4,
@@ -193,8 +193,9 @@
         "s6": 5,
         "s7": 5
       },
-      "notes": "Extends the Angel One repo into a reconciliation harness. Keep separate from recon to avoid theme repetition.",
-      "added": "2026-10-23"
+      "notes": "Extends the Angel One repo into a reconciliation harness. Keep separate from recon to avoid theme repetition. Shipped 2026-11-09, re-scored 4.70, promotion candidate. 1,200 orders, 1,668 prints, 286 injected breaks in 8 classes. broker_only leaves 844 shares and 27.2 lakh rupees of drift and reports nothing; broker_vs_app flags 206 items at 0.43 precision and still leaves 1,424 shares off; stream_replay leaves 1,779 shares and 5.54 lakh of cash. tape_three_way names all 286 and the reconstructed book equals the tape, with the explained delta equality holding at a max gap of 0 across 6 symbols. Triage at 60 tickets covers 87 percent of rupee exposure by impact, 26 percent by arrival order.",
+      "added": "2026-10-23",
+      "shipped": "2026-11-09"
     },
     {
       "id": "ledger-close",
