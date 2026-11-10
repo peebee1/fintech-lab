@@ -295,6 +295,22 @@
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-09-exchange-recon",
       "promoted": false
+    },
+    {
+      "date": "2026-11-10",
+      "id": "h-acp-bench",
+      "lane": "harden",
+      "title": "Make the load benchmark a gate, not a table",
+      "thesis": "bench/results.md was prose: no machine readable record, no threshold, and nothing failed when a number got worse. One JSON record now feeds the markdown, the gate and CI, and a mutated run returns four named violations.",
+      "path": "",
+      "theme": "reliability",
+      "score": null,
+      "tests": {
+        "passed": 60,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/agentic-commerce-protocol-poc/commit/d1938f8",
+      "promoted": false
     }
   ],
   "parked": [],
