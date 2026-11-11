@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**19 ships** | **2 day streak** (best 6) | 9 new artifacts | 10 fixes to existing repos
+**20 ships** | **3 day streak** (best 6) | 10 new artifacts | 10 fixes to existing repos
 
-Latest: **Make the load benchmark a gate, not a table** (2026-11-10)
+Latest: **The three clocks in a chargeback** (2026-11-11)
 
-> bench/results.md was prose: no machine readable record, no threshold, and nothing failed when a number got worse. One JSON record now feeds the markdown, the gate and CI, and a mutated run returns four named violations.
+> A status tracker recovers 21.3% of the defensible value in a 2,000 dispute book. Three clocks, two zero evidence checks, an evidence gate and a value per minute queue take the same 40 analyst minutes a day to 94.0%, worth $201,675. 55.2% of the recoverable money needs no evidence at all, and the tracker captured 6.4% of it.
 
-[Commit](https://github.com/peebee1/agentic-commerce-protocol-poc/commit/d1938f8)
+[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-11-dispute-clock)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-11-11 | [The three clocks in a chargeback](artifacts/2026-11-11-dispute-clock/) | A status tracker recovers 21.3% of the defensible value in a 2,000 dispute book. Three clocks, two zero evidence checks, an evidence gate and a value per minute queue take the same 40 analyst minutes a day to 94.0%, worth $201,675. 55.2% of the recoverable money needs no evidence at all, and the tracker captured 6.4% of it. | 32 passed | 4.75 |
 | 2026-11-10 | Make the load benchmark a gate, not a table | bench/results.md was prose: no machine readable record, no threshold, and nothing failed when a number got worse. One JSON record now feeds the markdown, the gate and CI, and a mutated run returns four named violations. | 60 passed | n/a |
 | 2026-11-09 | [Broker order, fill, and position reconciliation](artifacts/2026-11-09-exchange-recon/) | A book reconciled to the broker snapshot alone sits 844 shares and 27.2 lakh rupees away from the exchange tape on a 1,200 order session and reports zero breaks, because it has nothing to compare against. Reconciling the app to the broker flags 206 items at 43 percent precision and still leaves 1,424 shares off. Naming every break from the tape closes the gap to zero, and ranking the 286 breaks by rupee impact puts 87 percent of the exposure inside 60 review tickets against 26 percent in arrival order. | 24 passed | 4.70 |
 | 2026-11-07 | Make main the mandate, not the day-0 skeleton | The default branch held 2 commits and none of the work: no mandate package, no rails, no run record. Main now carries the 23 commits that built them, merged rather than replayed, so the repo a reader opens is the repo the README describes. | 113 passed | n/a |

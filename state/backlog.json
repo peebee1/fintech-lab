@@ -164,18 +164,19 @@
       "thesis": "Every dispute is a clock. The product is knowing which clock is running and what evidence still matters.",
       "theme": "risk",
       "type": "artifact",
-      "status": "queued",
+      "status": "shipped",
       "scores": {
         "s1": 5,
-        "s2": 4,
+        "s2": 5,
         "s3": 4,
-        "s4": 4,
-        "s5": 4,
+        "s4": 5,
+        "s5": 5,
         "s6": 5,
         "s7": 4
       },
-      "notes": "Network rule variants, evidence deadlines, liability shift, deadline breach simulation.",
-      "added": "2026-10-23"
+      "notes": "Shipped 2026-11-11, re-scored 4.75, promotion candidate. 2,000 synthetic disputes, $356,862 disputed, $277,708 (77.8%) defensible, 40 analyst minutes a day. Ladder of five policies: status_only 21.3%, response_clock 66.5%, frees_added 73.8%, complete_evidence 77.3%, three_clock 94.0% ($260,905). Unlimited analyst time reaches 98.2%, so the staffing constraint is worth $11,682 and the queue ordering is worth more. 621 free wins ($153,411, 55.2% of the ceiling) need no evidence; the status tracker captured 6.4% of that. 563 of its 804 forfeits are fraud, because a 25 day sweep is longer than the 20 day fraud window. Contest precision 0.53 to 0.96, wasted minutes 2,385 to 934. All six bench checks pass, including budget and deadline binding checks.",
+      "added": "2026-10-23",
+      "shipped": "2026-11-11"
     },
     {
       "id": "exchange-recon",

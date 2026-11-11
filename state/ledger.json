@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 14,
+  "sequence": 15,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -310,6 +310,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/agentic-commerce-protocol-poc/commit/d1938f8",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-11",
+      "id": "dispute-lifecycle",
+      "lane": "build",
+      "title": "The three clocks in a chargeback",
+      "thesis": "A status tracker recovers 21.3% of the defensible value in a 2,000 dispute book. Three clocks, two zero evidence checks, an evidence gate and a value per minute queue take the same 40 analyst minutes a day to 94.0%, worth $201,675. 55.2% of the recoverable money needs no evidence at all, and the tracker captured 6.4% of it.",
+      "path": "artifacts/2026-11-11-dispute-clock/",
+      "theme": "risk",
+      "score": 4.75,
+      "tests": {
+        "passed": 32,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-11-dispute-clock",
       "promoted": false
     }
   ],
