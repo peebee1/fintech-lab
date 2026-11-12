@@ -124,7 +124,9 @@
       "impact": 3,
       "confidence": 5,
       "effort": 3,
-      "status": "queued"
+      "status": "shipped",
+      "shipped": "2026-11-12",
+      "resolution": "Filed defect was half right. Stale data: yes, the synthetic catalog was generated 2026-08-04 and the crawled one 2026-08-05, 100 and 99 days before this run. Stale freshness labels in the eval report: no, the report never contained a freshness field at all, so nothing there was quoting one. The real defect sits one level down: JsonSource took as_of from path.stat().st_mtime and git rewrites mtime on checkout, so a fresh clone of the 100 day old catalog printed 'data as of 2026-11-12 08:02 UTC (fresh, 0m old)'. Freshness was measuring the clone. Neither committed catalog carried a date. Fix: save_catalog writes _meta.data_as_of (ISO 8601 UTC, injectable as_of for tests and backfills), JsonSource prefers the recorded date and exposes as_of_source (recorded, mtime, http), legacy files keep the mtime fallback rather than failing, EvalReport now carries data_as_of so a score names the book it scored, and a committed shopcon-catalog command regenerates the seeded fixture so the refresh is reproducible. Refresh: 243 synthetic products regenerated from committed code, verified byte identical to the committed products (only _meta changed, so the recorded eval numbers still describe the same book); real store re-crawled, 35 pages fetched, 8 products kept, 7 seen again, 0 price changes. Measured on two real clones: before, fresh clone of 986b085 reported as of 08:02 (the clone time) on August data; after, clone of 6983743 reports as of 08:03 (the recorded date) with file mtime 09:06. 7 new tests, 69 total, 0 failures. tools/gate.py was run and is not applicable to a harden item in a live repo: G2 collects from the lab rootdir and reports 8 errors on the flat imports, G5 wants README sections named problem, results and limits that this repo does not use, G6 flags the httpx client in 4 test files (the crawler is the function), G7 counts 4047 python lines against its 1500 cap. G3 and G4 pass. The repo suite that CI runs is the gate."
     },
     {
       "id": "h-angelone-main",
