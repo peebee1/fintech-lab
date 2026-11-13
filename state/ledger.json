@@ -343,6 +343,22 @@
       },
       "url": "https://github.com/peebee1/shopping-concierge/commit/6983743",
       "promoted": false
+    },
+    {
+      "date": "2026-11-13",
+      "id": "underwriting-calibration",
+      "lane": "build",
+      "title": "An underwriting model is a probability, or it is a personality test",
+      "thesis": "Three models rank the same 1,500 loan holdout identically, AUC 0.7402 and 0.862 accuracy at 0.5 for all three, and disagree by $417,755 of contribution, because one reports a mean PD of 5.99% where 13.73% default and approves 85.9% of the book. Two parameters fitted on 1,500 settled loans cut Brier by 8.8%, take ECE from 0.0951 to 0.0213, and turn a $150,633 loss into $270,379, which is $3,256 above the calibrated baseline. Ranking metrics cannot see the number that prices the loan.",
+      "path": "artifacts/2026-11-13-underwriting-calibration/",
+      "theme": "credit",
+      "score": 4.45,
+      "tests": {
+        "passed": 60,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-13-underwriting-calibration",
+      "promoted": false
     }
   ],
   "parked": [],

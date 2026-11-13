@@ -223,7 +223,7 @@
       "thesis": "An underwriting model is good when its probabilities mean something. Brier score does not care how confident the prompt sounded.",
       "theme": "credit",
       "type": "artifact",
-      "status": "queued",
+      "status": "shipped",
       "scores": {
         "s1": 4,
         "s2": 5,
