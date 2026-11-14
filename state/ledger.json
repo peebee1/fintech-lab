@@ -359,6 +359,22 @@
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-13-underwriting-calibration",
       "promoted": false
+    },
+    {
+      "date": "2026-11-14",
+      "id": "ledger-close",
+      "lane": "build",
+      "title": "Closing the books is a testable property, not a monthly meeting",
+      "thesis": "An append only, hash chained ledger closed four months of a 281 transaction book: 0 of 4 closed periods changed after the close, while the same five events moved 3 of 4 months and INR 22,700 in a stored balance ledger, which kept only 1 of 4 closes reproducible. One out of band edit of a single January entry broke the chain at seq 1 and stopped that close from reproducing while three others still verified.",
+      "path": "artifacts/2026-11-14-ledger-close/",
+      "theme": "money-movement",
+      "score": 4.45,
+      "tests": {
+        "passed": 33,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-14-ledger-close",
+      "promoted": false
     }
   ],
   "parked": [],

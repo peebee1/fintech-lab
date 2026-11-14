@@ -1,0 +1,92 @@
+{
+  "artifact": "ledger-close",
+  "as_of": "2026-05-20T09:30:00Z",
+  "baseline": {
+    "balanced_periods_after_events": 4,
+    "closed_period_drift": {
+      "absolute_minor": 2270000,
+      "fee_revenue_minor": 100000,
+      "per_period": {
+        "2026-01": {
+          "fee_revenue": 500000,
+          "tax_payable": -500000
+        },
+        "2026-02": {
+          "cash": 500000,
+          "fee_revenue": -400000
+        },
+        "2026-03": {
+          "bank_fees": 185000,
+          "cash": -185000
+        },
+        "2026-04": {}
+      },
+      "periods_drifted": 3
+    },
+    "closes_reproducing": 1,
+    "duplicate_fee_minor": -54836,
+    "net_minor_after_events": 200000,
+    "net_minor_after_tamper": -2300000,
+    "periods_tested": 6,
+    "tamper_detected": 0,
+    "tamper_drift_minor": 2500000
+  },
+  "book": {
+    "average_payment_minor": 2656331,
+    "counts": {
+      "payment": 240,
+      "payout": 6,
+      "refund": 35
+    },
+    "entries": 281,
+    "gross_minor": 637519538,
+    "months": 6
+  },
+  "closed_periods": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04"
+  ],
+  "sealed": {
+    "balanced_periods": 6,
+    "chain": {
+      "broken_seq": 1,
+      "checked": 0,
+      "ok": false,
+      "reason": "entry contents changed after it was chained"
+    },
+    "chain_before_tamper": {
+      "checked": 284,
+      "ok": true
+    },
+    "closed_period_drift": {
+      "absolute_minor": 0,
+      "fee_revenue_minor": 0,
+      "per_period": {
+        "2026-01": {},
+        "2026-02": {},
+        "2026-03": {},
+        "2026-04": {}
+      },
+      "periods_drifted": 0
+    },
+    "closes_reproducing_after_tamper": 3,
+    "closes_reproducing_before_tamper": 4,
+    "failing_closes": [
+      "2026-01"
+    ],
+    "journal_entries": 284,
+    "net_minor": 0,
+    "open_period_fee_revenue_minor": 341912,
+    "periods_tested": 6,
+    "refusals": {
+      "ClosedPeriod": 2,
+      "NoAmend": 1,
+      "Unbalanced": 1
+    },
+    "replay_entries_appended": 0,
+    "tamper_drift_minor": 2500000
+  },
+  "seed": 7
+}
