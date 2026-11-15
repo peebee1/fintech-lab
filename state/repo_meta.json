@@ -41,6 +41,11 @@
       "repo": "mishika.de",
       "description": "Personal site for Mishika Gupta, strategy and business consultant.",
       "topics": ["consulting", "personal-website", "portfolio"]
+    },
+    {
+      "repo": "dispute-clocks",
+      "description": "A chargeback runs on three clocks, not one. A simulator that scores dispute policies against an analyst budget: 21.3% of the recoverable value with a status tracker, 94.0% with the clocks, an evidence gate and a value per minute queue.",
+      "topics": ["chargebacks", "fintech", "payments", "python", "risk", "simulation", "disputes"]
     }
   ]
 }

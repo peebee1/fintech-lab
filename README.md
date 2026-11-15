@@ -52,6 +52,7 @@ An artifact moves to its own repo when it scores 4.2 or higher, its measurements
 
 - [settlement-recon](https://github.com/peebee1/settlement-recon): A recon engine that scores its own recall against injected breaks, and refuses to force a match.
 - [mandate-rails](https://github.com/peebee1/mandate-rails): One scheduler, three rails: 99.48% kept on cards, 60.74% on SEPA, 46.87% on UPI. The rail decides the outcome, not the code.
+- [dispute-clocks](https://github.com/peebee1/dispute-clocks): A status tracker recovers 21.3% of the defensible value in a 2,000 dispute book. Three clocks, two zero evidence checks, an evidence gate and a value per minute queue take the same 40 analyst minutes a day to 94.0%, worth $201,675. 55.2% of the recoverable money needs no evidence at all, and the tracker captured 6.4% of it.
 
 <!-- DASHBOARD:END -->
 

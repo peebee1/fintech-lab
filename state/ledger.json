@@ -326,7 +326,10 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-11-dispute-clock",
-      "promoted": false
+      "promoted": true,
+      "promoted_url": "https://github.com/peebee1/dispute-clocks",
+      "promoted_date": "2026-11-15",
+      "promoted_tests": 32
     },
     {
       "date": "2026-11-12",
