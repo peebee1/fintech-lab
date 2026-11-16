@@ -27,3 +27,4 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 | parked | PAN vault with scoped detokenization | security |
 | parked | Bank statement to normalized ledger | data |
 | parked | Regulatory change watcher for PSD3, RBI, MiCA | compliance |
+| shipped | Confirmation depth priced by ticket, not copied from a doc | stablecoin |

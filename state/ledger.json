@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 16,
+  "sequence": 17,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -377,6 +377,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-14-ledger-close",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-16",
+      "id": "finality-policy",
+      "lane": "build",
+      "title": "Confirmation depth priced by ticket, not copied from a doc",
+      "thesis": "Crediting a stablecoin payment at inclusion lost 136 bps of a USD 6.69M book over four weeks, and twelve confirmations still lost USD 13,912.83. Ticket tiers took the same book to 4.6 bps with 92.5 percent of payments clearing inside a minute. The protection is a cliff, not a slope: 12 to 32 blocks halves the loss and 32 to 40 removes it. A curve fitted on 28 days loses USD 6,740 when incidents fork 1.5x deeper than anything it saw, against USD 5,322 for the four row table.",
+      "path": "artifacts/2026-11-16-finality-policy/",
+      "theme": "stablecoin",
+      "score": 4.75,
+      "tests": {
+        "passed": 58,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-16-finality-policy",
       "promoted": false
     }
   ],

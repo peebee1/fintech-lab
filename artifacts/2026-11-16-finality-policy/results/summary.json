@@ -1,0 +1,1951 @@
+{
+  "book": {
+    "max_usd": 56127.8,
+    "median_usd": 136.26,
+    "p99_usd": 4304.82,
+    "payments": 4000,
+    "per_chain": {
+      "base": 1800,
+      "ethereum": 800,
+      "polygon": 1400
+    },
+    "total_usd": 1671976.24
+  },
+  "calibration": {
+    "days": 28,
+    "payments": 16000,
+    "seed": 20261101
+  },
+  "chains": {
+    "base": {
+      "block_time_s": 2,
+      "deep_q": 0.72,
+      "drop_prob": 0.55,
+      "incident_max": 48,
+      "incident_min": 20,
+      "incident_share": 0.04,
+      "reorgs_per_day": 150.0,
+      "shallow_share": 0.8
+    },
+    "ethereum": {
+      "block_time_s": 12,
+      "deep_q": 0.66,
+      "drop_prob": 0.6,
+      "incident_max": 40,
+      "incident_min": 16,
+      "incident_share": 0.01,
+      "reorgs_per_day": 4.0,
+      "shallow_share": 0.9
+    },
+    "polygon": {
+      "block_time_s": 2,
+      "deep_q": 0.7,
+      "drop_prob": 0.55,
+      "incident_max": 48,
+      "incident_min": 20,
+      "incident_share": 0.03,
+      "reorgs_per_day": 75.0,
+      "shallow_share": 0.85
+    }
+  },
+  "checks": {
+    "calibration_has_events": true,
+    "control_binds": true,
+    "deterministic_rerun": true,
+    "every_credit_after_inclusion": true,
+    "every_loss_was_credited_first": true,
+    "four_weeks_scored": true,
+    "loss_is_a_subset_of_false_credits": true,
+    "risk_curve_monotone": true
+  },
+  "command": "PYTHONPATH=. uv run python -m finality.cli bench",
+  "model": "synthetic reorg process, stated in finality/chain.py",
+  "params": {
+    "carry_per_hour": 1.4e-05,
+    "fixed_per_hour": 0.25
+  },
+  "policies": {
+    "calibrated": {
+      "exposed_usd": 202.64,
+      "false_credit_rate": 0.00019,
+      "false_credits": 3,
+      "k": {
+        "by_chain": {
+          "base": {
+            "max": 46,
+            "median": 46.0,
+            "min": 24
+          },
+          "ethereum": {
+            "max": 28,
+            "median": 28.0,
+            "min": 2
+          },
+          "polygon": {
+            "max": 35,
+            "median": 35.0,
+            "min": 9
+          }
+        },
+        "max": 46,
+        "median": 35.0,
+        "min": 2
+      },
+      "largest_loss_usd": 133.48,
+      "loss_bps": 0.326,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "100_to_1000": {
+          "loss_usd": 133.48,
+          "lost": 1
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 69.16,
+          "lost": 2
+        }
+      },
+      "loss_usd": 202.64,
+      "median_delay_s": 93.0,
+      "p95_delay_s": 344.0,
+      "payments": 16000,
+      "per_chain": {
+        "base": {
+          "exposed_usd": 202.64,
+          "false_credit_rate": 0.00042,
+          "false_credits": 3,
+          "largest_loss_usd": 133.48,
+          "loss_bps": 0.703,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 133.48,
+              "lost": 1
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 69.16,
+              "lost": 2
+            }
+          },
+          "loss_usd": 202.64,
+          "median_delay_s": 93.0,
+          "p95_delay_s": 98.0,
+          "payments": 7200,
+          "share_credited_60s": 0.0007,
+          "total_cost_usd": 250.48,
+          "value_usd": 2883489.92,
+          "value_weighted_delay_s": 94.4,
+          "wait_cost_usd": 47.84
+        },
+        "ethereum": {
+          "exposed_usd": 0.0,
+          "false_credit_rate": 0.0,
+          "false_credits": 0,
+          "largest_loss_usd": 0.0,
+          "loss_bps": 0.0,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 0.0,
+              "lost": 0
+            }
+          },
+          "loss_usd": 0.0,
+          "median_delay_s": 340.0,
+          "p95_delay_s": 348.0,
+          "payments": 3200,
+          "share_credited_60s": 0.0147,
+          "total_cost_usd": 67.82,
+          "value_usd": 1198443.38,
+          "value_weighted_delay_s": 339.3,
+          "wait_cost_usd": 67.82
+        },
+        "polygon": {
+          "exposed_usd": 0.0,
+          "false_credit_rate": 0.0,
+          "false_credits": 0,
+          "largest_loss_usd": 0.0,
+          "loss_bps": 0.0,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 0.0,
+              "lost": 0
+            }
+          },
+          "loss_usd": 0.0,
+          "median_delay_s": 71.0,
+          "p95_delay_s": 72.0,
+          "payments": 5600,
+          "share_credited_60s": 0.0807,
+          "total_cost_usd": 27.6,
+          "value_usd": 2135705.06,
+          "value_weighted_delay_s": 71.5,
+          "wait_cost_usd": 27.6
+        }
+      },
+      "per_week": [
+        {
+          "false_credits": 0,
+          "loss_usd": 0.0,
+          "seed": 20261116
+        },
+        {
+          "false_credits": 0,
+          "loss_usd": 0.0,
+          "seed": 20261123
+        },
+        {
+          "false_credits": 1,
+          "loss_usd": 28.67,
+          "seed": 20261130
+        },
+        {
+          "false_credits": 2,
+          "loss_usd": 173.97,
+          "seed": 20261207
+        }
+      ],
+      "share_credited_60s": 0.0315,
+      "total_cost_usd": 345.9,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 133.8,
+      "wait_cost_usd": 143.26
+    },
+    "chain_defaults": {
+      "exposed_usd": 23867.94,
+      "false_credit_rate": 0.0035,
+      "false_credits": 56,
+      "k": {
+        "by_chain": {
+          "base": {
+            "max": 12,
+            "median": 12.0,
+            "min": 12
+          },
+          "ethereum": {
+            "max": 32,
+            "median": 32.0,
+            "min": 32
+          },
+          "polygon": {
+            "max": 30,
+            "median": 30.0,
+            "min": 30
+          }
+        },
+        "max": 32,
+        "median": 30.0,
+        "min": 12
+      },
+      "largest_loss_usd": 4549.41,
+      "loss_bps": 22.287,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 10443.92,
+          "lost": 5
+        },
+        "100_to_1000": {
+          "loss_usd": 2671.0,
+          "lost": 12
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 742.23,
+          "lost": 14
+        }
+      },
+      "loss_usd": 13857.15,
+      "median_delay_s": 61.0,
+      "p95_delay_s": 393.0,
+      "payments": 16000,
+      "per_chain": {
+        "base": {
+          "exposed_usd": 23670.01,
+          "false_credit_rate": 0.00764,
+          "false_credits": 55,
+          "largest_loss_usd": 4549.41,
+          "loss_bps": 48.057,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 10443.92,
+              "lost": 5
+            },
+            "100_to_1000": {
+              "loss_usd": 2671.0,
+              "lost": 12
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 742.23,
+              "lost": 14
+            }
+          },
+          "loss_usd": 13857.15,
+          "median_delay_s": 26.0,
+          "p95_delay_s": 30.0,
+          "payments": 7200,
+          "share_credited_60s": 1.0,
+          "total_cost_usd": 13870.47,
+          "value_usd": 2883489.92,
+          "value_weighted_delay_s": 26.0,
+          "wait_cost_usd": 13.32
+        },
+        "ethereum": {
+          "exposed_usd": 0.0,
+          "false_credit_rate": 0.0,
+          "false_credits": 0,
+          "largest_loss_usd": 0.0,
+          "loss_bps": 0.0,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 0.0,
+              "lost": 0
+            }
+          },
+          "loss_usd": 0.0,
+          "median_delay_s": 391.0,
+          "p95_delay_s": 396.0,
+          "payments": 3200,
+          "share_credited_60s": 0.0,
+          "total_cost_usd": 88.6,
+          "value_usd": 1198443.38,
+          "value_weighted_delay_s": 390.5,
+          "wait_cost_usd": 88.6
+        },
+        "polygon": {
+          "exposed_usd": 197.93,
+          "false_credit_rate": 0.00018,
+          "false_credits": 1,
+          "largest_loss_usd": 0.0,
+          "loss_bps": 0.0,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 0.0,
+              "lost": 0
+            }
+          },
+          "loss_usd": 0.0,
+          "median_delay_s": 62.0,
+          "p95_delay_s": 62.0,
+          "payments": 5600,
+          "share_credited_60s": 0.0,
+          "total_cost_usd": 24.45,
+          "value_usd": 2135705.06,
+          "value_weighted_delay_s": 61.6,
+          "wait_cost_usd": 24.45
+        }
+      },
+      "per_week": [
+        {
+          "false_credits": 11,
+          "loss_usd": 3530.6,
+          "seed": 20261116
+        },
+        {
+          "false_credits": 10,
+          "loss_usd": 5002.41,
+          "seed": 20261123
+        },
+        {
+          "false_credits": 16,
+          "loss_usd": 3259.45,
+          "seed": 20261130
+        },
+        {
+          "false_credits": 19,
+          "loss_usd": 2064.69,
+          "seed": 20261207
+        }
+      ],
+      "share_credited_60s": 0.45,
+      "total_cost_usd": 13983.52,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 108.5,
+      "wait_cost_usd": 126.37
+    },
+    "credit_on_inclusion": {
+      "exposed_usd": 144940.02,
+      "false_credit_rate": 0.02287,
+      "false_credits": 366,
+      "k": {
+        "by_chain": {
+          "base": {
+            "max": 1,
+            "median": 1.0,
+            "min": 1
+          },
+          "ethereum": {
+            "max": 1,
+            "median": 1.0,
+            "min": 1
+          },
+          "polygon": {
+            "max": 1,
+            "median": 1.0,
+            "min": 1
+          }
+        },
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      },
+      "largest_loss_usd": 19051.68,
+      "loss_bps": 136.372,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 26656.35,
+          "lost": 15
+        },
+        "100_to_1000": {
+          "loss_usd": 34511.16,
+          "lost": 104
+        },
+        "over_10000": {
+          "loss_usd": 19051.68,
+          "lost": 1
+        },
+        "under_100": {
+          "loss_usd": 4572.26,
+          "lost": 86
+        }
+      },
+      "loss_usd": 84791.45,
+      "median_delay_s": 4.0,
+      "p95_delay_s": 21.0,
+      "payments": 16000,
+      "per_chain": {
+        "base": {
+          "exposed_usd": 142315.08,
+          "false_credit_rate": 0.04861,
+          "false_credits": 350,
+          "largest_loss_usd": 19051.68,
+          "loss_bps": 287.969,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 26656.35,
+              "lost": 15
+            },
+            "100_to_1000": {
+              "loss_usd": 33167.07,
+              "lost": 100
+            },
+            "over_10000": {
+              "loss_usd": 19051.68,
+              "lost": 1
+            },
+            "under_100": {
+              "loss_usd": 4160.49,
+              "lost": 80
+            }
+          },
+          "loss_usd": 83035.59,
+          "median_delay_s": 4.0,
+          "p95_delay_s": 7.0,
+          "payments": 7200,
+          "share_credited_60s": 1.0,
+          "total_cost_usd": 83037.5,
+          "value_usd": 2883489.92,
+          "value_weighted_delay_s": 3.7,
+          "wait_cost_usd": 1.91
+        },
+        "ethereum": {
+          "exposed_usd": 328.16,
+          "false_credit_rate": 0.00063,
+          "false_credits": 2,
+          "largest_loss_usd": 98.41,
+          "loss_bps": 0.821,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 98.41,
+              "lost": 1
+            }
+          },
+          "loss_usd": 98.41,
+          "median_delay_s": 19.0,
+          "p95_delay_s": 24.0,
+          "payments": 3200,
+          "share_credited_60s": 1.0,
+          "total_cost_usd": 102.61,
+          "value_usd": 1198443.38,
+          "value_weighted_delay_s": 18.5,
+          "wait_cost_usd": 4.2
+        },
+        "polygon": {
+          "exposed_usd": 2296.78,
+          "false_credit_rate": 0.0025,
+          "false_credits": 14,
+          "largest_loss_usd": 395.85,
+          "loss_bps": 7.761,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 1344.09,
+              "lost": 4
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 313.36,
+              "lost": 5
+            }
+          },
+          "loss_usd": 1657.45,
+          "median_delay_s": 4.0,
+          "p95_delay_s": 4.0,
+          "payments": 5600,
+          "share_credited_60s": 1.0,
+          "total_cost_usd": 1658.84,
+          "value_usd": 2135705.06,
+          "value_weighted_delay_s": 3.6,
+          "wait_cost_usd": 1.39
+        }
+      },
+      "per_week": [
+        {
+          "false_credits": 95,
+          "loss_usd": 21242.57,
+          "seed": 20261116
+        },
+        {
+          "false_credits": 84,
+          "loss_usd": 13719.05,
+          "seed": 20261123
+        },
+        {
+          "false_credits": 85,
+          "loss_usd": 15045.58,
+          "seed": 20261130
+        },
+        {
+          "false_credits": 102,
+          "loss_usd": 34784.25,
+          "seed": 20261207
+        }
+      ],
+      "share_credited_60s": 1.0,
+      "total_cost_usd": 84798.95,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 6.5,
+      "wait_cost_usd": 7.5
+    },
+    "fixed_12": {
+      "exposed_usd": 23978.99,
+      "false_credit_rate": 0.00363,
+      "false_credits": 58,
+      "k": {
+        "by_chain": {
+          "base": {
+            "max": 12,
+            "median": 12.0,
+            "min": 12
+          },
+          "ethereum": {
+            "max": 12,
+            "median": 12.0,
+            "min": 12
+          },
+          "polygon": {
+            "max": 12,
+            "median": 12.0,
+            "min": 12
+          }
+        },
+        "max": 12,
+        "median": 12.0,
+        "min": 12
+      },
+      "largest_loss_usd": 4549.41,
+      "loss_bps": 22.376,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 10443.92,
+          "lost": 5
+        },
+        "100_to_1000": {
+          "loss_usd": 2671.0,
+          "lost": 12
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 797.91,
+          "lost": 15
+        }
+      },
+      "loss_usd": 13912.83,
+      "median_delay_s": 26.0,
+      "p95_delay_s": 153.0,
+      "payments": 16000,
+      "per_chain": {
+        "base": {
+          "exposed_usd": 23670.01,
+          "false_credit_rate": 0.00764,
+          "false_credits": 55,
+          "largest_loss_usd": 4549.41,
+          "loss_bps": 48.057,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 10443.92,
+              "lost": 5
+            },
+            "100_to_1000": {
+              "loss_usd": 2671.0,
+              "lost": 12
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 742.23,
+              "lost": 14
+            }
+          },
+          "loss_usd": 13857.15,
+          "median_delay_s": 26.0,
+          "p95_delay_s": 30.0,
+          "payments": 7200,
+          "share_credited_60s": 1.0,
+          "total_cost_usd": 13870.47,
+          "value_usd": 2883489.92,
+          "value_weighted_delay_s": 26.0,
+          "wait_cost_usd": 13.32
+        },
+        "ethereum": {
+          "exposed_usd": 0.0,
+          "false_credit_rate": 0.0,
+          "false_credits": 0,
+          "largest_loss_usd": 0.0,
+          "loss_bps": 0.0,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 0.0,
+              "lost": 0
+            }
+          },
+          "loss_usd": 0.0,
+          "median_delay_s": 151.0,
+          "p95_delay_s": 156.0,
+          "payments": 3200,
+          "share_credited_60s": 0.0,
+          "total_cost_usd": 34.15,
+          "value_usd": 1198443.38,
+          "value_weighted_delay_s": 150.5,
+          "wait_cost_usd": 34.15
+        },
+        "polygon": {
+          "exposed_usd": 308.98,
+          "false_credit_rate": 0.00054,
+          "false_credits": 3,
+          "largest_loss_usd": 55.68,
+          "loss_bps": 0.261,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 55.68,
+              "lost": 1
+            }
+          },
+          "loss_usd": 55.68,
+          "median_delay_s": 26.0,
+          "p95_delay_s": 26.0,
+          "payments": 5600,
+          "share_credited_60s": 1.0,
+          "total_cost_usd": 65.82,
+          "value_usd": 2135705.06,
+          "value_weighted_delay_s": 25.6,
+          "wait_cost_usd": 10.14
+        }
+      },
+      "per_week": [
+        {
+          "false_credits": 12,
+          "loss_usd": 3586.28,
+          "seed": 20261116
+        },
+        {
+          "false_credits": 10,
+          "loss_usd": 5002.41,
+          "seed": 20261123
+        },
+        {
+          "false_credits": 17,
+          "loss_usd": 3259.45,
+          "seed": 20261130
+        },
+        {
+          "false_credits": 19,
+          "loss_usd": 2064.69,
+          "seed": 20261207
+        }
+      ],
+      "share_credited_60s": 0.8,
+      "total_cost_usd": 13970.44,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 49.8,
+      "wait_cost_usd": 57.61
+    },
+    "ticket_tiers": {
+      "exposed_usd": 6071.92,
+      "false_credit_rate": 0.0035,
+      "false_credits": 56,
+      "k": {
+        "by_chain": {
+          "base": {
+            "max": 64,
+            "median": 23.0,
+            "min": 6
+          },
+          "ethereum": {
+            "max": 25,
+            "median": 4.0,
+            "min": 1
+          },
+          "polygon": {
+            "max": 64,
+            "median": 23.0,
+            "min": 6
+          }
+        },
+        "max": 64,
+        "median": 6.0,
+        "min": 1
+      },
+      "largest_loss_usd": 536.76,
+      "loss_bps": 4.555,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "100_to_1000": {
+          "loss_usd": 1837.77,
+          "lost": 8
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 994.59,
+          "lost": 18
+        }
+      },
+      "loss_usd": 2832.36,
+      "median_delay_s": 47.0,
+      "p95_delay_s": 121.0,
+      "payments": 16000,
+      "per_chain": {
+        "base": {
+          "exposed_usd": 5664.53,
+          "false_credit_rate": 0.00722,
+          "false_credits": 52,
+          "largest_loss_usd": 536.76,
+          "loss_bps": 9.288,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 1837.77,
+              "lost": 8
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 840.5,
+              "lost": 16
+            }
+          },
+          "loss_usd": 2678.27,
+          "median_delay_s": 47.0,
+          "p95_delay_s": 121.0,
+          "payments": 7200,
+          "share_credited_60s": 0.9251,
+          "total_cost_usd": 2699.25,
+          "value_usd": 2883489.92,
+          "value_weighted_delay_s": 87.4,
+          "wait_cost_usd": 20.98
+        },
+        "ethereum": {
+          "exposed_usd": 98.41,
+          "false_credit_rate": 0.00031,
+          "false_credits": 1,
+          "largest_loss_usd": 98.41,
+          "loss_bps": 0.821,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 98.41,
+              "lost": 1
+            }
+          },
+          "loss_usd": 98.41,
+          "median_delay_s": 51.0,
+          "p95_delay_s": 125.0,
+          "payments": 3200,
+          "share_credited_60s": 0.9216,
+          "total_cost_usd": 109.09,
+          "value_usd": 1198443.38,
+          "value_weighted_delay_s": 97.8,
+          "wait_cost_usd": 10.68
+        },
+        "polygon": {
+          "exposed_usd": 308.98,
+          "false_credit_rate": 0.00054,
+          "false_credits": 3,
+          "largest_loss_usd": 55.68,
+          "loss_bps": 0.261,
+          "loss_by_band": {
+            "1000_to_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "100_to_1000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "over_10000": {
+              "loss_usd": 0.0,
+              "lost": 0
+            },
+            "under_100": {
+              "loss_usd": 55.68,
+              "lost": 1
+            }
+          },
+          "loss_usd": 55.68,
+          "median_delay_s": 47.0,
+          "p95_delay_s": 121.0,
+          "payments": 5600,
+          "share_credited_60s": 0.9257,
+          "total_cost_usd": 71.61,
+          "value_usd": 2135705.06,
+          "value_weighted_delay_s": 84.5,
+          "wait_cost_usd": 15.93
+        }
+      },
+      "per_week": [
+        {
+          "false_credits": 10,
+          "loss_usd": 357.95,
+          "seed": 20261116
+        },
+        {
+          "false_credits": 10,
+          "loss_usd": 280.6,
+          "seed": 20261123
+        },
+        {
+          "false_credits": 15,
+          "loss_usd": 593.27,
+          "seed": 20261130
+        },
+        {
+          "false_credits": 21,
+          "loss_usd": 1600.54,
+          "seed": 20261207
+        }
+      ],
+      "share_credited_60s": 0.9246,
+      "total_cost_usd": 2879.95,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 88.4,
+      "wait_cost_usd": 47.59
+    }
+  },
+  "risk": {
+    "false_credit": {
+      "base": [
+        0.057222,
+        0.024583,
+        0.019861,
+        0.016806,
+        0.015278,
+        0.013889,
+        0.011528,
+        0.010972,
+        0.010278,
+        0.010139,
+        0.009861,
+        0.009861,
+        0.009583,
+        0.009167,
+        0.009028,
+        0.00875,
+        0.008472,
+        0.008194,
+        0.007917,
+        0.007639,
+        0.006944,
+        0.006667,
+        0.006528,
+        0.00625,
+        0.006111,
+        0.005278,
+        0.004722,
+        0.004583,
+        0.004583,
+        0.004167,
+        0.00375,
+        0.00375,
+        0.00375,
+        0.003194,
+        0.002361,
+        0.002222,
+        0.002222,
+        0.002083,
+        0.002083,
+        0.001528,
+        0.00125,
+        0.001111,
+        0.000972,
+        0.000556,
+        0.000417,
+        0.000139,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ethereum": [
+        0.00125,
+        0.000937,
+        0.000625,
+        0.000625,
+        0.000625,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "polygon": [
+        0.002679,
+        0.001786,
+        0.001607,
+        0.001429,
+        0.00125,
+        0.00125,
+        0.00125,
+        0.00125,
+        0.00125,
+        0.001071,
+        0.000893,
+        0.000893,
+        0.000893,
+        0.000893,
+        0.000893,
+        0.000893,
+        0.000893,
+        0.000893,
+        0.000893,
+        0.000714,
+        0.000714,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000357,
+        0.000357,
+        0.000357,
+        0.000357,
+        0.000179,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "loss": {
+      "base": [
+        0.032222,
+        0.014167,
+        0.011528,
+        0.009583,
+        0.00875,
+        0.008056,
+        0.006944,
+        0.006528,
+        0.00625,
+        0.006111,
+        0.005833,
+        0.005833,
+        0.005556,
+        0.005139,
+        0.005139,
+        0.004861,
+        0.004583,
+        0.004444,
+        0.004167,
+        0.003889,
+        0.003194,
+        0.003194,
+        0.003194,
+        0.003194,
+        0.003056,
+        0.002778,
+        0.0025,
+        0.002361,
+        0.002361,
+        0.002222,
+        0.002222,
+        0.002222,
+        0.002222,
+        0.001944,
+        0.001528,
+        0.001528,
+        0.001528,
+        0.001389,
+        0.001389,
+        0.000972,
+        0.000694,
+        0.000556,
+        0.000417,
+        0.000139,
+        0.000139,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ethereum": [
+        0.000625,
+        0.000625,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.000313,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "polygon": [
+        0.00125,
+        0.000893,
+        0.000893,
+        0.000893,
+        0.000714,
+        0.000714,
+        0.000714,
+        0.000714,
+        0.000714,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000536,
+        0.000357,
+        0.000357,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.000179,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "schema": 1,
+  "stress": {
+    "incident_scale": 1.5,
+    "policies": {
+      "calibrated": {
+        "exposed_usd": 11407.16,
+        "false_credit_rate": 0.00237,
+        "false_credits": 38,
+        "largest_loss_usd": 1710.96,
+        "loss_bps": 10.841,
+        "loss_by_band": {
+          "1000_to_10000": {
+            "loss_usd": 4377.14,
+            "lost": 3
+          },
+          "100_to_1000": {
+            "loss_usd": 1837.77,
+            "lost": 8
+          },
+          "over_10000": {
+            "loss_usd": 0.0,
+            "lost": 0
+          },
+          "under_100": {
+            "loss_usd": 525.5,
+            "lost": 10
+          }
+        },
+        "loss_usd": 6740.41,
+        "median_delay_s": 93.0,
+        "p95_delay_s": 344.0,
+        "payments": 16000,
+        "share_credited_60s": 0.0315,
+        "total_cost_usd": 6883.58,
+        "value_usd": 6217638.36,
+        "value_weighted_delay_s": 133.8,
+        "wait_cost_usd": 143.17
+      },
+      "chain_defaults": {
+        "exposed_usd": 27960.74,
+        "false_credit_rate": 0.00438,
+        "false_credits": 70,
+        "largest_loss_usd": 4549.41,
+        "loss_bps": 25.737,
+        "loss_by_band": {
+          "1000_to_10000": {
+            "loss_usd": 10443.92,
+            "lost": 5
+          },
+          "100_to_1000": {
+            "loss_usd": 4725.52,
+            "lost": 17
+          },
+          "over_10000": {
+            "loss_usd": 0.0,
+            "lost": 0
+          },
+          "under_100": {
+            "loss_usd": 833.17,
+            "lost": 17
+          }
+        },
+        "loss_usd": 16002.61,
+        "median_delay_s": 61.0,
+        "p95_delay_s": 393.0,
+        "payments": 16000,
+        "share_credited_60s": 0.45,
+        "total_cost_usd": 16128.99,
+        "value_usd": 6217638.36,
+        "value_weighted_delay_s": 108.6,
+        "wait_cost_usd": 126.38
+      },
+      "credit_on_inclusion": {
+        "exposed_usd": 184516.06,
+        "false_credit_rate": 0.02406,
+        "false_credits": 385,
+        "largest_loss_usd": 36772.01,
+        "loss_bps": 199.392,
+        "loss_by_band": {
+          "1000_to_10000": {
+            "loss_usd": 26656.35,
+            "lost": 15
+          },
+          "100_to_1000": {
+            "loss_usd": 36691.63,
+            "lost": 110
+          },
+          "over_10000": {
+            "loss_usd": 55823.69,
+            "lost": 2
+          },
+          "under_100": {
+            "loss_usd": 4803.19,
+            "lost": 92
+          }
+        },
+        "loss_usd": 123974.86,
+        "median_delay_s": 4.0,
+        "p95_delay_s": 21.0,
+        "payments": 16000,
+        "share_credited_60s": 1.0,
+        "total_cost_usd": 123982.36,
+        "value_usd": 6217638.36,
+        "value_weighted_delay_s": 6.5,
+        "wait_cost_usd": 7.5
+      },
+      "fixed_12": {
+        "exposed_usd": 28572.51,
+        "false_credit_rate": 0.00456,
+        "false_credits": 73,
+        "largest_loss_usd": 4549.41,
+        "loss_bps": 26.306,
+        "loss_by_band": {
+          "1000_to_10000": {
+            "loss_usd": 10443.92,
+            "lost": 5
+          },
+          "100_to_1000": {
+            "loss_usd": 5078.79,
+            "lost": 18
+          },
+          "over_10000": {
+            "loss_usd": 0.0,
+            "lost": 0
+          },
+          "under_100": {
+            "loss_usd": 833.17,
+            "lost": 17
+          }
+        },
+        "loss_usd": 16355.88,
+        "median_delay_s": 26.0,
+        "p95_delay_s": 153.0,
+        "payments": 16000,
+        "share_credited_60s": 0.8,
+        "total_cost_usd": 16413.5,
+        "value_usd": 6217638.36,
+        "value_weighted_delay_s": 49.9,
+        "wait_cost_usd": 57.62
+      },
+      "ticket_tiers": {
+        "exposed_usd": 9330.29,
+        "false_credit_rate": 0.00462,
+        "false_credits": 74,
+        "largest_loss_usd": 1172.55,
+        "loss_bps": 8.559,
+        "loss_by_band": {
+          "1000_to_10000": {
+            "loss_usd": 1172.55,
+            "lost": 1
+          },
+          "100_to_1000": {
+            "loss_usd": 2947.89,
+            "lost": 13
+          },
+          "over_10000": {
+            "loss_usd": 0.0,
+            "lost": 0
+          },
+          "under_100": {
+            "loss_usd": 1201.52,
+            "lost": 24
+          }
+        },
+        "loss_usd": 5321.96,
+        "median_delay_s": 47.0,
+        "p95_delay_s": 121.0,
+        "payments": 16000,
+        "share_credited_60s": 0.9246,
+        "total_cost_usd": 5369.57,
+        "value_usd": 6217638.36,
+        "value_weighted_delay_s": 88.6,
+        "wait_cost_usd": 47.61
+      }
+    }
+  },
+  "sweep": [
+    {
+      "exposed_usd": 144940.02,
+      "false_credit_rate": 0.02287,
+      "false_credits": 366,
+      "k": 1,
+      "largest_loss_usd": 19051.68,
+      "loss_bps": 136.372,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 26656.35,
+          "lost": 15
+        },
+        "100_to_1000": {
+          "loss_usd": 34511.16,
+          "lost": 104
+        },
+        "over_10000": {
+          "loss_usd": 19051.68,
+          "lost": 1
+        },
+        "under_100": {
+          "loss_usd": 4572.26,
+          "lost": 86
+        }
+      },
+      "loss_usd": 84791.45,
+      "median_delay_s": 4.0,
+      "p95_delay_s": 21.0,
+      "payments": 16000,
+      "share_credited_60s": 1.0,
+      "total_cost_usd": 84798.95,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 6.5,
+      "wait_cost_usd": 7.5
+    },
+    {
+      "exposed_usd": 55649.05,
+      "false_credit_rate": 0.00931,
+      "false_credits": 149,
+      "k": 2,
+      "largest_loss_usd": 4549.41,
+      "loss_bps": 51.701,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 19651.35,
+          "lost": 11
+        },
+        "100_to_1000": {
+          "loss_usd": 10812.99,
+          "lost": 34
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 1681.61,
+          "lost": 33
+        }
+      },
+      "loss_usd": 32145.95,
+      "median_delay_s": 6.0,
+      "p95_delay_s": 33.0,
+      "payments": 16000,
+      "share_credited_60s": 0.9999,
+      "total_cost_usd": 32158.08,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 10.5,
+      "wait_cost_usd": 12.13
+    },
+    {
+      "exposed_usd": 42856.73,
+      "false_credit_rate": 0.00644,
+      "false_credits": 103,
+      "k": 4,
+      "largest_loss_usd": 4549.41,
+      "loss_bps": 40.144,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 18053.92,
+          "lost": 10
+        },
+        "100_to_1000": {
+          "loss_usd": 5866.54,
+          "lost": 20
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 1039.55,
+          "lost": 21
+        }
+      },
+      "loss_usd": 24960.01,
+      "median_delay_s": 10.0,
+      "p95_delay_s": 57.0,
+      "payments": 16000,
+      "share_credited_60s": 0.9998,
+      "total_cost_usd": 24981.25,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 18.4,
+      "wait_cost_usd": 21.24
+    },
+    {
+      "exposed_usd": 27960.24,
+      "false_credit_rate": 0.00425,
+      "false_credits": 68,
+      "k": 8,
+      "largest_loss_usd": 4549.41,
+      "loss_bps": 23.368,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 10443.92,
+          "lost": 5
+        },
+        "100_to_1000": {
+          "loss_usd": 3287.57,
+          "lost": 14
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 797.91,
+          "lost": 15
+        }
+      },
+      "loss_usd": 14529.4,
+      "median_delay_s": 18.0,
+      "p95_delay_s": 105.0,
+      "payments": 16000,
+      "share_credited_60s": 0.8,
+      "total_cost_usd": 14568.84,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 34.1,
+      "wait_cost_usd": 39.44
+    },
+    {
+      "exposed_usd": 23978.99,
+      "false_credit_rate": 0.00363,
+      "false_credits": 58,
+      "k": 12,
+      "largest_loss_usd": 4549.41,
+      "loss_bps": 22.376,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 10443.92,
+          "lost": 5
+        },
+        "100_to_1000": {
+          "loss_usd": 2671.0,
+          "lost": 12
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 797.91,
+          "lost": 15
+        }
+      },
+      "loss_usd": 13912.83,
+      "median_delay_s": 26.0,
+      "p95_delay_s": 153.0,
+      "payments": 16000,
+      "share_credited_60s": 0.8,
+      "total_cost_usd": 13970.44,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 49.8,
+      "wait_cost_usd": 57.61
+    },
+    {
+      "exposed_usd": 23671.88,
+      "false_credit_rate": 0.00337,
+      "false_credits": 54,
+      "k": 16,
+      "largest_loss_usd": 4549.41,
+      "loss_bps": 21.947,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 10443.92,
+          "lost": 5
+        },
+        "100_to_1000": {
+          "loss_usd": 2499.29,
+          "lost": 11
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 702.73,
+          "lost": 13
+        }
+      },
+      "loss_usd": 13645.94,
+      "median_delay_s": 34.0,
+      "p95_delay_s": 201.0,
+      "payments": 16000,
+      "share_credited_60s": 0.7997,
+      "total_cost_usd": 13721.72,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 65.6,
+      "wait_cost_usd": 75.78
+    },
+    {
+      "exposed_usd": 14068.23,
+      "false_credit_rate": 0.0025,
+      "false_credits": 40,
+      "k": 24,
+      "largest_loss_usd": 1710.96,
+      "loss_bps": 13.281,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 5894.51,
+          "lost": 4
+        },
+        "100_to_1000": {
+          "loss_usd": 1837.77,
+          "lost": 8
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 525.5,
+          "lost": 10
+        }
+      },
+      "loss_usd": 8257.78,
+      "median_delay_s": 50.0,
+      "p95_delay_s": 297.0,
+      "payments": 16000,
+      "share_credited_60s": 0.7961,
+      "total_cost_usd": 8369.92,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 97.0,
+      "wait_cost_usd": 112.14
+    },
+    {
+      "exposed_usd": 11013.05,
+      "false_credit_rate": 0.00206,
+      "false_credits": 33,
+      "k": 32,
+      "largest_loss_usd": 1710.96,
+      "loss_bps": 10.628,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 4377.14,
+          "lost": 3
+        },
+        "100_to_1000": {
+          "loss_usd": 1837.77,
+          "lost": 8
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 393.43,
+          "lost": 8
+        }
+      },
+      "loss_usd": 6608.34,
+      "median_delay_s": 66.0,
+      "p95_delay_s": 393.0,
+      "payments": 16000,
+      "share_credited_60s": 0.0,
+      "total_cost_usd": 6756.82,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 128.5,
+      "wait_cost_usd": 148.48
+    },
+    {
+      "exposed_usd": 547.7,
+      "false_credit_rate": 0.00056,
+      "false_credits": 9,
+      "k": 40,
+      "largest_loss_usd": 133.48,
+      "loss_bps": 0.578,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "100_to_1000": {
+          "loss_usd": 133.48,
+          "lost": 1
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 225.71,
+          "lost": 5
+        }
+      },
+      "loss_usd": 359.19,
+      "median_delay_s": 82.0,
+      "p95_delay_s": 489.0,
+      "payments": 16000,
+      "share_credited_60s": 0.0,
+      "total_cost_usd": 544.11,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 160.0,
+      "wait_cost_usd": 184.92
+    },
+    {
+      "exposed_usd": 0.0,
+      "false_credit_rate": 0.0,
+      "false_credits": 0,
+      "k": 48,
+      "largest_loss_usd": 0.0,
+      "loss_bps": 0.0,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "100_to_1000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 0.0,
+          "lost": 0
+        }
+      },
+      "loss_usd": 0.0,
+      "median_delay_s": 98.0,
+      "p95_delay_s": 585.0,
+      "payments": 16000,
+      "share_credited_60s": 0.0,
+      "total_cost_usd": 221.3,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 191.5,
+      "wait_cost_usd": 221.3
+    },
+    {
+      "exposed_usd": 0.0,
+      "false_credit_rate": 0.0,
+      "false_credits": 0,
+      "k": 64,
+      "largest_loss_usd": 0.0,
+      "loss_bps": 0.0,
+      "loss_by_band": {
+        "1000_to_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "100_to_1000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "over_10000": {
+          "loss_usd": 0.0,
+          "lost": 0
+        },
+        "under_100": {
+          "loss_usd": 0.0,
+          "lost": 0
+        }
+      },
+      "loss_usd": 0.0,
+      "median_delay_s": 130.0,
+      "p95_delay_s": 777.0,
+      "payments": 16000,
+      "share_credited_60s": 0.0,
+      "total_cost_usd": 293.93,
+      "value_usd": 6217638.36,
+      "value_weighted_delay_s": 254.3,
+      "wait_cost_usd": 293.93
+    }
+  ],
+  "weeks": [
+    20261116,
+    20261123,
+    20261130,
+    20261207
+  ],
+  "window_days": 7
+}

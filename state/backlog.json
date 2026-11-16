@@ -294,6 +294,27 @@
       },
       "notes": "Better as a newsletter than a repo. Fails the measured gate without an evaluation set.",
       "added": "2026-10-23"
+    },
+    {
+      "id": "finality-policy",
+      "title": "Confirmation depth priced by ticket, not copied from a doc",
+      "thesis": "A confirmation count is a bet on the depth of the next reorg, priced in blocks and settled in dollars.",
+      "theme": "stablecoin",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 5,
+        "s2": 5,
+        "s3": 4,
+        "s4": 5,
+        "s5": 5,
+        "s6": 5,
+        "s7": 4
+      },
+      "notes": "Shipped 2026-11-16, re-scored 4.75, promotion candidate. 4,000 synthetic stablecoin payments a week, USD 1.67M per week, four held out weeks and USD 6.69M scored per policy. Credit on inclusion: 366 false credits, USD 84,791.45 lost, 136.4 bps. Fixed 12: USD 13,912.83, 22.4 bps, 26 seconds median wait, and USD 13,857.15 of it on the fast chain. Per chain defaults of 12, 30 and 32: USD 13,857.15, 61 seconds median, USD 55.68 avoided. Ticket tiers: USD 2,832.36, 4.6 bps, 92.5 percent inside 60 seconds. Calibrated on 28 days of another seed: USD 202.64, 0.3 bps, 93 seconds median. The fixed depth sweep is a cliff: k=12 USD 13,913, k=24 USD 8,258, k=32 USD 6,608, k=40 USD 359, k=48 USD 0. Stress with incidents 1.5x deeper than the calibration month: calibrated USD 6,740 against USD 5,322 for the tier table, so the fitted curve is the cheapest in distribution and the less robust out of it. 58 tests, gate green at 1450 python lines. Promotion needs real chain headers for the loss curve, not another generator.",
+      "added": "2026-11-16",
+      "shipped": "2026-11-16",
+      "artifact": "artifacts/2026-11-16-finality-policy/"
     }
   ]
 }
