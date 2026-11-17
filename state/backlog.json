@@ -315,6 +315,27 @@
       "added": "2026-11-16",
       "shipped": "2026-11-16",
       "artifact": "artifacts/2026-11-16-finality-policy/"
+    },
+    {
+      "id": "consent-refresh",
+      "title": "Consent refresh timed against the debit, not the calendar",
+      "thesis": "An A2A payment rides on an authorisation that expires, so every renewal is a chance for the customer to leave. The timing of the ask decides which loss you take.",
+      "theme": "open-banking",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 4,
+        "s2": 5,
+        "s3": 4,
+        "s4": 4,
+        "s5": 5,
+        "s6": 5,
+        "s7": 4
+      },
+      "notes": "Queue was empty, so this was scored and built in the same run. Shipped 2026-11-18, re-scored 4.35. 1,200 payers, 13,834 scheduled debits, USD 525,635.54 billed, 90 day consent lifetime. fixed_30 captured 51.0%, never_refresh 28.3%, fixed_90 73.8%, on_failure 66.0%, jit_1 80.3%, jit_2 88.2%, jit_3 89.7%, jit_7 84.8%, adaptive 86.3%. The sweep is a cliff at the context window: lead 3 captures 89.7% with 100% of prompts near a debit, lead 4 drops to 83.2% with 0%. Stress without the contextual advantage flips the winner to jit_7. 27 tests, gate green at 1108 python lines.",
+      "added": "2026-11-18",
+      "shipped": "2026-11-18",
+      "artifact": "artifacts/2026-11-18-consent-refresh/"
     }
   ]
 }

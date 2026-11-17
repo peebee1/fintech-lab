@@ -1,0 +1,348 @@
+{
+  "generated_for": "2026-11-18",
+  "book": {
+    "payers": 1200,
+    "merchants": 12,
+    "days": 360,
+    "consent_lifetime_days": 90,
+    "scheduled_usd": 525635.54,
+    "scheduled_payments": 13834,
+    "median_bill_usd": 32.65,
+    "latency_p50_h": 20.4,
+    "mean_abandon_prob": 0.1164
+  },
+  "ceiling": {
+    "policy": "no_expiry",
+    "captured_usd": 473680.11,
+    "note": "Reference only: consent never expires, natural churn still applies."
+  },
+  "policies": [
+    {
+      "policy": "never_refresh",
+      "settled": 3548,
+      "refused": 9007,
+      "refused_usd": 339382.93,
+      "captured_usd": 134297.18,
+      "capture_rate": 0.2835,
+      "prompts": 0,
+      "prompts_per_payer": 0.0,
+      "contextual_share": 0.0,
+      "renewals": 0,
+      "abandons": 0,
+      "abandon_rate_per_prompt": 0.0,
+      "usd_per_prompt": null,
+      "churned": 204
+    },
+    {
+      "policy": "on_failure",
+      "settled": 8279,
+      "refused": 2322,
+      "refused_usd": 87972.04,
+      "captured_usd": 312873.07,
+      "capture_rate": 0.6605,
+      "prompts": 1990,
+      "prompts_per_payer": 1.66,
+      "contextual_share": 0.0005,
+      "renewals": 1634,
+      "abandons": 355,
+      "abandon_rate_per_prompt": 0.1784,
+      "usd_per_prompt": 157.22,
+      "churned": 175
+    },
+    {
+      "policy": "fixed_30",
+      "settled": 6403,
+      "refused": 0,
+      "refused_usd": 0.0,
+      "captured_usd": 241699.56,
+      "capture_rate": 0.5103,
+      "prompts": 7669,
+      "prompts_per_payer": 6.39,
+      "contextual_share": 0.1022,
+      "renewals": 6882,
+      "abandons": 787,
+      "abandon_rate_per_prompt": 0.1026,
+      "usd_per_prompt": 31.52,
+      "churned": 136
+    },
+    {
+      "policy": "fixed_90",
+      "settled": 9226,
+      "refused": 39,
+      "refused_usd": 1560.38,
+      "captured_usd": 349661.46,
+      "capture_rate": 0.7382,
+      "prompts": 3741,
+      "prompts_per_payer": 3.12,
+      "contextual_share": 0.0684,
+      "renewals": 3311,
+      "abandons": 430,
+      "abandon_rate_per_prompt": 0.1149,
+      "usd_per_prompt": 93.47,
+      "churned": 159
+    },
+    {
+      "policy": "jit_1",
+      "settled": 10089,
+      "refused": 1590,
+      "refused_usd": 60239.29,
+      "captured_usd": 380585.24,
+      "capture_rate": 0.8035,
+      "prompts": 2789,
+      "prompts_per_payer": 2.32,
+      "contextual_share": 1.0,
+      "renewals": 2588,
+      "abandons": 187,
+      "abandon_rate_per_prompt": 0.067,
+      "usd_per_prompt": 136.46,
+      "churned": 201
+    },
+    {
+      "policy": "jit_2",
+      "settled": 11012,
+      "refused": 687,
+      "refused_usd": 26937.41,
+      "captured_usd": 418007.49,
+      "capture_rate": 0.8825,
+      "prompts": 2963,
+      "prompts_per_payer": 2.47,
+      "contextual_share": 1.0,
+      "renewals": 2791,
+      "abandons": 166,
+      "abandon_rate_per_prompt": 0.056,
+      "usd_per_prompt": 141.08,
+      "churned": 195
+    },
+    {
+      "policy": "jit_3",
+      "settled": 11334,
+      "refused": 350,
+      "refused_usd": 13383.83,
+      "captured_usd": 424678.49,
+      "capture_rate": 0.8966,
+      "prompts": 3024,
+      "prompts_per_payer": 2.52,
+      "contextual_share": 1.0,
+      "renewals": 2849,
+      "abandons": 174,
+      "abandon_rate_per_prompt": 0.0575,
+      "usd_per_prompt": 140.44,
+      "churned": 197
+    },
+    {
+      "policy": "jit_7",
+      "settled": 10676,
+      "refused": 66,
+      "refused_usd": 2210.78,
+      "captured_usd": 401479.08,
+      "capture_rate": 0.8476,
+      "prompts": 2889,
+      "prompts_per_payer": 2.41,
+      "contextual_share": 0.0,
+      "renewals": 2553,
+      "abandons": 336,
+      "abandon_rate_per_prompt": 0.1163,
+      "usd_per_prompt": 138.97,
+      "churned": 182
+    },
+    {
+      "policy": "adaptive_lead",
+      "settled": 10853,
+      "refused": 173,
+      "refused_usd": 6259.31,
+      "captured_usd": 408803.52,
+      "capture_rate": 0.863,
+      "prompts": 2919,
+      "prompts_per_payer": 2.43,
+      "contextual_share": 0.4714,
+      "renewals": 2653,
+      "abandons": 266,
+      "abandon_rate_per_prompt": 0.0911,
+      "usd_per_prompt": 140.05,
+      "churned": 193
+    }
+  ],
+  "sweep": [
+    {
+      "lead_days": 1,
+      "refused": 1590,
+      "captured_usd": 380585.24,
+      "capture_rate": 0.8035,
+      "prompts": 2789,
+      "contextual_share": 1.0
+    },
+    {
+      "lead_days": 2,
+      "refused": 687,
+      "captured_usd": 418007.49,
+      "capture_rate": 0.8825,
+      "prompts": 2963,
+      "contextual_share": 1.0
+    },
+    {
+      "lead_days": 3,
+      "refused": 350,
+      "captured_usd": 424678.49,
+      "capture_rate": 0.8966,
+      "prompts": 3024,
+      "contextual_share": 1.0
+    },
+    {
+      "lead_days": 4,
+      "refused": 197,
+      "captured_usd": 394185.3,
+      "capture_rate": 0.8322,
+      "prompts": 2834,
+      "contextual_share": 0.0
+    },
+    {
+      "lead_days": 5,
+      "refused": 125,
+      "captured_usd": 407128.04,
+      "capture_rate": 0.8595,
+      "prompts": 2905,
+      "contextual_share": 0.0
+    },
+    {
+      "lead_days": 6,
+      "refused": 99,
+      "captured_usd": 401419.69,
+      "capture_rate": 0.8474,
+      "prompts": 2864,
+      "contextual_share": 0.0
+    },
+    {
+      "lead_days": 7,
+      "refused": 66,
+      "captured_usd": 401479.08,
+      "capture_rate": 0.8476,
+      "prompts": 2889,
+      "contextual_share": 0.0
+    },
+    {
+      "lead_days": 8,
+      "refused": 45,
+      "captured_usd": 410019.83,
+      "capture_rate": 0.8656,
+      "prompts": 2914,
+      "contextual_share": 0.0
+    },
+    {
+      "lead_days": 9,
+      "refused": 35,
+      "captured_usd": 410839.41,
+      "capture_rate": 0.8673,
+      "prompts": 2923,
+      "contextual_share": 0.0
+    },
+    {
+      "lead_days": 10,
+      "refused": 24,
+      "captured_usd": 405182.09,
+      "capture_rate": 0.8554,
+      "prompts": 2880,
+      "contextual_share": 0.0
+    },
+    {
+      "lead_days": 11,
+      "refused": 16,
+      "captured_usd": 406830.88,
+      "capture_rate": 0.8589,
+      "prompts": 2906,
+      "contextual_share": 0.0
+    },
+    {
+      "lead_days": 12,
+      "refused": 18,
+      "captured_usd": 408695.44,
+      "capture_rate": 0.8628,
+      "prompts": 2917,
+      "contextual_share": 0.0
+    }
+  ],
+  "stress": {
+    "no_context_advantage": [
+      {
+        "policy": "fixed_30",
+        "captured_usd": 235843.05,
+        "capture_rate": 0.4979,
+        "refused": 0,
+        "prompts": 7627
+      },
+      {
+        "policy": "jit_2",
+        "captured_usd": 385737.42,
+        "capture_rate": 0.8143,
+        "refused": 653,
+        "prompts": 2813
+      },
+      {
+        "policy": "jit_7",
+        "captured_usd": 401479.08,
+        "capture_rate": 0.8476,
+        "refused": 66,
+        "prompts": 2889
+      },
+      {
+        "policy": "adaptive_lead",
+        "captured_usd": 399545.79,
+        "capture_rate": 0.8435,
+        "refused": 159,
+        "prompts": 2868
+      }
+    ],
+    "slow_responses_1_5x": [
+      {
+        "policy": "fixed_30",
+        "captured_usd": 252918.2,
+        "capture_rate": 0.5339,
+        "refused": 0,
+        "prompts": 7788
+      },
+      {
+        "policy": "jit_2",
+        "captured_usd": 406102.38,
+        "capture_rate": 0.8573,
+        "refused": 1072,
+        "prompts": 2903
+      },
+      {
+        "policy": "jit_7",
+        "captured_usd": 403306.34,
+        "capture_rate": 0.8514,
+        "refused": 167,
+        "prompts": 2887
+      },
+      {
+        "policy": "adaptive_lead",
+        "captured_usd": 406499.17,
+        "capture_rate": 0.8582,
+        "refused": 301,
+        "prompts": 2916
+      }
+    ]
+  },
+  "audit": {
+    "never_refresh": 3548,
+    "on_failure": 8279,
+    "fixed_30": 6403,
+    "fixed_90": 9226,
+    "jit_1": 10089,
+    "jit_2": 11012,
+    "jit_3": 11334,
+    "jit_7": 10676,
+    "adaptive_lead": 10853
+  },
+  "checks": {
+    "every_attempt_accounted": true,
+    "no_settlement_on_expired_consent": true,
+    "jit_prompts_all_have_a_payment_at_risk": true,
+    "never_refresh_sends_no_prompts": true,
+    "ceiling_binds": true,
+    "dropoff_binds": true,
+    "contextual_conversion_shows": true,
+    "lead_time_binds": true,
+    "calendar_is_worse_than_jit": true,
+    "deterministic": true
+  }
+}

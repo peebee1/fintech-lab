@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 17,
+  "sequence": 18,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -393,6 +393,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-16-finality-policy",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-18",
+      "id": "consent-refresh",
+      "lane": "build",
+      "title": "A consent is a lease with an expiry date",
+      "thesis": "An A2A payment rides on an authorisation that expires, and every renewal is a chance for the customer to leave. On a 1,200 payer book with USD 525,635.54 billed, refreshing on a 30 day calendar captured 51.0% of the achievable revenue and lost 787 mandates at the prompt, against 28.3% for never refreshing at all. Prompting three days before a debit that would land after expiry captured 89.7% with 2.54 times fewer prompts. A seven day lead refused 66 payments against 350 and still captured USD 23,199.41 less, because a prompt a week out leaves the payment context and 11.6% of those customers walk away. A policy that learns each customer's response latency halved refusals and lost USD 15,874.97 to its own prompts.",
+      "path": "artifacts/2026-11-18-consent-refresh/",
+      "theme": "open-banking",
+      "score": 4.35,
+      "tests": {
+        "passed": 27,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-18-consent-refresh",
       "promoted": false
     }
   ],

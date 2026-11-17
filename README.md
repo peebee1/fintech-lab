@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**24 ships** | **1 day streak** (best 6) | 13 new artifacts | 11 fixes to existing repos
+**25 ships** | **1 day streak** (best 6) | 14 new artifacts | 11 fixes to existing repos
 
-Latest: **Confirmation depth priced by ticket, not copied from a doc** (2026-11-16)
+Latest: **A consent is a lease with an expiry date** (2026-11-18)
 
-> Crediting a stablecoin payment at inclusion lost 136 bps of a USD 6.69M book over four weeks, and twelve confirmations still lost USD 13,912.83. Ticket tiers took the same book to 4.6 bps with 92.5 percent of payments clearing inside a minute. The protection is a cliff, not a slope: 12 to 32 blocks halves the loss and 32 to 40 removes it. A curve fitted on 28 days loses USD 6,740 when incidents fork 1.5x deeper than anything it saw, against USD 5,322 for the four row table.
+> An A2A payment rides on an authorisation that expires, and every renewal is a chance for the customer to leave. On a 1,200 payer book with USD 525,635.54 billed, refreshing on a 30 day calendar captured 51.0% of the achievable revenue and lost 787 mandates at the prompt, against 28.3% for never refreshing at all. Prompting three days before a debit that would land after expiry captured 89.7% with 2.54 times fewer prompts. A seven day lead refused 66 payments against 350 and still captured USD 23,199.41 less, because a prompt a week out leaves the payment context and 11.6% of those customers walk away. A policy that learns each customer's response latency halved refusals and lost USD 15,874.97 to its own prompts.
 
-[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-16-finality-policy)
+[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-18-consent-refresh)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-11-18 | [A consent is a lease with an expiry date](artifacts/2026-11-18-consent-refresh/) | An A2A payment rides on an authorisation that expires, and every renewal is a chance for the customer to leave. On a 1,200 payer book with USD 525,635.54 billed, refreshing on a 30 day calendar captured 51.0% of the achievable revenue and lost 787 mandates at the prompt, against 28.3% for never refreshing at all. Prompting three days before a debit that would land after expiry captured 89.7% with 2.54 times fewer prompts. A seven day lead refused 66 payments against 350 and still captured USD 23,199.41 less, because a prompt a week out leaves the payment context and 11.6% of those customers walk away. A policy that learns each customer's response latency halved refusals and lost USD 15,874.97 to its own prompts. | 27 passed | 4.35 |
 | 2026-11-16 | [Confirmation depth priced by ticket, not copied from a doc](artifacts/2026-11-16-finality-policy/) | Crediting a stablecoin payment at inclusion lost 136 bps of a USD 6.69M book over four weeks, and twelve confirmations still lost USD 13,912.83. Ticket tiers took the same book to 4.6 bps with 92.5 percent of payments clearing inside a minute. The protection is a cliff, not a slope: 12 to 32 blocks halves the loss and 32 to 40 removes it. A curve fitted on 28 days loses USD 6,740 when incidents fork 1.5x deeper than anything it saw, against USD 5,322 for the four row table. | 58 passed | 4.75 |
 | 2026-11-14 | [Closing the books is a testable property, not a monthly meeting](artifacts/2026-11-14-ledger-close/) | An append only, hash chained ledger closed four months of a 281 transaction book: 0 of 4 closed periods changed after the close, while the same five events moved 3 of 4 months and INR 22,700 in a stored balance ledger, which kept only 1 of 4 closes reproducible. One out of band edit of a single January entry broke the chain at seq 1 and stopped that close from reproducing while three others still verified. | 33 passed | 4.45 |
 | 2026-11-13 | [An underwriting model is a probability, or it is a personality test](artifacts/2026-11-13-underwriting-calibration/) | Three models rank the same 1,500 loan holdout identically, AUC 0.7402 and 0.862 accuracy at 0.5 for all three, and disagree by $417,755 of contribution, because one reports a mean PD of 5.99% where 13.73% default and approves 85.9% of the book. Two parameters fitted on 1,500 settled loans cut Brier by 8.8%, take ECE from 0.0951 to 0.0213, and turn a $150,633 loss into $270,379, which is $3,256 above the calibrated baseline. Ranking metrics cannot see the number that prices the loan. | 60 passed | 4.45 |
