@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 18,
+  "sequence": 19,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -409,6 +409,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-18-consent-refresh",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-18",
+      "id": "intraday-liquidity",
+      "lane": "build",
+      "title": "Size the buffer at 11:00, not at midnight",
+      "thesis": "A card processor operating account needed USD 1,609,061 at the open against USD 1,902,586 of daily payouts, and all 393 of the 393 days with a positive net position still ran short before the 11:00 batch, because 70 percent of the acquirer settlement lands at 16:30. Sizing on the daily net at its 95th percentile held USD 634,288 every night and still missed a payout on 95.6 percent of days, at USD 271,703 a year. Sizing on the trailing intraday requirement at p90 cost USD 106,970 with 84 failed batches and 12.7 percent of days shorted, against USD 448,355 for holding nothing, and the perfect forecast floor is USD 71,127. Moving the settlement from 16:30 to 08:00 cut the required float to USD 305,080 and the best policy to USD 33,638 a year, which is worth more than any sizing decision. Raising the failure fee from USD 50 to USD 1,000 moves the best percentile from p75 to p95.",
+      "path": "artifacts/2026-11-18-intraday-liquidity/",
+      "theme": "treasury",
+      "score": 4.75,
+      "tests": {
+        "passed": 37,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-18-intraday-liquidity",
       "promoted": false
     }
   ],

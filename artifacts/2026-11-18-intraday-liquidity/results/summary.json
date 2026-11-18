@@ -1,0 +1,979 @@
+{
+  "seed": 20261118,
+  "command": "PYTHONPATH=. uv run python -m liquidity.cli bench",
+  "warmup_days": 60,
+  "eval_days": 660,
+  "carry_bps_per_day": 2.18,
+  "fee_per_failed_batch_usd": 250.0,
+  "emergency_bps": 10.0,
+  "book": {
+    "days": 720,
+    "payout_total_usd": 1369861695.37,
+    "mean_payout_usd": 1902585.68,
+    "net_total_usd": 9881.45,
+    "net_positive_days": 393,
+    "slipped_days": 27
+  },
+  "required_opening_usd": {
+    "mean": 1294716.09,
+    "p50": 1270038.63,
+    "p90": 1655285.17,
+    "p95": 1789708.99,
+    "p99": 2709818.13,
+    "max": 3079873.88
+  },
+  "policies": [
+    {
+      "policy": "zero",
+      "mean_opening_usd": 0.0,
+      "annual_total_usd": 448354.83,
+      "annual_carry_usd": 0.0,
+      "annual_fee_usd": 122086.36,
+      "annual_emergency_usd": 326268.47,
+      "events": 1279,
+      "days_shorted": 660,
+      "shortfall_rate": 1.0,
+      "worst_gap_usd": 3079873.88
+    },
+    {
+      "policy": "daily_net",
+      "mean_opening_usd": 23727.81,
+      "annual_total_usd": 443201.68,
+      "annual_carry_usd": 1303.52,
+      "annual_fee_usd": 121609.09,
+      "annual_emergency_usd": 320289.07,
+      "events": 1274,
+      "days_shorted": 660,
+      "shortfall_rate": 1.0,
+      "worst_gap_usd": 3079873.88
+    },
+    {
+      "policy": "daily_net_p95",
+      "mean_opening_usd": 634287.91,
+      "annual_total_usd": 271702.79,
+      "annual_carry_usd": 34845.26,
+      "annual_fee_usd": 66150.0,
+      "annual_emergency_usd": 170707.53,
+      "events": 693,
+      "days_shorted": 631,
+      "shortfall_rate": 0.9561,
+      "worst_gap_usd": 2482655.03
+    },
+    {
+      "policy": "gross_batch",
+      "mean_opening_usd": 1288261.78,
+      "annual_total_usd": 140726.59,
+      "annual_carry_usd": 70771.98,
+      "annual_fee_usd": 31404.55,
+      "annual_emergency_usd": 38550.07,
+      "events": 329,
+      "days_shorted": 329,
+      "shortfall_rate": 0.4985,
+      "worst_gap_usd": 1985647.51
+    },
+    {
+      "policy": "peak_p50",
+      "mean_opening_usd": 1266670.72,
+      "annual_total_usd": 136330.94,
+      "annual_carry_usd": 69586.02,
+      "annual_fee_usd": 33981.82,
+      "annual_emergency_usd": 32763.1,
+      "events": 356,
+      "days_shorted": 356,
+      "shortfall_rate": 0.5394,
+      "worst_gap_usd": 1792815.67
+    },
+    {
+      "policy": "peak_p75",
+      "mean_opening_usd": 1409623.0,
+      "annual_total_usd": 114192.04,
+      "annual_carry_usd": 77439.05,
+      "annual_fee_usd": 17372.73,
+      "annual_emergency_usd": 19380.26,
+      "events": 182,
+      "days_shorted": 182,
+      "shortfall_rate": 0.2758,
+      "worst_gap_usd": 1703478.26
+    },
+    {
+      "policy": "peak_p90",
+      "mean_opening_usd": 1609060.51,
+      "annual_total_usd": 106969.51,
+      "annual_carry_usd": 88395.31,
+      "annual_fee_usd": 8018.18,
+      "annual_emergency_usd": 10556.02,
+      "events": 84,
+      "days_shorted": 84,
+      "shortfall_rate": 0.1273,
+      "worst_gap_usd": 1528282.85
+    },
+    {
+      "policy": "peak_p95",
+      "mean_opening_usd": 1764892.13,
+      "annual_total_usd": 109351.7,
+      "annual_carry_usd": 96956.24,
+      "annual_fee_usd": 4868.18,
+      "annual_emergency_usd": 7527.28,
+      "events": 51,
+      "days_shorted": 51,
+      "shortfall_rate": 0.0773,
+      "worst_gap_usd": 1305478.45
+    },
+    {
+      "policy": "peak_p100",
+      "mean_opening_usd": 2436812.83,
+      "annual_total_usd": 137984.66,
+      "annual_carry_usd": 133868.7,
+      "annual_fee_usd": 1622.73,
+      "annual_emergency_usd": 2493.23,
+      "events": 17,
+      "days_shorted": 17,
+      "shortfall_rate": 0.0258,
+      "worst_gap_usd": 1158227.1
+    }
+  ],
+  "oracle": {
+    "policy": "oracle",
+    "mean_opening_usd": 1294716.09,
+    "annual_total_usd": 71126.55,
+    "annual_carry_usd": 71126.55,
+    "annual_fee_usd": 0.0,
+    "annual_emergency_usd": 0.0,
+    "events": 0,
+    "days_shorted": 0,
+    "shortfall_rate": 0.0,
+    "worst_gap_usd": 0.0
+  },
+  "sweep": [
+    {
+      "q": 0.5,
+      "policy": "peak_p50",
+      "mean_opening_usd": 1266670.72,
+      "annual_total_usd": 136330.94,
+      "events": 356,
+      "days_shorted": 356
+    },
+    {
+      "q": 0.6,
+      "policy": "peak_p60",
+      "mean_opening_usd": 1319096.87,
+      "annual_total_usd": 125343.49,
+      "events": 276,
+      "days_shorted": 276
+    },
+    {
+      "q": 0.7,
+      "policy": "peak_p70",
+      "mean_opening_usd": 1374486.38,
+      "annual_total_usd": 116515.15,
+      "events": 202,
+      "days_shorted": 202
+    },
+    {
+      "q": 0.75,
+      "policy": "peak_p75",
+      "mean_opening_usd": 1409623.0,
+      "annual_total_usd": 114192.04,
+      "events": 182,
+      "days_shorted": 182
+    },
+    {
+      "q": 0.8,
+      "policy": "peak_p80",
+      "mean_opening_usd": 1460584.9,
+      "annual_total_usd": 110436.89,
+      "events": 145,
+      "days_shorted": 145
+    },
+    {
+      "q": 0.85,
+      "policy": "peak_p85",
+      "mean_opening_usd": 1522596.49,
+      "annual_total_usd": 107746.05,
+      "events": 113,
+      "days_shorted": 113
+    },
+    {
+      "q": 0.9,
+      "policy": "peak_p90",
+      "mean_opening_usd": 1609060.51,
+      "annual_total_usd": 106969.51,
+      "events": 84,
+      "days_shorted": 84
+    },
+    {
+      "q": 0.95,
+      "policy": "peak_p95",
+      "mean_opening_usd": 1764892.13,
+      "annual_total_usd": 109351.7,
+      "events": 51,
+      "days_shorted": 51
+    },
+    {
+      "q": 1.0,
+      "policy": "peak_p100",
+      "mean_opening_usd": 2436812.83,
+      "annual_total_usd": 137984.66,
+      "events": 17,
+      "days_shorted": 17
+    }
+  ],
+  "windows": [
+    {
+      "window": 20,
+      "mean_opening_usd": 1596818.12,
+      "annual_total_usd": 107714.48,
+      "events": 93,
+      "days_shorted": 93
+    },
+    {
+      "window": 40,
+      "mean_opening_usd": 1609060.51,
+      "annual_total_usd": 106969.51,
+      "events": 84,
+      "days_shorted": 84
+    },
+    {
+      "window": 80,
+      "mean_opening_usd": 1610788.59,
+      "annual_total_usd": 106878.66,
+      "events": 84,
+      "days_shorted": 84
+    },
+    {
+      "window": 160,
+      "mean_opening_usd": 1631600.42,
+      "annual_total_usd": 106539.62,
+      "events": 76,
+      "days_shorted": 76
+    }
+  ],
+  "fee_sensitivity": [
+    {
+      "fee_usd": 50.0,
+      "best_policy": "peak_p75",
+      "best_annual_usd": 100293.86,
+      "peak_p90_usd": 100554.97,
+      "peak_max_usd": 136686.48
+    },
+    {
+      "fee_usd": 250.0,
+      "best_policy": "peak_p90",
+      "best_annual_usd": 106969.51,
+      "peak_p90_usd": 106969.51,
+      "peak_max_usd": 137984.66
+    },
+    {
+      "fee_usd": 1000.0,
+      "best_policy": "peak_p95",
+      "best_annual_usd": 123956.25,
+      "peak_p90_usd": 131024.06,
+      "peak_max_usd": 142852.84
+    }
+  ],
+  "regimes": [
+    {
+      "regime": "baseline",
+      "note": "4 percent of settlement days slip to the next morning",
+      "required_opening_p90_usd": 1655285.17,
+      "policies": [
+        {
+          "policy": "zero",
+          "mean_opening_usd": 0.0,
+          "annual_total_usd": 448354.83,
+          "annual_carry_usd": 0.0,
+          "annual_fee_usd": 122086.36,
+          "annual_emergency_usd": 326268.47,
+          "events": 1279,
+          "days_shorted": 660,
+          "shortfall_rate": 1.0,
+          "worst_gap_usd": 3079873.88
+        },
+        {
+          "policy": "daily_net",
+          "mean_opening_usd": 23727.81,
+          "annual_total_usd": 443201.68,
+          "annual_carry_usd": 1303.52,
+          "annual_fee_usd": 121609.09,
+          "annual_emergency_usd": 320289.07,
+          "events": 1274,
+          "days_shorted": 660,
+          "shortfall_rate": 1.0,
+          "worst_gap_usd": 3079873.88
+        },
+        {
+          "policy": "daily_net_p95",
+          "mean_opening_usd": 634287.91,
+          "annual_total_usd": 271702.79,
+          "annual_carry_usd": 34845.26,
+          "annual_fee_usd": 66150.0,
+          "annual_emergency_usd": 170707.53,
+          "events": 693,
+          "days_shorted": 631,
+          "shortfall_rate": 0.9561,
+          "worst_gap_usd": 2482655.03
+        },
+        {
+          "policy": "gross_batch",
+          "mean_opening_usd": 1288261.78,
+          "annual_total_usd": 140726.59,
+          "annual_carry_usd": 70771.98,
+          "annual_fee_usd": 31404.55,
+          "annual_emergency_usd": 38550.07,
+          "events": 329,
+          "days_shorted": 329,
+          "shortfall_rate": 0.4985,
+          "worst_gap_usd": 1985647.51
+        },
+        {
+          "policy": "peak_p50",
+          "mean_opening_usd": 1266670.72,
+          "annual_total_usd": 136330.94,
+          "annual_carry_usd": 69586.02,
+          "annual_fee_usd": 33981.82,
+          "annual_emergency_usd": 32763.1,
+          "events": 356,
+          "days_shorted": 356,
+          "shortfall_rate": 0.5394,
+          "worst_gap_usd": 1792815.67
+        },
+        {
+          "policy": "peak_p75",
+          "mean_opening_usd": 1409623.0,
+          "annual_total_usd": 114192.04,
+          "annual_carry_usd": 77439.05,
+          "annual_fee_usd": 17372.73,
+          "annual_emergency_usd": 19380.26,
+          "events": 182,
+          "days_shorted": 182,
+          "shortfall_rate": 0.2758,
+          "worst_gap_usd": 1703478.26
+        },
+        {
+          "policy": "peak_p90",
+          "mean_opening_usd": 1609060.51,
+          "annual_total_usd": 106969.51,
+          "annual_carry_usd": 88395.31,
+          "annual_fee_usd": 8018.18,
+          "annual_emergency_usd": 10556.02,
+          "events": 84,
+          "days_shorted": 84,
+          "shortfall_rate": 0.1273,
+          "worst_gap_usd": 1528282.85
+        },
+        {
+          "policy": "peak_p95",
+          "mean_opening_usd": 1764892.13,
+          "annual_total_usd": 109351.7,
+          "annual_carry_usd": 96956.24,
+          "annual_fee_usd": 4868.18,
+          "annual_emergency_usd": 7527.28,
+          "events": 51,
+          "days_shorted": 51,
+          "shortfall_rate": 0.0773,
+          "worst_gap_usd": 1305478.45
+        },
+        {
+          "policy": "peak_p100",
+          "mean_opening_usd": 2436812.83,
+          "annual_total_usd": 137984.66,
+          "annual_carry_usd": 133868.7,
+          "annual_fee_usd": 1622.73,
+          "annual_emergency_usd": 2493.23,
+          "events": 17,
+          "days_shorted": 17,
+          "shortfall_rate": 0.0258,
+          "worst_gap_usd": 1158227.1
+        }
+      ]
+    },
+    {
+      "regime": "slip 12 percent",
+      "note": "the acquirer delays three times as often",
+      "required_opening_p90_usd": 1626096.36,
+      "policies": [
+        {
+          "policy": "zero",
+          "mean_opening_usd": 0.0,
+          "annual_total_usd": 424281.3,
+          "annual_carry_usd": 0.0,
+          "annual_fee_usd": 117027.27,
+          "annual_emergency_usd": 307254.03,
+          "events": 1226,
+          "days_shorted": 659,
+          "shortfall_rate": 0.9985,
+          "worst_gap_usd": 3079873.88
+        },
+        {
+          "policy": "daily_net",
+          "mean_opening_usd": 24476.99,
+          "annual_total_usd": 418789.59,
+          "annual_carry_usd": 1344.66,
+          "annual_fee_usd": 116359.09,
+          "annual_emergency_usd": 301085.83,
+          "events": 1219,
+          "days_shorted": 659,
+          "shortfall_rate": 0.9985,
+          "worst_gap_usd": 3079873.88
+        },
+        {
+          "policy": "daily_net_p95",
+          "mean_opening_usd": 827906.89,
+          "annual_total_usd": 217046.24,
+          "annual_carry_usd": 45481.89,
+          "annual_fee_usd": 55363.64,
+          "annual_emergency_usd": 116200.72,
+          "events": 580,
+          "days_shorted": 559,
+          "shortfall_rate": 0.847,
+          "worst_gap_usd": 2289635.84
+        },
+        {
+          "policy": "gross_batch",
+          "mean_opening_usd": 1288261.78,
+          "annual_total_usd": 134007.39,
+          "annual_carry_usd": 70771.98,
+          "annual_fee_usd": 28540.91,
+          "annual_emergency_usd": 34694.5,
+          "events": 299,
+          "days_shorted": 299,
+          "shortfall_rate": 0.453,
+          "worst_gap_usd": 1985647.51
+        },
+        {
+          "policy": "peak_p50",
+          "mean_opening_usd": 1239142.98,
+          "annual_total_usd": 134194.63,
+          "annual_carry_usd": 68073.73,
+          "annual_fee_usd": 32931.82,
+          "annual_emergency_usd": 33189.08,
+          "events": 345,
+          "days_shorted": 345,
+          "shortfall_rate": 0.5227,
+          "worst_gap_usd": 1882787.6
+        },
+        {
+          "policy": "peak_p75",
+          "mean_opening_usd": 1395417.55,
+          "annual_total_usd": 111870.59,
+          "annual_carry_usd": 76658.69,
+          "annual_fee_usd": 16704.55,
+          "annual_emergency_usd": 18507.35,
+          "events": 175,
+          "days_shorted": 175,
+          "shortfall_rate": 0.2652,
+          "worst_gap_usd": 1720104.76
+        },
+        {
+          "policy": "peak_p90",
+          "mean_opening_usd": 1586220.96,
+          "annual_total_usd": 104787.66,
+          "annual_carry_usd": 87140.56,
+          "annual_fee_usd": 7636.36,
+          "annual_emergency_usd": 10010.73,
+          "events": 80,
+          "days_shorted": 80,
+          "shortfall_rate": 0.1212,
+          "worst_gap_usd": 1528282.85
+        },
+        {
+          "policy": "peak_p95",
+          "mean_opening_usd": 1727897.1,
+          "annual_total_usd": 107485.18,
+          "annual_carry_usd": 94923.69,
+          "annual_fee_usd": 5440.91,
+          "annual_emergency_usd": 7120.58,
+          "events": 57,
+          "days_shorted": 57,
+          "shortfall_rate": 0.0864,
+          "worst_gap_usd": 1305478.45
+        },
+        {
+          "policy": "peak_p100",
+          "mean_opening_usd": 2359776.83,
+          "annual_total_usd": 133704.4,
+          "annual_carry_usd": 129636.67,
+          "annual_fee_usd": 1431.82,
+          "annual_emergency_usd": 2635.92,
+          "events": 15,
+          "days_shorted": 15,
+          "shortfall_rate": 0.0227,
+          "worst_gap_usd": 1158227.1
+        }
+      ]
+    },
+    {
+      "regime": "payout spikes 10 percent",
+      "note": "more merchants batch quarterly payouts through the same cutoff",
+      "required_opening_p90_usd": 2141271.56,
+      "policies": [
+        {
+          "policy": "zero",
+          "mean_opening_usd": 0.0,
+          "annual_total_usd": 487900.64,
+          "annual_carry_usd": 0.0,
+          "annual_fee_usd": 122086.36,
+          "annual_emergency_usd": 365814.27,
+          "events": 1279,
+          "days_shorted": 659,
+          "shortfall_rate": 0.9985,
+          "worst_gap_usd": 4268314.08
+        },
+        {
+          "policy": "daily_net",
+          "mean_opening_usd": 5421.79,
+          "annual_total_usd": 486641.26,
+          "annual_carry_usd": 297.84,
+          "annual_fee_usd": 121895.45,
+          "annual_emergency_usd": 364447.97,
+          "events": 1277,
+          "days_shorted": 659,
+          "shortfall_rate": 0.9985,
+          "worst_gap_usd": 4268314.08
+        },
+        {
+          "policy": "daily_net_p95",
+          "mean_opening_usd": 982904.23,
+          "annual_total_usd": 238831.35,
+          "annual_carry_usd": 53996.82,
+          "annual_fee_usd": 54409.09,
+          "annual_emergency_usd": 130425.44,
+          "events": 570,
+          "days_shorted": 540,
+          "shortfall_rate": 0.8182,
+          "worst_gap_usd": 2948101.81
+        },
+        {
+          "policy": "gross_batch",
+          "mean_opening_usd": 1665824.57,
+          "annual_total_usd": 144602.94,
+          "annual_carry_usd": 91513.84,
+          "annual_fee_usd": 17086.36,
+          "annual_emergency_usd": 36002.74,
+          "events": 179,
+          "days_shorted": 178,
+          "shortfall_rate": 0.2697,
+          "worst_gap_usd": 2122465.64
+        },
+        {
+          "policy": "peak_p50",
+          "mean_opening_usd": 1322709.09,
+          "annual_total_usd": 165035.36,
+          "annual_carry_usd": 72664.26,
+          "annual_fee_usd": 31786.36,
+          "annual_emergency_usd": 60584.73,
+          "events": 333,
+          "days_shorted": 331,
+          "shortfall_rate": 0.5015,
+          "worst_gap_usd": 2906784.04
+        },
+        {
+          "policy": "peak_p75",
+          "mean_opening_usd": 1586517.86,
+          "annual_total_usd": 142195.26,
+          "annual_carry_usd": 87156.95,
+          "annual_fee_usd": 17181.82,
+          "annual_emergency_usd": 37856.49,
+          "events": 180,
+          "days_shorted": 180,
+          "shortfall_rate": 0.2727,
+          "worst_gap_usd": 2552064.32
+        },
+        {
+          "policy": "peak_p90",
+          "mean_opening_usd": 2069218.67,
+          "annual_total_usd": 141337.13,
+          "annual_carry_usd": 113674.53,
+          "annual_fee_usd": 8209.09,
+          "annual_emergency_usd": 19453.51,
+          "events": 86,
+          "days_shorted": 86,
+          "shortfall_rate": 0.1303,
+          "worst_gap_usd": 1821600.22
+        },
+        {
+          "policy": "peak_p95",
+          "mean_opening_usd": 2450603.81,
+          "annual_total_usd": 148547.82,
+          "annual_carry_usd": 134626.24,
+          "annual_fee_usd": 4390.91,
+          "annual_emergency_usd": 9530.67,
+          "events": 46,
+          "days_shorted": 46,
+          "shortfall_rate": 0.0697,
+          "worst_gap_usd": 1460523.8
+        },
+        {
+          "policy": "peak_p100",
+          "mean_opening_usd": 3125616.82,
+          "annual_total_usd": 176069.64,
+          "annual_carry_usd": 171708.89,
+          "annual_fee_usd": 1527.27,
+          "annual_emergency_usd": 2833.47,
+          "events": 16,
+          "days_shorted": 16,
+          "shortfall_rate": 0.0242,
+          "worst_gap_usd": 1004129.25
+        }
+      ]
+    },
+    {
+      "regime": "batch one is 60 percent",
+      "note": "merchants move their cutoffs earlier in the day",
+      "required_opening_p90_usd": 1655285.17,
+      "policies": [
+        {
+          "policy": "zero",
+          "mean_opening_usd": 0.0,
+          "annual_total_usd": 449977.56,
+          "annual_carry_usd": 0.0,
+          "annual_fee_usd": 123709.09,
+          "annual_emergency_usd": 326268.47,
+          "events": 1296,
+          "days_shorted": 660,
+          "shortfall_rate": 1.0,
+          "worst_gap_usd": 3079873.88
+        },
+        {
+          "policy": "daily_net",
+          "mean_opening_usd": 23727.81,
+          "annual_total_usd": 445301.68,
+          "annual_carry_usd": 1303.52,
+          "annual_fee_usd": 123709.09,
+          "annual_emergency_usd": 320289.07,
+          "events": 1296,
+          "days_shorted": 660,
+          "shortfall_rate": 1.0,
+          "worst_gap_usd": 3079873.88
+        },
+        {
+          "policy": "daily_net_p95",
+          "mean_opening_usd": 634287.91,
+          "annual_total_usd": 288693.7,
+          "annual_carry_usd": 34845.26,
+          "annual_fee_usd": 83140.91,
+          "annual_emergency_usd": 170707.53,
+          "events": 871,
+          "days_shorted": 631,
+          "shortfall_rate": 0.9561,
+          "worst_gap_usd": 2482655.03
+        },
+        {
+          "policy": "gross_batch",
+          "mean_opening_usd": 1704373.35,
+          "annual_total_usd": 114401.18,
+          "annual_carry_usd": 93631.56,
+          "annual_fee_usd": 9831.82,
+          "annual_emergency_usd": 10937.81,
+          "events": 103,
+          "days_shorted": 101,
+          "shortfall_rate": 0.153,
+          "worst_gap_usd": 1620690.18
+        },
+        {
+          "policy": "peak_p50",
+          "mean_opening_usd": 1266670.72,
+          "annual_total_usd": 137094.58,
+          "annual_carry_usd": 69586.02,
+          "annual_fee_usd": 34745.45,
+          "annual_emergency_usd": 32763.1,
+          "events": 364,
+          "days_shorted": 356,
+          "shortfall_rate": 0.5394,
+          "worst_gap_usd": 1792815.67
+        },
+        {
+          "policy": "peak_p75",
+          "mean_opening_usd": 1409623.0,
+          "annual_total_usd": 114478.4,
+          "annual_carry_usd": 77439.05,
+          "annual_fee_usd": 17659.09,
+          "annual_emergency_usd": 19380.26,
+          "events": 185,
+          "days_shorted": 182,
+          "shortfall_rate": 0.2758,
+          "worst_gap_usd": 1703478.26
+        },
+        {
+          "policy": "peak_p90",
+          "mean_opening_usd": 1609060.51,
+          "annual_total_usd": 106969.51,
+          "annual_carry_usd": 88395.31,
+          "annual_fee_usd": 8018.18,
+          "annual_emergency_usd": 10556.02,
+          "events": 84,
+          "days_shorted": 84,
+          "shortfall_rate": 0.1273,
+          "worst_gap_usd": 1528282.85
+        },
+        {
+          "policy": "peak_p95",
+          "mean_opening_usd": 1764892.13,
+          "annual_total_usd": 109351.7,
+          "annual_carry_usd": 96956.24,
+          "annual_fee_usd": 4868.18,
+          "annual_emergency_usd": 7527.28,
+          "events": 51,
+          "days_shorted": 51,
+          "shortfall_rate": 0.0773,
+          "worst_gap_usd": 1305478.45
+        },
+        {
+          "policy": "peak_p100",
+          "mean_opening_usd": 2436812.83,
+          "annual_total_usd": 137984.66,
+          "annual_carry_usd": 133868.7,
+          "annual_fee_usd": 1622.73,
+          "annual_emergency_usd": 2493.23,
+          "events": 17,
+          "days_shorted": 17,
+          "shortfall_rate": 0.0258,
+          "worst_gap_usd": 1158227.1
+        }
+      ]
+    },
+    {
+      "regime": "settlement at the open",
+      "note": "the acquirer settles the whole day at 08:00, before any payout",
+      "required_opening_p90_usd": 305080.44,
+      "policies": [
+        {
+          "policy": "zero",
+          "mean_opening_usd": 0.0,
+          "annual_total_usd": 56927.34,
+          "annual_carry_usd": 0.0,
+          "annual_fee_usd": 28636.36,
+          "annual_emergency_usd": 28290.97,
+          "events": 300,
+          "days_shorted": 300,
+          "shortfall_rate": 0.4545,
+          "worst_gap_usd": 1782816.8
+        },
+        {
+          "policy": "daily_net",
+          "mean_opening_usd": 22984.81,
+          "annual_total_usd": 52991.86,
+          "annual_carry_usd": 1262.7,
+          "annual_fee_usd": 26059.09,
+          "annual_emergency_usd": 25670.07,
+          "events": 273,
+          "days_shorted": 273,
+          "shortfall_rate": 0.4136,
+          "worst_gap_usd": 1751661.03
+        },
+        {
+          "policy": "daily_net_p95",
+          "mean_opening_usd": 502182.07,
+          "annual_total_usd": 37690.98,
+          "annual_carry_usd": 27587.88,
+          "annual_fee_usd": 3627.27,
+          "annual_emergency_usd": 6475.83,
+          "events": 38,
+          "days_shorted": 38,
+          "shortfall_rate": 0.0576,
+          "worst_gap_usd": 1445244.88
+        },
+        {
+          "policy": "gross_batch",
+          "mean_opening_usd": 1288261.78,
+          "annual_total_usd": 71997.51,
+          "annual_carry_usd": 70771.98,
+          "annual_fee_usd": 572.73,
+          "annual_emergency_usd": 652.8,
+          "events": 6,
+          "days_shorted": 6,
+          "shortfall_rate": 0.0091,
+          "worst_gap_usd": 692054.58
+        },
+        {
+          "policy": "peak_p50",
+          "mean_opening_usd": 2429.27,
+          "annual_total_usd": 56818.94,
+          "annual_carry_usd": 133.47,
+          "annual_fee_usd": 28636.36,
+          "annual_emergency_usd": 28049.11,
+          "events": 300,
+          "days_shorted": 300,
+          "shortfall_rate": 0.4545,
+          "worst_gap_usd": 1770238.66
+        },
+        {
+          "policy": "peak_p75",
+          "mean_opening_usd": 125732.94,
+          "annual_total_usd": 40856.78,
+          "annual_carry_usd": 6907.27,
+          "annual_fee_usd": 16609.09,
+          "annual_emergency_usd": 17340.41,
+          "events": 174,
+          "days_shorted": 174,
+          "shortfall_rate": 0.2636,
+          "worst_gap_usd": 1674387.85
+        },
+        {
+          "policy": "peak_p90",
+          "mean_opening_usd": 295917.4,
+          "annual_total_usd": 33638.4,
+          "annual_carry_usd": 16256.5,
+          "annual_fee_usd": 6968.18,
+          "annual_emergency_usd": 10413.71,
+          "events": 73,
+          "days_shorted": 73,
+          "shortfall_rate": 0.1106,
+          "worst_gap_usd": 1559439.86
+        },
+        {
+          "policy": "peak_p95",
+          "mean_opening_usd": 476001.31,
+          "annual_total_usd": 37902.43,
+          "annual_carry_usd": 26149.69,
+          "annual_fee_usd": 4390.91,
+          "annual_emergency_usd": 7361.83,
+          "events": 46,
+          "days_shorted": 46,
+          "shortfall_rate": 0.0697,
+          "worst_gap_usd": 1477736.36
+        },
+        {
+          "policy": "peak_p100",
+          "mean_opening_usd": 1085743.68,
+          "annual_total_usd": 63880.87,
+          "annual_carry_usd": 59646.55,
+          "annual_fee_usd": 1813.64,
+          "annual_emergency_usd": 2420.68,
+          "events": 19,
+          "days_shorted": 19,
+          "shortfall_rate": 0.0288,
+          "worst_gap_usd": 1362553.97
+        }
+      ]
+    },
+    {
+      "regime": "volume steps up 25 percent",
+      "note": "a large merchant cohort goes live at business day 400",
+      "required_opening_p90_usd": 1923727.33,
+      "policies": [
+        {
+          "policy": "zero",
+          "mean_opening_usd": 0.0,
+          "annual_total_usd": 487279.86,
+          "annual_carry_usd": 0.0,
+          "annual_fee_usd": 122086.36,
+          "annual_emergency_usd": 365193.5,
+          "events": 1279,
+          "days_shorted": 660,
+          "shortfall_rate": 1.0,
+          "worst_gap_usd": 3768040.76
+        },
+        {
+          "policy": "daily_net",
+          "mean_opening_usd": 26459.64,
+          "annual_total_usd": 481588.32,
+          "annual_carry_usd": 1453.57,
+          "annual_fee_usd": 121609.09,
+          "annual_emergency_usd": 358525.65,
+          "events": 1274,
+          "days_shorted": 660,
+          "shortfall_rate": 1.0,
+          "worst_gap_usd": 3753593.38
+        },
+        {
+          "policy": "daily_net_p95",
+          "mean_opening_usd": 710637.89,
+          "annual_total_usd": 296198.52,
+          "annual_carry_usd": 39039.63,
+          "annual_fee_usd": 66150.0,
+          "annual_emergency_usd": 191008.88,
+          "events": 693,
+          "days_shorted": 631,
+          "shortfall_rate": 0.9561,
+          "worst_gap_usd": 3094983.78
+        },
+        {
+          "policy": "gross_batch",
+          "mean_opening_usd": 1442801.1,
+          "annual_total_usd": 154483.11,
+          "annual_carry_usd": 79261.66,
+          "annual_fee_usd": 31500.0,
+          "annual_emergency_usd": 43721.45,
+          "events": 330,
+          "days_shorted": 330,
+          "shortfall_rate": 0.5,
+          "worst_gap_usd": 2287390.94
+        },
+        {
+          "policy": "peak_p50",
+          "mean_opening_usd": 1409943.97,
+          "annual_total_usd": 150571.36,
+          "annual_carry_usd": 77456.79,
+          "annual_fee_usd": 34554.55,
+          "annual_emergency_usd": 38560.02,
+          "events": 362,
+          "days_shorted": 362,
+          "shortfall_rate": 0.5485,
+          "worst_gap_usd": 2224786.63
+        },
+        {
+          "policy": "peak_p75",
+          "mean_opening_usd": 1572382.24,
+          "annual_total_usd": 126897.77,
+          "annual_carry_usd": 86380.31,
+          "annual_fee_usd": 18040.91,
+          "annual_emergency_usd": 22476.55,
+          "events": 189,
+          "days_shorted": 189,
+          "shortfall_rate": 0.2864,
+          "worst_gap_usd": 2029724.56
+        },
+        {
+          "policy": "peak_p90",
+          "mean_opening_usd": 1790303.53,
+          "annual_total_usd": 119112.53,
+          "annual_carry_usd": 98352.17,
+          "annual_fee_usd": 8495.45,
+          "annual_emergency_usd": 12264.9,
+          "events": 89,
+          "days_shorted": 89,
+          "shortfall_rate": 0.1348,
+          "worst_gap_usd": 1683595.72
+        },
+        {
+          "policy": "peak_p95",
+          "mean_opening_usd": 1956635.97,
+          "annual_total_usd": 121425.04,
+          "annual_carry_usd": 107489.86,
+          "annual_fee_usd": 5250.0,
+          "annual_emergency_usd": 8685.18,
+          "events": 55,
+          "days_shorted": 55,
+          "shortfall_rate": 0.0833,
+          "worst_gap_usd": 1631848.05
+        },
+        {
+          "policy": "peak_p100",
+          "mean_opening_usd": 2704486.68,
+          "annual_total_usd": 152995.38,
+          "annual_carry_usd": 148573.49,
+          "annual_fee_usd": 1622.73,
+          "annual_emergency_usd": 2799.16,
+          "events": 17,
+          "days_shorted": 17,
+          "shortfall_rate": 0.0258,
+          "worst_gap_usd": 1273727.49
+        }
+      ]
+    }
+  ],
+  "net_positive_days": 361,
+  "net_positive_days_that_shorted": 361,
+  "checks": {
+    "every_eval_day_scored": true,
+    "oracle_has_no_shortfall": true,
+    "oracle_is_the_floor": true,
+    "every_net_positive_day_still_shorts_at_zero": true,
+    "timing_policy_halves_the_daily_net_policy": true,
+    "carry_rises_with_the_percentile": true,
+    "retimed_settlement_needs_less_float": true,
+    "book_is_plausible": true,
+    "no_day_fails_more_than_two_batches": true
+  }
+}

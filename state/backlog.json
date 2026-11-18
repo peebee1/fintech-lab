@@ -336,6 +336,27 @@
       "added": "2026-11-18",
       "shipped": "2026-11-18",
       "artifact": "artifacts/2026-11-18-consent-refresh/"
+    },
+    {
+      "id": "intraday-liquidity",
+      "title": "Intraday liquidity buffer sized against the settlement clock",
+      "thesis": "A daily net position says the account funds itself. The 11:00 payout run says otherwise, and the buffer between them is a measured number, not a policy preference.",
+      "theme": "treasury",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 5,
+        "s2": 5,
+        "s3": 4,
+        "s4": 5,
+        "s5": 5,
+        "s6": 5,
+        "s7": 4
+      },
+      "notes": "Queue was empty, so this was scored and built in the same run. Shipped 2026-11-18, scored 4.75, promotion candidate. 720 synthetic business days, USD 1,369,861,695 of payouts, cumulative net flow USD 9,881. Required opening: mean USD 1,294,716, p90 USD 1,655,285, worst day USD 3,079,874. zero buffer USD 448,355 a year, daily_net_p95 USD 271,703 with 95.6 percent of days short, gross_batch USD 140,727, peak_p90 USD 106,970 with 84 failed batches, peak_p100 USD 137,985, oracle USD 71,127. All 393 net positive days short at a zero buffer. Settlement at 08:00 instead of 16:30 cuts the p90 float to USD 305,080 and the best policy to USD 33,638. The batch split regime is an exact null: 45/55 and 60/40 give the same requirement to the cent. Trailing window from 20 to 160 days lands within 1.1 percent. 37 tests, gate green at 1344 python lines.",
+      "added": "2026-11-18",
+      "shipped": "2026-11-18",
+      "artifact": "artifacts/2026-11-18-intraday-liquidity/"
     }
   ]
 }
