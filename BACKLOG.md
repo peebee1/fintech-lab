@@ -30,3 +30,4 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 | shipped | Confirmation depth priced by ticket, not copied from a doc | stablecoin |
 | shipped | Consent refresh timed against the debit, not the calendar | open-banking |
 | shipped | Intraday liquidity buffer sized against the settlement clock | treasury |
+| shipped | Capture windows matched to merchant class, not to the calendar | payments |

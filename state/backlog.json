@@ -357,6 +357,27 @@
       "added": "2026-11-18",
       "shipped": "2026-11-18",
       "artifact": "artifacts/2026-11-18-intraday-liquidity/"
+    },
+    {
+      "id": "auth-holds",
+      "title": "Capture windows matched to merchant class, not to the calendar",
+      "thesis": "An authorisation is a promise with a deadline. One window for a whole merchant book loses money on both sides of that date, and the window that fits is a property of the merchant class.",
+      "theme": "payments",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 4,
+        "s4": 5,
+        "s5": 5,
+        "s6": 5,
+        "s7": 5
+      },
+      "notes": "Queue was empty: every hardening item was shipped and the backlog held no queued idea, so this was scored and built in the same run. Shipped 2026-11-19, re-scored 4.65. 2,500 synthetic authorisations over 170 days, 2,967 settlement requests, USD 383,504.17 requested, USD 9,271.24 of tips above the authorisation, 193 never settled. The 7 day window captured 59.1% and refused USD 116,883.23, which is 30.48% of the book, matching the 30.5% of value that arrives after day 7. 14 days 86.5%, 21 days 88.6%, 28 days 89.6% with zero expiry refusals and USD 4,715,738.70 of frozen funds days against USD 2,140,155.70 at 7 days. Tiered windows (7 restaurant and retail, 14 multi item, 21 hotel and late batch) captured the same 88.6% as a blanket 21 days with 16.75% fewer funds days. Over limit handling: refusing the whole capture lost USD 40,028.52 against USD 1,866.14 for settling what fits, 21.45 times, and 4.32 times the whole tip book. Tolerance 0% and 5% print identical rows because every tipped capture is refused outright below the smallest tip rate: a plateau, stated as such. 24 tests, gate green at 988 python lines. S2 scored 4, not 5, because the invariant is proven but error classes are not measured as precision and recall.",
+      "added": "2026-11-19",
+      "shipped": "2026-11-19",
+      "artifact": "artifacts/2026-11-19-auth-holds/"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 19,
+  "sequence": 20,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -425,6 +425,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-18-intraday-liquidity",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-19",
+      "id": "auth-holds",
+      "lane": "build",
+      "title": "A capture window is a two sided date",
+      "thesis": "An authorisation is a promise with a deadline, and one window for a whole merchant book loses money on both sides. On 2,500 synthetic authorisations worth USD 383,504.17, a 7 day window refused USD 116,883.23 past expiry, 30.5 percent of settlement value, while holding USD 2,140,155.70 of customer funds days. A 21 day window recovered 88.6 percent for USD 4,028,299.12 of funds days, and 28 days bought 1.0 point more for USD 4,715,738.70. Per class windows captured the same 88.6 percent with 16.75 percent fewer funds days, and refusing an over limit capture lost USD 40,028.52 to avoid USD 1,866.14 of excess, 4.32 times the whole tip book, because the refusal takes the authorised base with the tip.",
+      "path": "artifacts/2026-11-19-auth-holds/",
+      "theme": "payments",
+      "score": 4.65,
+      "tests": {
+        "passed": 24,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-19-auth-holds",
       "promoted": false
     }
   ],
