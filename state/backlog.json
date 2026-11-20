@@ -378,6 +378,27 @@
       "added": "2026-11-19",
       "shipped": "2026-11-19",
       "artifact": "artifacts/2026-11-19-auth-holds/"
+    },
+    {
+      "id": "fee-qualification",
+      "title": "Card fee qualification gap and repair ranking",
+      "thesis": "The merchant negotiates the rate and pays for the missing field. Card fees are rate times qualification, and qualification is auditable.",
+      "theme": "acquiring",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 4,
+        "s4": 5,
+        "s5": 5,
+        "s6": 5,
+        "s7": 5
+      },
+      "notes": "Queue was empty: every backlog item was shipped or parked and every hardening item was shipped, so this was scored and built in the same run. Shipped 2026-11-20, scored 4.65. 61,985 synthetic transactions over 45 days, USD 11,174,093.62 processed. Billed USD 255,120.61, fully qualified USD 204,734.23, gap USD 50,386.38 (45.09 bps of value, 19.75% of the bill), 28,553 transactions with a gap. Partition by binding rule: commercial_data USD 29,420.29 (58.4%), avs_cvv USD 9,133.38, unauthorized USD 5,367.07, commercial_l3 USD 2,942.57, mcc_mismatch USD 1,943.35, late_batch USD 1,292.51, stored_credential USD 287.21. Best single commercial_data USD 20,451.98 (40.6%). Best pair commercial_data plus avs_cvv USD 30,485.41 (60.5%), 5.455 times a 5 bps cut of USD 5,588.58. Best triple adds commercial_l3, USD 37,908.13 (75.2%). Sum of singles USD 36,361.28, so USD 14,025.10 of the gap sits behind a higher failure. The lowest rule can never be masked, pinned in a test. Stress at 0.4x missing field rates: gap USD 23,674.48, 10.37% of the bill, same pair wins at 66.3%. 28 tests, gate green at 1155 python lines.",
+      "added": "2026-11-20",
+      "shipped": "2026-11-20",
+      "artifact": "artifacts/2026-11-20-fee-qualification/"
     }
   ]
 }

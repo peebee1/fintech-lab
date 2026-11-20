@@ -442,6 +442,22 @@
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-19-auth-holds",
       "promoted": false
+    },
+    {
+      "date": "2026-11-20",
+      "id": "fee-qualification",
+      "lane": "build",
+      "title": "The card fee gap is a field, not a rate",
+      "thesis": "A merchant audits the rate and misses the qualification. On 61,985 transactions billed USD 255,120.61, USD 50,386.38, 19.75 percent, came from items that failed a qualification rule, and one missing Level 2 field carried 58.4 percent of it. The best two data fixes recover 5.455 times a 5 basis point rate cut.",
+      "path": "artifacts/2026-11-20-fee-qualification/",
+      "theme": "acquiring",
+      "score": 4.65,
+      "tests": {
+        "passed": 28,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-20-fee-qualification",
+      "promoted": false
     }
   ],
   "parked": [],

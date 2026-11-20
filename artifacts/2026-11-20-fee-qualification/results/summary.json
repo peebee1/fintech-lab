@@ -1,0 +1,379 @@
+{
+  "synthetic": true,
+  "seed": 20261120,
+  "gap_scale": 1.0,
+  "book": {
+    "transactions": 61985,
+    "days": 45,
+    "processed_cents": 1117409362,
+    "by_channel": {
+      "card_present": 32254,
+      "ecommerce": 21041,
+      "recurring": 8690
+    },
+    "by_product": {
+      "consumer_credit": 29666,
+      "consumer_debit": 18074,
+      "commercial_credit": 9907,
+      "prepaid": 4338
+    },
+    "commercial_transactions": 9907,
+    "large_commercial_transactions": 291
+  },
+  "totals": {
+    "billed_cents": 25512061,
+    "qualified_cents": 20473423,
+    "gap_cents": 5038638,
+    "gap_bp_of_processed": 45.09,
+    "gap_share_of_billed": 0.1975,
+    "failing_transactions": 28553,
+    "clean_transactions": 33432
+  },
+  "by_cause": [
+    {
+      "code": "unauthorized",
+      "label": "no authorisation on file",
+      "fix": "send the auth record with the batch",
+      "effort": 2,
+      "transactions": 2552,
+      "gap_cents": 536707,
+      "share": 0.106518,
+      "recovery_alone_cents": 284409,
+      "masked_cents": 252298,
+      "recovery_alone_share": 0.529915
+    },
+    {
+      "code": "commercial_data",
+      "label": "commercial card without tax amount and customer code",
+      "fix": "send the Level 2 fields",
+      "effort": 3,
+      "transactions": 5178,
+      "gap_cents": 2942029,
+      "share": 0.583894,
+      "recovery_alone_cents": 2045198,
+      "masked_cents": 896831,
+      "recovery_alone_share": 0.695166
+    },
+    {
+      "code": "mcc_mismatch",
+      "label": "filed under an MCC outside the registered group",
+      "fix": "map each product line to its MCC",
+      "effort": 2,
+      "transactions": 2108,
+      "gap_cents": 194335,
+      "share": 0.038569,
+      "recovery_alone_cents": 144590,
+      "masked_cents": 49745,
+      "recovery_alone_share": 0.744024
+    },
+    {
+      "code": "avs_cvv",
+      "label": "card not present without an AVS or CVV result",
+      "fix": "pass the AVS and CVV results",
+      "effort": 4,
+      "transactions": 10769,
+      "gap_cents": 913338,
+      "share": 0.181267,
+      "recovery_alone_cents": 733500,
+      "masked_cents": 179838,
+      "recovery_alone_share": 0.803098
+    },
+    {
+      "code": "commercial_l3",
+      "label": "commercial card at or above USD 5,000 without line items",
+      "fix": "send Level 3 line items",
+      "effort": 5,
+      "transactions": 50,
+      "gap_cents": 294257,
+      "share": 0.0584,
+      "recovery_alone_cents": 272594,
+      "masked_cents": 21663,
+      "recovery_alone_share": 0.926381
+    },
+    {
+      "code": "stored_credential",
+      "label": "recurring charge without the stored credential indicator",
+      "fix": "flag recurring charges as stored credential",
+      "effort": 1,
+      "transactions": 2185,
+      "gap_cents": 28721,
+      "share": 0.0057,
+      "recovery_alone_cents": 26586,
+      "masked_cents": 2135,
+      "recovery_alone_share": 0.925664
+    },
+    {
+      "code": "late_batch",
+      "label": "settlement file after the daily cut off",
+      "fix": "move the batch before the cut off",
+      "effort": 2,
+      "transactions": 5711,
+      "gap_cents": 129251,
+      "share": 0.025652,
+      "recovery_alone_cents": 129251,
+      "masked_cents": 0,
+      "recovery_alone_share": 1.0
+    }
+  ],
+  "single_fixes": [
+    {
+      "codes": [
+        "unauthorized"
+      ],
+      "recovery_cents": 284409,
+      "share": 0.056446,
+      "transactions": 2552,
+      "effort": 2
+    },
+    {
+      "codes": [
+        "commercial_data"
+      ],
+      "recovery_cents": 2045198,
+      "share": 0.405903,
+      "transactions": 5178,
+      "effort": 3
+    },
+    {
+      "codes": [
+        "mcc_mismatch"
+      ],
+      "recovery_cents": 144590,
+      "share": 0.028696,
+      "transactions": 2106,
+      "effort": 2
+    },
+    {
+      "codes": [
+        "avs_cvv"
+      ],
+      "recovery_cents": 733500,
+      "share": 0.145575,
+      "transactions": 10769,
+      "effort": 4
+    },
+    {
+      "codes": [
+        "commercial_l3"
+      ],
+      "recovery_cents": 272594,
+      "share": 0.054101,
+      "transactions": 50,
+      "effort": 5
+    },
+    {
+      "codes": [
+        "stored_credential"
+      ],
+      "recovery_cents": 26586,
+      "share": 0.005276,
+      "transactions": 2170,
+      "effort": 1
+    },
+    {
+      "codes": [
+        "late_batch"
+      ],
+      "recovery_cents": 129251,
+      "share": 0.025652,
+      "transactions": 5711,
+      "effort": 2
+    }
+  ],
+  "best_pairs": [
+    {
+      "codes": [
+        "commercial_data",
+        "avs_cvv"
+      ],
+      "recovery_cents": 3048541,
+      "share": 0.605033,
+      "transactions": 15947,
+      "effort": 7
+    },
+    {
+      "codes": [
+        "commercial_data",
+        "commercial_l3"
+      ],
+      "recovery_cents": 2605882,
+      "share": 0.51718,
+      "transactions": 5228,
+      "effort": 8
+    },
+    {
+      "codes": [
+        "unauthorized",
+        "commercial_data"
+      ],
+      "recovery_cents": 2431690,
+      "share": 0.482609,
+      "transactions": 7730,
+      "effort": 5
+    },
+    {
+      "codes": [
+        "commercial_data",
+        "mcc_mismatch"
+      ],
+      "recovery_cents": 2253644,
+      "share": 0.447272,
+      "transactions": 7284,
+      "effort": 5
+    }
+  ],
+  "best_triples": [
+    {
+      "codes": [
+        "commercial_data",
+        "avs_cvv",
+        "commercial_l3"
+      ],
+      "recovery_cents": 3790813,
+      "share": 0.752349,
+      "transactions": 15997,
+      "effort": 12
+    },
+    {
+      "codes": [
+        "unauthorized",
+        "commercial_data",
+        "avs_cvv"
+      ],
+      "recovery_cents": 3484818,
+      "share": 0.691619,
+      "transactions": 18499,
+      "effort": 9
+    },
+    {
+      "codes": [
+        "commercial_data",
+        "avs_cvv",
+        "late_batch"
+      ],
+      "recovery_cents": 3295780,
+      "share": 0.654101,
+      "transactions": 21658,
+      "effort": 9
+    }
+  ],
+  "budget_curve": [
+    {
+      "codes": [],
+      "recovery_cents": 0,
+      "share": 0.0,
+      "transactions": 0,
+      "effort": 0
+    },
+    {
+      "codes": [
+        "commercial_data"
+      ],
+      "recovery_cents": 2045198,
+      "share": 0.405903,
+      "transactions": 5178,
+      "effort": 3
+    },
+    {
+      "codes": [
+        "commercial_data",
+        "avs_cvv"
+      ],
+      "recovery_cents": 3048541,
+      "share": 0.605033,
+      "transactions": 15947,
+      "effort": 7
+    },
+    {
+      "codes": [
+        "commercial_data",
+        "avs_cvv",
+        "commercial_l3"
+      ],
+      "recovery_cents": 3790813,
+      "share": 0.752349,
+      "transactions": 15997,
+      "effort": 12
+    },
+    {
+      "codes": [
+        "unauthorized",
+        "commercial_data",
+        "mcc_mismatch",
+        "avs_cvv",
+        "commercial_l3",
+        "stored_credential",
+        "late_batch"
+      ],
+      "recovery_cents": 5038638,
+      "share": 1.0,
+      "transactions": 28553,
+      "effort": 19
+    }
+  ],
+  "rate_cuts": [
+    {
+      "bp": 5,
+      "saving_cents": 558858,
+      "share_of_gap": 0.110914
+    },
+    {
+      "bp": 10,
+      "saving_cents": 1117424,
+      "share_of_gap": 0.221771
+    },
+    {
+      "bp": 25,
+      "saving_cents": 2793477,
+      "share_of_gap": 0.554411
+    }
+  ],
+  "headline": {
+    "gap_cents": 5038638,
+    "gap_bp_of_processed": 45.09,
+    "gap_share_of_billed": 0.1975,
+    "top_cause": "commercial_data",
+    "top_cause_cents": 2942029,
+    "top_cause_share": 0.583894,
+    "top_cause_transactions": 5178,
+    "best_single_codes": [
+      "commercial_data"
+    ],
+    "best_single_cents": 2045198,
+    "best_single_share": 0.405903,
+    "best_pair_codes": [
+      "commercial_data",
+      "avs_cvv"
+    ],
+    "best_pair_cents": 3048541,
+    "best_pair_share": 0.605033,
+    "best_triple_codes": [
+      "commercial_data",
+      "avs_cvv",
+      "commercial_l3"
+    ],
+    "best_triple_cents": 3790813,
+    "best_triple_share": 0.752349,
+    "sum_of_single_cents": 3636128,
+    "cascade_cents": 1402510,
+    "all_fixes_cents": 5038638,
+    "rate_cut_5bp_cents": 558858,
+    "rate_cut_5bp_share_of_gap": 0.110914,
+    "pair_over_rate_cut": 5.455
+  },
+  "stress": {
+    "gap_scale": 0.4,
+    "label": "well integrated merchant",
+    "processed_cents": 1117409362,
+    "billed_cents": 22840871,
+    "gap_cents": 2367448,
+    "gap_share_of_billed": 0.10365,
+    "best_pair_codes": [
+      "commercial_data",
+      "avs_cvv"
+    ],
+    "best_pair_cents": 1569469,
+    "best_pair_share": 0.662937,
+    "rate_cut_5bp_cents": 558858
+  }
+}
