@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 20,
+  "sequence": 21,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -457,6 +457,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-20-fee-qualification",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-21",
+      "id": "h-shopping-eval-gate",
+      "lane": "harden",
+      "title": "Make the README's keyless evaluation number a gate, not a byline",
+      "thesis": "The README quoted 12 of 13 and 81 percent gold recall for the mock evaluation; the committed command printed 13 of 14 and 82.5 percent. CI ran pytest only and the eval returned 0 on every outcome, so the one keyless number in the repo could not fail. It now replays against a committed record and exits 1 on drift or below 85 percent pass rate.",
+      "path": "",
+      "theme": "reliability",
+      "score": null,
+      "tests": {
+        "passed": 75,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/shopping-concierge/commit/1104f83",
       "promoted": false
     }
   ],
