@@ -43,6 +43,11 @@
       "topics": ["consulting", "personal-website", "portfolio"]
     },
     {
+      "repo": "intraday-float",
+      "description": "An acquirer funds payouts at 11:00 and settles cards at 16:30, so the daily net says nothing about the buffer. A simulator that sizes it against the intraday requirement: USD 106,970 a year against USD 448,355 for holding nothing.",
+      "topics": ["cash-management", "fintech", "payments", "python", "simulation", "treasury", "liquidity"]
+    },
+    {
       "repo": "dispute-clocks",
       "description": "A chargeback runs on three clocks, not one. A simulator that scores dispute policies against an analyst budget: 21.3% of the recoverable value with a status tracker, 94.0% with the clocks, an evidence gate and a value per minute queue.",
       "topics": ["chargebacks", "fintech", "payments", "python", "risk", "simulation", "disputes"]

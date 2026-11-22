@@ -425,7 +425,10 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-18-intraday-liquidity",
-      "promoted": false
+      "promoted": true,
+      "promoted_url": "https://github.com/peebee1/intraday-float",
+      "promoted_date": "2026-11-22",
+      "promoted_tests": 37
     },
     {
       "date": "2026-11-19",
