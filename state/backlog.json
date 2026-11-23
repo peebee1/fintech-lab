@@ -399,6 +399,27 @@
       "added": "2026-11-20",
       "shipped": "2026-11-20",
       "artifact": "artifacts/2026-11-20-fee-qualification/"
+    },
+    {
+      "id": "sca-exemptions",
+      "title": "SCA exemption selection priced against the fraud rate it moves",
+      "thesis": "The exemption ladder is a control, not an entitlement: the ceiling a merchant may use depends on the fraud the exemptions at that ceiling produce, and that rate is measured over every remote card payment.",
+      "theme": "authentication",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 4,
+        "s4": 4,
+        "s5": 5,
+        "s6": 5,
+        "s7": 5
+      },
+      "notes": "Queue was empty: every backlog item was shipped or parked and every hardening item was shipped, so this was scored and built in the same run. Shipped 2026-11-23, scored 4.50. 49,752 synthetic remote card transactions over 60 days, EUR 2,953,266.79 processed, latent fraud 14.16 bps. Challenge all EUR 34,942.88, of which 99.1 percent is friction. Exempt everything EUR 4,710.16 and 56 of 60 days over the 1 bp reference rate, worst window 29.98 bps. Best compliant policy (one rung down, risk cutoff 0.12) EUR 25,026.14, 27.5 percent of value exempt, 0 breach days, saves EUR 10,217.70 of friction for EUR 300.96 of added fraud, 28.4 percent off challenge all. Ladder at its ceiling with a risk test EUR 16,439.13 with 8 breach days, worst window 4.91 bps over 6. Compliance premium over the unconstrained floor EUR 20,315.98, 4.3 times the floor. The article 16 counters refused 61 of 14,152 under-cap transactions, so the EUR 30 cap is what binds there. 31 tests, gate green at 979 python lines. Promotion candidate for the recap lane.",
+      "added": "2026-11-23",
+      "shipped": "2026-11-23",
+      "artifact": "artifacts/2026-11-23-sca-exemptions/"
     }
   ]
 }

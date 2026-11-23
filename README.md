@@ -10,18 +10,19 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**29 ships** | **4 day streak** (best 6) | 17 new artifacts | 12 fixes to existing repos
+**30 ships** | **1 day streak** (best 6) | 18 new artifacts | 12 fixes to existing repos
 
-Latest: **Make the README's keyless evaluation number a gate, not a byline** (2026-11-21)
+Latest: **SCA exemption selection priced against the fraud rate it moves** (2026-11-23)
 
-> The README quoted 12 of 13 and 81 percent gold recall for the mock evaluation; the committed command printed 13 of 14 and 82.5 percent. CI ran pytest only and the eval returned 0 on every outcome, so the one keyless number in the repo could not fail. It now replays against a committed record and exits 1 on drift or below 85 percent pass rate.
+> On 49,752 remote card transactions, exempting everything costs EUR 4,710 and is over the 1 bp reference rate on 56 of 60 days; the risk-screened policy at the ladder's ceiling costs EUR 16,439 and is over on 8; the cheapest policy that never breaches costs EUR 25,026, so the fraud rate rule charges EUR 20,315.98, 4.3 times the unconstrained floor.
 
-[Commit](https://github.com/peebee1/shopping-concierge/commit/1104f83)
+[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-23-sca-exemptions)
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-11-23 | [SCA exemption selection priced against the fraud rate it moves](artifacts/2026-11-23-sca-exemptions/) | On 49,752 remote card transactions, exempting everything costs EUR 4,710 and is over the 1 bp reference rate on 56 of 60 days; the risk-screened policy at the ladder's ceiling costs EUR 16,439 and is over on 8; the cheapest policy that never breaches costs EUR 25,026, so the fraud rate rule charges EUR 20,315.98, 4.3 times the unconstrained floor. | 31 passed | 4.50 |
 | 2026-11-21 | Make the README's keyless evaluation number a gate, not a byline | The README quoted 12 of 13 and 81 percent gold recall for the mock evaluation; the committed command printed 13 of 14 and 82.5 percent. CI ran pytest only and the eval returned 0 on every outcome, so the one keyless number in the repo could not fail. It now replays against a committed record and exits 1 on drift or below 85 percent pass rate. | 75 passed | n/a |
 | 2026-11-20 | [The card fee gap is a field, not a rate](artifacts/2026-11-20-fee-qualification/) | A merchant audits the rate and misses the qualification. On 61,985 transactions billed USD 255,120.61, USD 50,386.38, 19.75 percent, came from items that failed a qualification rule, and one missing Level 2 field carried 58.4 percent of it. The best two data fixes recover 5.455 times a 5 basis point rate cut. | 28 passed | 4.65 |
 | 2026-11-19 | [A capture window is a two sided date](artifacts/2026-11-19-auth-holds/) | An authorisation is a promise with a deadline, and one window for a whole merchant book loses money on both sides. On 2,500 synthetic authorisations worth USD 383,504.17, a 7 day window refused USD 116,883.23 past expiry, 30.5 percent of settlement value, while holding USD 2,140,155.70 of customer funds days. A 21 day window recovered 88.6 percent for USD 4,028,299.12 of funds days, and 28 days bought 1.0 point more for USD 4,715,738.70. Per class windows captured the same 88.6 percent with 16.75 percent fewer funds days, and refusing an over limit capture lost USD 40,028.52 to avoid USD 1,866.14 of excess, 4.32 times the whole tip book, because the refusal takes the authorised base with the tip. | 24 passed | 4.65 |

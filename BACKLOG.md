@@ -32,3 +32,4 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 | shipped | Intraday liquidity buffer sized against the settlement clock | treasury |
 | shipped | Capture windows matched to merchant class, not to the calendar | payments |
 | shipped | Card fee qualification gap and repair ranking | acquiring |
+| shipped | SCA exemption selection priced against the fraud rate it moves | authentication |

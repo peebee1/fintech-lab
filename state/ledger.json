@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 21,
+  "sequence": 22,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -476,6 +476,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/shopping-concierge/commit/1104f83",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-23",
+      "id": "sca-exemptions",
+      "lane": "build",
+      "title": "SCA exemption selection priced against the fraud rate it moves",
+      "thesis": "On 49,752 remote card transactions, exempting everything costs EUR 4,710 and is over the 1 bp reference rate on 56 of 60 days; the risk-screened policy at the ladder's ceiling costs EUR 16,439 and is over on 8; the cheapest policy that never breaches costs EUR 25,026, so the fraud rate rule charges EUR 20,315.98, 4.3 times the unconstrained floor.",
+      "path": "artifacts/2026-11-23-sca-exemptions/",
+      "theme": "authentication",
+      "score": 4.5,
+      "tests": {
+        "passed": 31,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-23-sca-exemptions",
       "promoted": false
     }
   ],
