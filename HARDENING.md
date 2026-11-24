@@ -24,3 +24,4 @@ Fixes to the repos people already see. Priority is impact x confidence / effort,
 | angelone-smartapi | Decide what leaves the machine before the mandate branch is public |
 | angelone-smartapi | Stop the SDK from writing bearer tokens into logs |
 | shopping-concierge | Make the README's keyless evaluation number a gate |
+| fintech-lab | Make the lab re-derive its own committed numbers in CI |

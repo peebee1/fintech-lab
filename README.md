@@ -10,18 +10,17 @@ I build agentic commerce and payments systems for a living. This repo is the par
 work that can be made public: the primitives, the failure modes, and the measurements.
 
 <!-- DASHBOARD:START -->
-**30 ships** | **1 day streak** (best 6) | 18 new artifacts | 12 fixes to existing repos
+**31 ships** | **2 day streak** (best 6) | 18 new artifacts | 13 fixes to existing repos
 
-Latest: **SCA exemption selection priced against the fraud rate it moves** (2026-11-23)
+Latest: **Make the lab re-derive its own committed numbers in CI** (2026-11-24)
 
-> On 49,752 remote card transactions, exempting everything costs EUR 4,710 and is over the 1 bp reference rate on 56 of 60 days; the risk-screened policy at the ladder's ceiling costs EUR 16,439 and is over on 8; the cheapest policy that never breaches costs EUR 25,026, so the fraud rate rule charges EUR 20,315.98, 4.3 times the unconstrained floor.
-
-[Code and results](https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-23-sca-exemptions)
+> The gate checked that results/ held a file, never that the file still came from the code. An edited seed in one committed summary.json passed every check. tools/repro.py now deletes the committed outputs in a scratch copy, re-runs the documented command, and compares: 18 of 18 artifacts reproduce, 41 files byte for byte, 2 by structure with 7 timing values drifting, 1 declared volatile. The first run also found two result files no command writes.
 
 ## Shipped
 
 | Date | Artifact | Claim | Tests | Score |
 |---|---|---|---|---|
+| 2026-11-24 | [Make the lab re-derive its own committed numbers in CI](tools/repro.py) | The gate checked that results/ held a file, never that the file still came from the code. An edited seed in one committed summary.json passed every check. tools/repro.py now deletes the committed outputs in a scratch copy, re-runs the documented command, and compares: 18 of 18 artifacts reproduce, 41 files byte for byte, 2 by structure with 7 timing values drifting, 1 declared volatile. The first run also found two result files no command writes. | 745 passed | n/a |
 | 2026-11-23 | [SCA exemption selection priced against the fraud rate it moves](artifacts/2026-11-23-sca-exemptions/) | On 49,752 remote card transactions, exempting everything costs EUR 4,710 and is over the 1 bp reference rate on 56 of 60 days; the risk-screened policy at the ladder's ceiling costs EUR 16,439 and is over on 8; the cheapest policy that never breaches costs EUR 25,026, so the fraud rate rule charges EUR 20,315.98, 4.3 times the unconstrained floor. | 31 passed | 4.50 |
 | 2026-11-21 | Make the README's keyless evaluation number a gate, not a byline | The README quoted 12 of 13 and 81 percent gold recall for the mock evaluation; the committed command printed 13 of 14 and 82.5 percent. CI ran pytest only and the eval returned 0 on every outcome, so the one keyless number in the repo could not fail. It now replays against a committed record and exits 1 on drift or below 85 percent pass rate. | 75 passed | n/a |
 | 2026-11-20 | [The card fee gap is a field, not a rate](artifacts/2026-11-20-fee-qualification/) | A merchant audits the rate and misses the qualification. On 61,985 transactions billed USD 255,120.61, USD 50,386.38, 19.75 percent, came from items that failed a qualification rule, and one missing Level 2 field carried 58.4 percent of it. The best two data fixes recover 5.455 times a 5 basis point rate cut. | 28 passed | 4.65 |
@@ -70,7 +69,9 @@ An artifact moves to its own repo when it scores 4.2 or higher, its measurements
 |---|---|
 | `RUBRIC.md` | The scoring rules: hard gates, seven weighted dimensions, anti repetition, promotion bar |
 | `tools/select.py` | Picks the next item deterministically, including penalties for repeating a theme |
-| `tools/gate.py` | Binary quality gate: tests pass twice, README sections present, no secrets, measured output exists, size cap |
+| `tools/gate.py` | Binary quality gate: tests pass twice, README sections present, no secrets, committed numbers re-derived from code, size cap |
+| `tools/repro.py` | Re-runs each artifact's documented command in a scratch copy and diffs what it produces against what is committed |
+| `tools/repro_manifest.json` | Which command regenerates which result file. No entry means the numbers are never re-derived, so G3 fails |
 | `tools/render_readme.py` | Regenerates this dashboard, `BACKLOG.md`, and `HARDENING.md` from `state/*.json` |
 | `state/backlog.json` | Every idea that survived scoring, with its scores |
 | `state/hardening.json` | Defects in my other public repos, ranked by impact x confidence / effort |
@@ -96,7 +97,14 @@ uv sync
 uv run pytest                      # every artifact
 uv run python tools/select.py       # what should I build next
 uv run python tools/gate.py artifacts/<name>
+uv run python tools/repro.py --all    # re-derive every committed result from its code
 ```
+
+A result file is gated three ways in the manifest: `byte` must match the committed file
+exactly, `structure` must keep the same keys and types while wall clock values are printed
+as drift and not failed, and `volatile` must be produced but is declared ungated because it
+renders a timing column. Anything not listed in either class is not checked, which is why
+an artifact with no manifest entry fails G3 outright.
 
 ## What this is not
 

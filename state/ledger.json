@@ -493,6 +493,22 @@
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-23-sca-exemptions",
       "promoted": false
+    },
+    {
+      "date": "2026-11-24",
+      "id": "h-lab-repro-gate",
+      "lane": "harden",
+      "title": "Make the lab re-derive its own committed numbers in CI",
+      "thesis": "The gate checked that results/ held a file, never that the file still came from the code. An edited seed in one committed summary.json passed every check. tools/repro.py now deletes the committed outputs in a scratch copy, re-runs the documented command, and compares: 18 of 18 artifacts reproduce, 41 files byte for byte, 2 by structure with 7 timing values drifting, 1 declared volatile. The first run also found two result files no command writes.",
+      "path": "tools/repro.py",
+      "theme": "reliability",
+      "score": null,
+      "tests": {
+        "passed": 745,
+        "failed": 0
+      },
+      "url": "",
+      "promoted": false
     }
   ],
   "parked": [],

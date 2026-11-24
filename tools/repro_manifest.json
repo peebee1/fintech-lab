@@ -1,0 +1,171 @@
+{
+  "_note": "How each artifact's committed results are re-derived. Every artifact under artifacts/ needs an entry, or gate.py G3 fails. byte = must match exactly; structure = key tree and types must match, timing values are reported as drift and not gated.",
+  "artifacts/2026-10-22-agent-spend-policy/": {
+    "steps": [
+      {
+        "argv": ["node", "bench.mjs"],
+        "byte": ["results/cases.json"],
+        "structure": ["results/bench.json"]
+      }
+    ]
+  },
+  "artifacts/2026-10-23-recon/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "recon.cli", "eval"],
+        "byte": ["results/eval.json", "results/eval.md"]
+      },
+      {
+        "argv": ["python", "-m", "recon.cli", "bench"],
+        "volatile": ["results/bench.md"]
+      }
+    ]
+  },
+  "artifacts/2026-10-26-mandate-sim/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "mandate.cli", "eval"],
+        "byte": ["results/eval.json", "results/eval.md"]
+      }
+    ]
+  },
+  "artifacts/2026-10-28-fx-rounding/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "fxalloc.cli", "bench"],
+        "byte": [
+          "results/allocation.json",
+          "results/bias.json",
+          "results/example.json",
+          "results/fx_order.json"
+        ]
+      }
+    ]
+  },
+  "artifacts/2026-10-30-agent-credit/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "creditnet.cli", "bench"],
+        "byte": [
+          "results/default.json",
+          "results/limits.json",
+          "results/netting.json",
+          "results/policies.json"
+        ]
+      }
+    ]
+  },
+  "artifacts/2026-11-02-idempotency-conformance/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "idemconform.cli", "run"],
+        "byte": [
+          "results/conformance.json",
+          "results/violations.json",
+          "results/summary.md"
+        ],
+        "structure": ["results/overhead.json"]
+      }
+    ]
+  },
+  "artifacts/2026-11-04-sanctions-screening/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "screenlab.cli", "screen"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-06-payment-routing/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "routelab.cli", "route"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-09-exchange-recon/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "orderrecon.cli", "reconcile"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-11-dispute-clock/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "disputeclock.cli", "run"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-13-underwriting-calibration/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "uwcal.cli", "run"],
+        "byte": [
+          "results/summary.json",
+          "results/summary.md",
+          "results/reliability_overconfident.csv"
+        ]
+      }
+    ]
+  },
+  "artifacts/2026-11-14-ledger-close/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "ledgerclose.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-16-finality-policy/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "finality.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-18-consent-refresh/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "consent.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-18-intraday-liquidity/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "liquidity.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-19-auth-holds/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "authholds.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-20-fee-qualification/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "qualification.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  },
+  "artifacts/2026-11-23-sca-exemptions/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "exempt.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
+  }
+}

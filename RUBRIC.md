@@ -13,7 +13,7 @@ Any failed gate means the item is parked, not shipped. Gates are binary and chec
 |---|---|---|
 | G1 Runnable | One documented command runs it from a clean checkout, no paid key needed | A repo nobody can run is a blog post |
 | G2 Tested | Tests pass, are deterministic, and cover the central claim | Flaky or decorative tests hide regressions |
-| G3 Measured | At least one number is produced by committed code, with the command to reproduce it | Claims without numbers are marketing |
+| G3 Measured | At least one number is produced by committed code, the documented command re-derives it, and the artifact has an entry in `tools/repro_manifest.json` | Claims without numbers are marketing, and numbers nobody re-derives drift silently |
 | G4 Honest | No secrets, no PII, no live credentials, synthetic data labeled as synthetic | Trust is the product in fintech |
 | G5 Documented | README has Problem, Why it matters, Design, Run, Results, Limits, Next | The limits section is where credibility lives |
 | G6 Portable | Stdlib or pinned deps, no service to boot, CI green | A demo that needs five servers never runs again |

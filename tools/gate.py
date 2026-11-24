@@ -19,6 +19,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+import repro  # noqa: E402
+
 SKIP_DIRS = {".venv", "__pycache__", ".git", "node_modules", ".pytest_cache", ".mypy_cache"}
 TEXT_SUFFIXES = {".py", ".md", ".json", ".toml", ".yaml", ".yml", ".txt", ".cfg", ".sh", ".html", ".csv"}
 
@@ -103,6 +106,25 @@ def check_results(base: Path) -> tuple[bool, str]:
     return False, "no results/, bench/, or eval/ output committed"
 
 
+def check_reproducible(base: Path) -> tuple[bool, str]:
+    """A committed number nobody re-derives is a number that can drift silently."""
+    ok, detail = check_results(base)
+    if not ok:
+        return ok, detail
+    entry = repro.entry_for(base, repro.load_manifest())
+    if entry is None:
+        return False, (
+            f"{detail}, but no entry in tools/repro_manifest.json, "
+            "so the committed numbers are never re-derived from code"
+        )
+    report = repro.reproduce(base, entry)
+    if not report.ok:
+        return False, "results do not reproduce: " + "; ".join(report.failures[:3])
+    drift = f", {len(report.drift)} timing values drift" if report.drift else ""
+    vol = f", {report.volatile} declared volatile" if report.volatile else ""
+    return True, f"{detail}, {report.compared} files re-derived from code{vol}{drift}"
+
+
 def check_portable(base: Path) -> tuple[bool, str]:
     """A demo that needs the network is a demo that stops working. Tests and runtime only."""
     banned = ("requests", "httpx", "aiohttp", "urllib.request", "boto3", "openai", "anthropic")
@@ -155,7 +177,7 @@ def main() -> None:
     checks = [
         ("G1 runnable", lambda: (True, "checked by G2 and the README run section")),
         ("G2 tested", lambda: run_tests(base)),
-        ("G3 measured", lambda: check_results(base)),
+        ("G3 measured", lambda: check_reproducible(base)),
         ("G4 honest", lambda: check_secrets(base)),
         ("G5 documented", lambda: check_readme(base)),
         ("G6 portable", lambda: check_portable(base)),
