@@ -167,5 +167,13 @@
         "byte": ["results/summary.json", "results/summary.md"]
       }
     ]
+  },
+  "artifacts/2026-11-25-cash-logistics/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "cashplan.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
   }
 }

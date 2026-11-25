@@ -33,3 +33,4 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 | shipped | Capture windows matched to merchant class, not to the calendar | payments |
 | shipped | Card fee qualification gap and repair ranking | acquiring |
 | shipped | SCA exemption selection priced against the fraud rate it moves | authentication |
+| shipped | ATM cash replenishment priced by trip, by balance, and by service | cash |

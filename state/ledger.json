@@ -509,6 +509,22 @@
       },
       "url": "",
       "promoted": false
+    },
+    {
+      "date": "2026-11-25",
+      "id": "cash-logistics",
+      "lane": "build",
+      "title": "ATM cash replenishment priced by trip, by balance, and by service",
+      "thesis": "On 60 synthetic machines over 120 days, 6,144,545 notes and INR 3,072,272,500 dispensed, the default weekly fill to capacity costs INR 7,684,571.80 and serves 99.423 percent, while a min/max rule that may trip any day costs INR 6,597,770.30 and serves every withdrawal, so the default is 16.47 percent more expensive and worse: it spends INR 1,069,957.70 more on cash to save INR 91,999.20 on trips. Cutting the fill without adding trips frees INR 987,164.28 of funding and adds 36,517 unserved withdrawals, and a fortnightly cadence cuts the trip bill 40.73 percent to end 39.49 percent more expensive in total because 25.39 percent of withdrawals go unserved. Capacity only binds when the cadence is fixed: 94.691 percent at three cassettes, 99.423 at four, and the 99.5 percent target needs five at INR 9,676,489.65, 46.66 percent above the daily policy, while any day trips serve 100 percent at every cassette count. Perfect foresight is worth INR 778,651.59, 11.8 percent, bought with 162 more trips and 1,412.8 fewer notes held. The weekly policy's losses are 98.84 percent metro.",
+      "path": "artifacts/2026-11-25-cash-logistics/",
+      "theme": "cash",
+      "score": 4.05,
+      "tests": {
+        "passed": 35,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-25-cash-logistics",
+      "promoted": false
     }
   ],
   "parked": [],

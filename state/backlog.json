@@ -420,6 +420,27 @@
       "added": "2026-11-23",
       "shipped": "2026-11-23",
       "artifact": "artifacts/2026-11-23-sca-exemptions/"
+    },
+    {
+      "id": "cash-logistics",
+      "title": "ATM cash replenishment priced by trip, by balance, and by service",
+      "thesis": "A machine is a stock with a flow problem: the cadence and the fill quantity have opposite costs, and the default of one trip a week filled to the top is dominated on both.",
+      "theme": "cash",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 4,
+        "s2": 4,
+        "s3": 4,
+        "s4": 4,
+        "s5": 5,
+        "s6": 5,
+        "s7": 3
+      },
+      "notes": "Queue was empty: every backlog item was shipped or parked and every hardening item was shipped, so this was scored and built in the same run. Shipped 2026-11-25, scored 4.05. 60 synthetic machines, 120 days, 898,883 withdrawals, 6,144,545 notes, INR 3,072,272,500. Weekly full fill INR 7,684,571.80 at 99.423 percent service and 21.48 bps of value; daily min/max INR 6,597,770.30 at 100 percent, 16.47 percent cheaper and 0.577 points better. Same trips with a seven day fill frees INR 987,164.28 of funding and loses 36,517 withdrawals. Fortnightly trips cut CIT 40.73 percent and end 39.49 percent more expensive with 25.39 percent of withdrawals unserved. Fixed cadence capacity sweep 74.935, 94.691, 99.423, 99.943, 99.998 percent for two to six cassettes; 99.5 percent needs five cassettes at INR 9,676,489.65, 46.66 percent above the daily policy. Any day trips serve 100 percent at every rung, so capacity is a cost choice unless the schedule is fixed. Oracle gap INR 778,651.59, 11.8 percent. 98.84 percent of the weekly policy's lost withdrawals are metro. 35 tests, gate green at 1183 python lines, both results files re-derived by tools/repro.py. S7 scored 3: cash logistics is adjacent to the lab thesis, not core to it, so this is not a promotion candidate.",
+      "added": "2026-11-25",
+      "shipped": "2026-11-25",
+      "artifact": "artifacts/2026-11-25-cash-logistics/"
     }
   ]
 }
