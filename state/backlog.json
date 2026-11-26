@@ -441,6 +441,27 @@
       "added": "2026-11-25",
       "shipped": "2026-11-25",
       "artifact": "artifacts/2026-11-25-cash-logistics/"
+    },
+    {
+      "id": "correspondent-fees",
+      "title": "Correspondent charge codes priced by what the beneficiary receives",
+      "thesis": "The charge code does not change what the chain takes, only who pays it, so the code that looks cheapest on your own ledger is the one that puts the shortfall on your supplier.",
+      "theme": "cross-border",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 4,
+        "s4": 5,
+        "s5": 5,
+        "s6": 5,
+        "s7": 5
+      },
+      "notes": "Queue was empty: every backlog item was shipped or parked and every hardening item was shipped, so this was scored and built in the same run. Shipped 2026-11-26, scored 4.65, promotion candidate. 2,000 synthetic supplier invoices over 90 days, USD 12,138,953 instructed across five corridors of one to three hops, median ticket USD 4,200. The chains take USD 47,499.41, 39.13 bps. SHA costs the payer 29.75 bps and leaves the beneficiary 39.13 bps short, 68.88 in total; OUR costs 61.20 with nothing deducted, so SHA is 31.45 bps cheaper on the payer's ledger and 7.68 bps, USD 9,320, dearer in total. BEN is the cheapest row on the payer's ledger at 16.82 bps and the second worst policy at 73.43, because it puts the sender bank's fee on the supplier too. Repairing every claim costs 92.72 bps, 31.52 bps above the bundle: the median claim is USD 37, the minimum wire fee is USD 35, and the average repaired claim costs USD 105.21 including the USD 37 owed. The claim threshold sweep is a staircase from 92.72 at USD 25 to 68.88 at USD 250 and never, and the largest claim on the book is USD 100.08, so every threshold above it is the same policy. The tolerated deduction is the free lever: USD 25 to USD 50 cuts claims from 827 to 189 and total cost from 68.88 to 59.42 bps, USD 11,483, because those shortfalls were already being absorbed. A tolerance below the smallest lift, USD 12, behaves as zero, which is why the first two rungs print identically. OUR wins on two and three hop corridors and above USD 5,475 to USD 10,875 depending on the route; a per corridor rule reaches 56.41 bps, 56.67 percent of the oracle prize of USD 26,713.23, while an expected-deduction rule reaches only 12.54 percent and loses to the blunt bundle. 46 tests, gate green at 1350 python lines, both results files re-derived by tools/repro.py.",
+      "added": "2026-11-26",
+      "shipped": "2026-11-26",
+      "artifact": "artifacts/2026-11-26-correspondent-fees/"
     }
   ]
 }

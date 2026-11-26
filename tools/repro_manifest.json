@@ -175,5 +175,13 @@
         "byte": ["results/summary.json", "results/summary.md"]
       }
     ]
+  },
+  "artifacts/2026-11-26-correspondent-fees/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "corrfee.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
   }
 }

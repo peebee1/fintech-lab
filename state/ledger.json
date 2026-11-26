@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 22,
+  "sequence": 23,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -524,6 +524,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-25-cash-logistics",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-26",
+      "id": "correspondent-fees",
+      "lane": "build",
+      "title": "Correspondent charge codes: the fee is a cost allocation, not a cost",
+      "thesis": "On 2,000 synthetic supplier invoices worth USD 12,138,953 over 90 days, the correspondent chains take USD 47,499.41, 39.13 bps of the value. Shared charges cost the payer 29.75 bps and leave the beneficiary 39.13 bps short, 68.88 in total, while one bundled OUR charge costs 61.20 for both: SHA is 31.45 bps cheaper on the payer's own ledger and 7.68 bps dearer in total, and the difference is the supplier's money. Repairing the shortfall is the wrong repair: the median claim is USD 37 and the minimum wire fee is USD 35, so repairing every claim costs 92.72 bps, 31.52 bps above the bundle, and 51 percent more than buying delivery up front. Raising the tolerated deduction from USD 25 to USD 50 cuts claims 77 percent and total cost 9.46 bps, USD 11,483, for nothing, because the supplier was absorbing those shortfalls already. One line per corridor, OUR above the breakeven and SHA below, reaches 56.41 bps against 61.20 for OUR everywhere and 68.88 for SHA everywhere, 56.67 percent of the oracle prize.",
+      "path": "artifacts/2026-11-26-correspondent-fees/",
+      "theme": "cross-border",
+      "score": 4.65,
+      "tests": {
+        "passed": 46,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-26-correspondent-fees",
       "promoted": false
     }
   ],
