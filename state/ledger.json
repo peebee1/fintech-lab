@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 23,
+  "sequence": 24,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -540,6 +540,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-26-correspondent-fees",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-27",
+      "id": "payout-holds",
+      "lane": "build",
+      "title": "Seller payout reserves priced against the hold and the risk band",
+      "thesis": "On 400 synthetic marketplace sellers over 180 days, 52,349 orders and USD 6,927,844.81 of GMV, refunds cost USD 254,124.66. Paying T+1 with no reserve writes off USD 57,605.04, 22.7 percent of the refund book, and touches 263 of 400 sellers. A 15 percent reserve held 30 days cuts the write-off to USD 21,835.52 for USD 12,329.06 of float, 50.2 bps of GMV against 86.4, and captures 49.8 percent of the gap to perfect foresight. The hold loses on both counts: 14 days writes off USD 33,537.86 for USD 31,813.71 of float, strictly dominated by a 10 percent reserve at USD 25,911.97 for USD 8,879.54, and every hold rung including three days is worse in total than paying next day. The reserve has a knee at 15 percent: the next five points spend USD 3,442.10 to save USD 1,980.62, and the net is negative on every rung above it. The risk band is the wrong shape: 14 days plus 10 percent for new and risky sellers halves the write-off and still costs USD 57,605.53, USD 23,440.95 above the blunt reserve, because established sellers are 70 percent of the book, 89.7 percent of GMV and 61.6 percent of the write-off dollars. Clawback from later payouts is worth USD 2,250.32 at the same reserve rate. Three seed books pick the 15 percent rung and capture 43.0 to 49.8 percent of the prize. 43 tests, gate green at 1,323 python lines, both results files re-derived by tools/repro.py.",
+      "path": "artifacts/2026-11-27-payout-holds/",
+      "theme": "payouts",
+      "score": 4.55,
+      "tests": {
+        "passed": 43,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-27-payout-holds",
       "promoted": false
     }
   ],

@@ -183,5 +183,13 @@
         "byte": ["results/summary.json", "results/summary.md"]
       }
     ]
+  },
+  "artifacts/2026-11-27-payout-holds/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "payoutholds.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
   }
 }

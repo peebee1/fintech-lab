@@ -1,0 +1,1213 @@
+{
+  "book": {
+    "seed": 20261127,
+    "days": 180,
+    "sellers": 400,
+    "orders": 52349,
+    "refunds": 1932,
+    "gmv_cents": 692784481,
+    "refund_cost_cents": 25412466,
+    "horizon_days": 287,
+    "digest": "44b69a89ec8e27c3"
+  },
+  "policies": {
+    "pay_t1": {
+      "policy": {
+        "name": "pay_t1",
+        "hold_days": 1,
+        "reserve_rate": 0.0,
+        "reserve_days": 0,
+        "clawback": true,
+        "tiered": false,
+        "tier_variant": "hold_plus_reserve",
+        "note": "pay next day, no reserve: what sellers ask for"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 673132519,
+        "charged_held": 14574877,
+        "charged_carry": 5077085,
+        "written_off": 5760504,
+        "float_cents_days": 687673138,
+        "float_cost_cents": 226084,
+        "economic_cost_cents": 5986588
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 83.15001501888435,
+        "float_cost_bps": 3.2634102841573323,
+        "economic_bps": 86.41342530304168,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 263,
+        "largest": 84440,
+        "top_decile_share": 0.26143458975117456
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "hold_7": {
+      "policy": {
+        "name": "hold_7",
+        "hold_days": 7,
+        "reserve_rate": 0.0,
+        "reserve_days": 0,
+        "clawback": true,
+        "tiered": false,
+        "tier_variant": "hold_plus_reserve",
+        "note": "one week hold, no reserve"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 671878224,
+        "charged_held": 20763351,
+        "charged_carry": 142906,
+        "written_off": 4506209,
+        "float_cents_days": 4830189015,
+        "float_cost_cents": 1588007,
+        "economic_cost_cents": 6094216
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 65.04488947984964,
+        "float_cost_bps": 22.922092563444707,
+        "economic_bps": 87.96698204329435,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 231,
+        "largest": 76532,
+        "top_decile_share": 0.25811208490329673
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "hold_14": {
+      "policy": {
+        "name": "hold_14",
+        "hold_days": 14,
+        "reserve_rate": 0.0,
+        "reserve_days": 0,
+        "clawback": true,
+        "tiered": false,
+        "tier_variant": "hold_plus_reserve",
+        "note": "two week hold, no reserve"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 670725801,
+        "charged_held": 22058680,
+        "charged_carry": 0,
+        "written_off": 3353786,
+        "float_cents_days": 9676671571,
+        "float_cost_cents": 3181371,
+        "economic_cost_cents": 6535157
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 48.4102356790524,
+        "float_cost_bps": 45.9215107620172,
+        "economic_bps": 94.3317464410696,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 189,
+        "largest": 76532,
+        "top_decile_share": 0.24863273923857993
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "hold_21": {
+      "policy": {
+        "name": "hold_21",
+        "hold_days": 21,
+        "reserve_rate": 0.0,
+        "reserve_days": 0,
+        "clawback": true,
+        "tiered": false,
+        "tier_variant": "hold_plus_reserve",
+        "note": "three week hold, no reserve"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 669869975,
+        "charged_held": 22914506,
+        "charged_carry": 0,
+        "written_off": 2497960,
+        "float_cents_days": 14516712670,
+        "float_cost_cents": 4772618,
+        "economic_cost_cents": 7270578
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 36.05681230610592,
+        "float_cost_bps": 68.89037111672829,
+        "economic_bps": 104.9471834228342,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 156,
+        "largest": 61022,
+        "top_decile_share": 0.25898092843760506
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "reserve_5": {
+      "policy": {
+        "name": "reserve_5",
+        "hold_days": 1,
+        "reserve_rate": 0.05,
+        "reserve_days": 30,
+        "clawback": true,
+        "tiered": false,
+        "tier_variant": "hold_plus_reserve",
+        "note": "5 percent held 30 days"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 670889808,
+        "charged_held": 20921478,
+        "charged_carry": 973195,
+        "written_off": 3517793,
+        "float_cents_days": 1656182028,
+        "float_cost_cents": 544498,
+        "economic_cost_cents": 4062291
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 50.777595290850634,
+        "float_cost_bps": 7.859558274371911,
+        "economic_bps": 58.63715356522255,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 204,
+        "largest": 71214,
+        "top_decile_share": 0.2758263490773903
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "reserve_10": {
+      "policy": {
+        "name": "reserve_10",
+        "hold_days": 1,
+        "reserve_rate": 0.1,
+        "reserve_days": 30,
+        "clawback": true,
+        "tiered": false,
+        "tier_variant": "hold_plus_reserve",
+        "note": "10 percent held 30 days"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 669963212,
+        "charged_held": 22596237,
+        "charged_carry": 225032,
+        "written_off": 2591197,
+        "float_cents_days": 2700860859,
+        "float_cost_cents": 887954,
+        "economic_cost_cents": 3479151
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 37.402642106817055,
+        "float_cost_bps": 12.817175100664532,
+        "economic_bps": 50.21981720748158,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 166,
+        "largest": 61338,
+        "top_decile_share": 0.2762595819615413
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "reserve_20": {
+      "policy": {
+        "name": "reserve_20",
+        "hold_days": 1,
+        "reserve_rate": 0.2,
+        "reserve_days": 30,
+        "clawback": true,
+        "tiered": false,
+        "tier_variant": "hold_plus_reserve",
+        "note": "20 percent held 30 days"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 669357505,
+        "charged_held": 23401351,
+        "charged_carry": 25625,
+        "written_off": 1985490,
+        "float_cents_days": 4797060651,
+        "float_cost_cents": 1577116,
+        "economic_cost_cents": 3562606
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 28.659562309104324,
+        "float_cost_bps": 22.764886386073652,
+        "economic_bps": 51.42444869517797,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 136,
+        "largest": 61022,
+        "top_decile_share": 0.26700612946929975
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "hold_7_reserve_10": {
+      "policy": {
+        "name": "hold_7_reserve_10",
+        "hold_days": 7,
+        "reserve_rate": 0.1,
+        "reserve_days": 30,
+        "clawback": true,
+        "tiered": false,
+        "tier_variant": "hold_plus_reserve",
+        "note": ""
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 669333726,
+        "charged_held": 23417072,
+        "charged_carry": 33683,
+        "written_off": 1961711,
+        "float_cents_days": 6890749486,
+        "float_cost_cents": 2265452,
+        "economic_cost_cents": 4227163
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 28.316324250918086,
+        "float_cost_bps": 32.70067477161054,
+        "economic_bps": 61.01699902252862,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 139,
+        "largest": 61022,
+        "top_decile_share": 0.2667518304174264
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "reserve_10_no_clawback": {
+      "policy": {
+        "name": "reserve_10_no_clawback",
+        "hold_days": 1,
+        "reserve_rate": 0.1,
+        "reserve_days": 30,
+        "clawback": false,
+        "tiered": false,
+        "tier_variant": "hold_plus_reserve",
+        "note": "the reserve pays refunds but later sales are never withheld"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 670188244,
+        "charged_held": 22596237,
+        "charged_carry": 0,
+        "written_off": 2816229,
+        "float_cents_days": 2700860859,
+        "float_cost_cents": 887954,
+        "economic_cost_cents": 3704183
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 40.65086729331629,
+        "float_cost_bps": 12.817175100664532,
+        "economic_bps": 53.468042393980824,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 173,
+        "largest": 74163,
+        "top_decile_share": 0.28472080928077936
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "tiered_hold": {
+      "policy": {
+        "name": "tiered_hold",
+        "hold_days": 1,
+        "reserve_rate": 0.0,
+        "reserve_days": 0,
+        "clawback": true,
+        "tiered": true,
+        "tier_variant": "hold_plus_reserve",
+        "note": "new and risky: 14 day hold plus 10 percent for 60 days; established: T+2"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 670200222,
+        "charged_held": 22352389,
+        "charged_carry": 231870,
+        "written_off": 2828207,
+        "float_cents_days": 8919219535,
+        "float_cost_cents": 2932346,
+        "economic_cost_cents": 5760553
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 40.823763775967144,
+        "float_cost_bps": 42.32695853358759,
+        "economic_bps": 83.15072230955474,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 155,
+        "largest": 64699,
+        "top_decile_share": 0.25898033630494516
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    },
+    "tiered_reserve": {
+      "policy": {
+        "name": "tiered_reserve",
+        "hold_days": 1,
+        "reserve_rate": 0.0,
+        "reserve_days": 0,
+        "clawback": true,
+        "tiered": true,
+        "tier_variant": "reserve_only",
+        "note": "new and risky: 20 percent for 60 days, no hold; established: T+1"
+      },
+      "funding_rate": 0.12,
+      "totals": {
+        "sales": 692784481,
+        "refund_cost": 25412466,
+        "paid": 670298103,
+        "charged_held": 22147062,
+        "charged_carry": 339316,
+        "written_off": 2926088,
+        "float_cents_days": 5906988961,
+        "float_cost_cents": 1942024,
+        "economic_cost_cents": 4868112
+      },
+      "leftover_cents": 0,
+      "rates": {
+        "written_off_bps": 42.23662741082677,
+        "float_cost_bps": 28.03215218096088,
+        "economic_bps": 70.26877959178765,
+        "refund_bps": 366.81632884325535
+      },
+      "writeoff": {
+        "sellers": 165,
+        "largest": 64699,
+        "top_decile_share": 0.2503017680944661
+      },
+      "checks": {
+        "sales_fully_allocated": true,
+        "refunds_fully_covered": true,
+        "nothing_left_held": true,
+        "float_non_negative": true,
+        "every_seller_has_a_sale": true
+      }
+    }
+  },
+  "oracle": {
+    "policy": {
+      "name": "oracle",
+      "hold_days": 1,
+      "reserve_rate": 0.0,
+      "reserve_days": 0,
+      "clawback": true,
+      "tiered": false,
+      "tier_variant": "hold_plus_reserve",
+      "note": "perfect foresight on late refunds"
+    },
+    "funding_rate": 0.12,
+    "totals": {
+      "sales": 692784481,
+      "refund_cost": 25412466,
+      "paid": 667372015,
+      "charged_held": 25412466,
+      "charged_carry": 0,
+      "written_off": 0,
+      "float_cents_days": 2502077807,
+      "float_cost_cents": 822601,
+      "economic_cost_cents": 822601
+    },
+    "leftover_cents": 0,
+    "rates": {
+      "written_off_bps": 0.0,
+      "float_cost_bps": 11.873836994913862,
+      "economic_bps": 11.873836994913862,
+      "refund_bps": 366.81632884325535
+    },
+    "writeoff": {
+      "sellers": 0,
+      "largest": 0,
+      "top_decile_share": 0.0
+    },
+    "checks": {
+      "sales_fully_allocated": true,
+      "refunds_fully_covered": true,
+      "nothing_left_held": true,
+      "float_non_negative": true,
+      "every_seller_has_a_sale": true
+    }
+  },
+  "sweeps": {
+    "reserve": [
+      {
+        "policy": {
+          "name": "reserve_0",
+          "hold_days": 1,
+          "reserve_rate": 0.0,
+          "reserve_days": 30,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 673132519,
+          "charged_held": 14574877,
+          "charged_carry": 5077085,
+          "written_off": 5760504,
+          "float_cents_days": 687673138,
+          "float_cost_cents": 226084,
+          "economic_cost_cents": 5986588
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 83.15001501888435,
+          "float_cost_bps": 3.2634102841573323,
+          "economic_bps": 86.41342530304168,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 263,
+          "largest": 84440,
+          "top_decile_share": 0.26143458975117456
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "reserve_5",
+          "hold_days": 1,
+          "reserve_rate": 0.05,
+          "reserve_days": 30,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 670889808,
+          "charged_held": 20921478,
+          "charged_carry": 973195,
+          "written_off": 3517793,
+          "float_cents_days": 1656182028,
+          "float_cost_cents": 544498,
+          "economic_cost_cents": 4062291
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 50.777595290850634,
+          "float_cost_bps": 7.859558274371911,
+          "economic_bps": 58.63715356522255,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 204,
+          "largest": 71214,
+          "top_decile_share": 0.2758263490773903
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "reserve_10",
+          "hold_days": 1,
+          "reserve_rate": 0.1,
+          "reserve_days": 30,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 669963212,
+          "charged_held": 22596237,
+          "charged_carry": 225032,
+          "written_off": 2591197,
+          "float_cents_days": 2700860859,
+          "float_cost_cents": 887954,
+          "economic_cost_cents": 3479151
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 37.402642106817055,
+          "float_cost_bps": 12.817175100664532,
+          "economic_bps": 50.21981720748158,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 166,
+          "largest": 61338,
+          "top_decile_share": 0.2762595819615413
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "reserve_15",
+          "hold_days": 1,
+          "reserve_rate": 0.15,
+          "reserve_days": 30,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 669555567,
+          "charged_held": 23160318,
+          "charged_carry": 68596,
+          "written_off": 2183552,
+          "float_cents_days": 3750090267,
+          "float_cost_cents": 1232906,
+          "economic_cost_cents": 3416458
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 31.51848893682132,
+          "float_cost_bps": 17.796385944159162,
+          "economic_bps": 49.31487488098048,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 146,
+          "largest": 61022,
+          "top_decile_share": 0.26696272861832465
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "reserve_20",
+          "hold_days": 1,
+          "reserve_rate": 0.2,
+          "reserve_days": 30,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 669357505,
+          "charged_held": 23401351,
+          "charged_carry": 25625,
+          "written_off": 1985490,
+          "float_cents_days": 4797060651,
+          "float_cost_cents": 1577116,
+          "economic_cost_cents": 3562606
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 28.659562309104324,
+          "float_cost_bps": 22.764886386073652,
+          "economic_bps": 51.42444869517797,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 136,
+          "largest": 61022,
+          "top_decile_share": 0.26700612946929975
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "reserve_25",
+          "hold_days": 1,
+          "reserve_rate": 0.25,
+          "reserve_days": 30,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 669255049,
+          "charged_held": 23527832,
+          "charged_carry": 1600,
+          "written_off": 1883034,
+          "float_cents_days": 5841407707,
+          "float_cost_cents": 1920463,
+          "economic_cost_cents": 3803497
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 27.18066082083614,
+          "float_cost_bps": 27.72092985148725,
+          "economic_bps": 54.90159067232339,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 128,
+          "largest": 61022,
+          "top_decile_share": 0.2648050964560385
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "reserve_30",
+          "hold_days": 1,
+          "reserve_rate": 0.3,
+          "reserve_days": 30,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 669208138,
+          "charged_held": 23576343,
+          "charged_carry": 0,
+          "written_off": 1836123,
+          "float_cents_days": 6884618455,
+          "float_cost_cents": 2263436,
+          "economic_cost_cents": 4099559
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 26.503523828213467,
+          "float_cost_bps": 32.67157481260034,
+          "economic_bps": 59.17509864081381,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 124,
+          "largest": 61022,
+          "top_decile_share": 0.25581401681695615
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      }
+    ],
+    "hold": [
+      {
+        "policy": {
+          "name": "hold_0",
+          "hold_days": 0,
+          "reserve_rate": 0.0,
+          "reserve_days": 0,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 673316698,
+          "charged_held": 10038277,
+          "charged_carry": 9429506,
+          "written_off": 5944683,
+          "float_cents_days": 0,
+          "float_cost_cents": 0,
+          "economic_cost_cents": 5944683
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 85.80854743482627,
+          "float_cost_bps": 0.0,
+          "economic_bps": 85.80854743482627,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 266,
+          "largest": 85580,
+          "top_decile_share": 0.2655605017122023
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "hold_3",
+          "hold_days": 3,
+          "reserve_rate": 0.0,
+          "reserve_days": 0,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 672745212,
+          "charged_held": 18661964,
+          "charged_carry": 1377305,
+          "written_off": 5373197,
+          "float_cents_days": 2065600019,
+          "float_cost_cents": 679101,
+          "economic_cost_cents": 6052298
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 77.55943078060953,
+          "float_cost_bps": 9.802485745924207,
+          "economic_bps": 87.36191652653375,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 254,
+          "largest": 84440,
+          "top_decile_share": 0.26102951371408867
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "hold_7",
+          "hold_days": 7,
+          "reserve_rate": 0.0,
+          "reserve_days": 0,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 671878224,
+          "charged_held": 20763351,
+          "charged_carry": 142906,
+          "written_off": 4506209,
+          "float_cents_days": 4830189015,
+          "float_cost_cents": 1588007,
+          "economic_cost_cents": 6094216
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 65.04488947984964,
+          "float_cost_bps": 22.922092563444707,
+          "economic_bps": 87.96698204329435,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 231,
+          "largest": 76532,
+          "top_decile_share": 0.25811208490329673
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "hold_14",
+          "hold_days": 14,
+          "reserve_rate": 0.0,
+          "reserve_days": 0,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 670725801,
+          "charged_held": 22058680,
+          "charged_carry": 0,
+          "written_off": 3353786,
+          "float_cents_days": 9676671571,
+          "float_cost_cents": 3181371,
+          "economic_cost_cents": 6535157
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 48.4102356790524,
+          "float_cost_bps": 45.9215107620172,
+          "economic_bps": 94.3317464410696,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 189,
+          "largest": 76532,
+          "top_decile_share": 0.24863273923857993
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "hold_21",
+          "hold_days": 21,
+          "reserve_rate": 0.0,
+          "reserve_days": 0,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 669869975,
+          "charged_held": 22914506,
+          "charged_carry": 0,
+          "written_off": 2497960,
+          "float_cents_days": 14516712670,
+          "float_cost_cents": 4772618,
+          "economic_cost_cents": 7270578
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 36.05681230610592,
+          "float_cost_bps": 68.89037111672829,
+          "economic_bps": 104.9471834228342,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 156,
+          "largest": 61022,
+          "top_decile_share": 0.25898092843760506
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      },
+      {
+        "policy": {
+          "name": "hold_28",
+          "hold_days": 28,
+          "reserve_rate": 0.0,
+          "reserve_days": 0,
+          "clawback": true,
+          "tiered": false,
+          "tier_variant": "hold_plus_reserve",
+          "note": ""
+        },
+        "funding_rate": 0.12,
+        "totals": {
+          "sales": 692784481,
+          "refund_cost": 25412466,
+          "paid": 669336790,
+          "charged_held": 23447691,
+          "charged_carry": 0,
+          "written_off": 1964775,
+          "float_cents_days": 19351587403,
+          "float_cost_cents": 6362166,
+          "economic_cost_cents": 8326941
+        },
+        "leftover_cents": 0,
+        "rates": {
+          "written_off_bps": 28.360551569572472,
+          "float_cost_bps": 91.83470725003149,
+          "economic_bps": 120.19525881960395,
+          "refund_bps": 366.81632884325535
+        },
+        "writeoff": {
+          "sellers": 128,
+          "largest": 61022,
+          "top_decile_share": 0.2636983878561158
+        },
+        "checks": {
+          "sales_fully_allocated": true,
+          "refunds_fully_covered": true,
+          "nothing_left_held": true,
+          "float_non_negative": true,
+          "every_seller_has_a_sale": true
+        }
+      }
+    ]
+  },
+  "robustness": [
+    {
+      "seed": 20261128,
+      "gmv_cents": 687862682,
+      "base_economic_cents": 5892137,
+      "base_writeoff_cents": 5667593,
+      "best_flat_policy": "reserve_15",
+      "best_flat_writeoff_cents": 2305408,
+      "best_flat_economic_cents": 3528332,
+      "tiered_hold_economic_cents": 5666386,
+      "oracle_economic_cents": 800677,
+      "prize_captured_pct": 46.42685987909166
+    },
+    {
+      "seed": 20261129,
+      "gmv_cents": 700764311,
+      "base_economic_cents": 6178878,
+      "base_writeoff_cents": 5950098,
+      "best_flat_policy": "reserve_15",
+      "best_flat_writeoff_cents": 2639451,
+      "best_flat_economic_cents": 3885673,
+      "tiered_hold_economic_cents": 5836752,
+      "oracle_economic_cents": 845865,
+      "prize_captured_pct": 43.00017644809791
+    }
+  ],
+  "marginal_reserve": [
+    {
+      "from_rate": 0.0,
+      "to_rate": 0.05,
+      "writeoff_saved_cents": 2242711,
+      "float_added_cents": 318414,
+      "net_cents": 1924297
+    },
+    {
+      "from_rate": 0.05,
+      "to_rate": 0.1,
+      "writeoff_saved_cents": 926596,
+      "float_added_cents": 343456,
+      "net_cents": 583140
+    },
+    {
+      "from_rate": 0.1,
+      "to_rate": 0.15,
+      "writeoff_saved_cents": 407645,
+      "float_added_cents": 344952,
+      "net_cents": 62693
+    },
+    {
+      "from_rate": 0.15,
+      "to_rate": 0.2,
+      "writeoff_saved_cents": 198062,
+      "float_added_cents": 344210,
+      "net_cents": -146148
+    },
+    {
+      "from_rate": 0.2,
+      "to_rate": 0.25,
+      "writeoff_saved_cents": 102456,
+      "float_added_cents": 343347,
+      "net_cents": -240891
+    },
+    {
+      "from_rate": 0.25,
+      "to_rate": 0.3,
+      "writeoff_saved_cents": 46911,
+      "float_added_cents": 342973,
+      "net_cents": -296062
+    }
+  ],
+  "comparisons": {
+    "writeoff_cut_base_to_reserve_10_pct": 55.01787690799277,
+    "best_flat_policy": "reserve_15",
+    "best_flat_rate_pct": 15.0,
+    "best_flat_economic_cents": 3416458,
+    "best_flat_writeoff_cents": 2183552,
+    "best_flat_float_cents": 1232906,
+    "tiered_economic_cents": 5760553,
+    "tiered_writeoff_cents": 2828207,
+    "tiered_float_cents": 2932346,
+    "tiered_vs_best_flat_cents": 2344095,
+    "tiered_reserve_economic_cents": 4868112,
+    "tiered_reserve_vs_best_flat_cents": 1451654,
+    "hold14_writeoff_cents": 3353786,
+    "hold14_float_cents": 3181371,
+    "reserve_10_writeoff_cents": 2591197,
+    "reserve_10_float_cents": 887954,
+    "clawback_value_cents": 225032,
+    "oracle_writeoff_cents": 0,
+    "oracle_economic_cents": 822601,
+    "prize_cents": 5163987,
+    "prize_captured_pct": 49.77026471987633,
+    "best_policy": "reserve_10"
+  },
+  "checks": {
+    "pay_t1_balances": true,
+    "hold_7_balances": true,
+    "hold_14_balances": true,
+    "hold_21_balances": true,
+    "reserve_5_balances": true,
+    "reserve_10_balances": true,
+    "reserve_20_balances": true,
+    "hold_7_reserve_10_balances": true,
+    "reserve_10_no_clawback_balances": true,
+    "tiered_hold_balances": true,
+    "tiered_reserve_balances": true,
+    "oracle_never_writes_off": true,
+    "zero_reserve_binds": true,
+    "reserve_reduces_writeoff": true,
+    "reserve_sweep_is_monotone": true,
+    "reserve_curve_turns": true,
+    "the_best_flat_rung_is_stable_across_seeds": true,
+    "reserve_dominates_hold": true,
+    "clawback_carries_the_reserve": true,
+    "tiered_beats_base": true,
+    "oracle_is_the_floor": true
+  }
+}

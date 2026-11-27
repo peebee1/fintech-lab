@@ -462,6 +462,27 @@
       "added": "2026-11-26",
       "shipped": "2026-11-26",
       "artifact": "artifacts/2026-11-26-correspondent-fees/"
+    },
+    {
+      "id": "payout-holds",
+      "title": "Seller payout reserves priced against the hold and the risk band",
+      "thesis": "A reserve and a hold are two prices on the same refund risk, and the cheaper one is not the one most platforms use.",
+      "theme": "payouts",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 5,
+        "s2": 4,
+        "s3": 4,
+        "s4": 5,
+        "s5": 5,
+        "s6": 5,
+        "s7": 4
+      },
+      "notes": "Queue was empty: every backlog item was shipped or parked and every hardening item was shipped, so this was scored and built in the same run. Shipped 2026-11-27, scored 4.55, promotion candidate. 400 synthetic sellers, 180 days, 52,349 orders, USD 6,927,844.81 GMV, 1,932 refunds costing USD 254,124.66. Pay T+1 writes off USD 57,605.04, 22.7 percent of the refund book, 263 sellers. A 15 percent reserve held 30 days cuts it to USD 21,835.52 for USD 12,329.06 of float, 50.2 bps against 86.4, capturing 49.8 percent of the perfect foresight prize. A 14 day hold writes off USD 33,537.86 for USD 31,813.71 of float, dominated by a 10 percent reserve at USD 25,911.97 and USD 8,879.54, and every hold rung is worse in total than T+1. Reserve marginal net turns negative at 20 percent: 15 to 20 spends USD 3,442.10 to save USD 1,980.62. Banding new and risky sellers halves the write-off and still costs USD 57,605.53, USD 23,440.95 above the blunt reserve, because established sellers are 70 percent of the book, 89.7 percent of GMV and 61.6 percent of write-off dollars. Clawback is worth USD 2,250.32. Three seeds, same 15 percent winner, 43.0 to 49.8 percent of the prize. 43 tests, gate green at 1323 python lines, both results files re-derived by tools/repro.py.",
+      "added": "2026-11-27",
+      "shipped": "2026-11-27",
+      "artifact": "artifacts/2026-11-27-payout-holds/"
     }
   ]
 }
