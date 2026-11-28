@@ -36,3 +36,4 @@ Run `python3 tools/select.py` for the selector's pick, including the anti repeti
 | shipped | ATM cash replenishment priced by trip, by balance, and by service | cash |
 | shipped | Correspondent charge codes priced by what the beneficiary receives | cross-border |
 | shipped | Seller payout reserves priced against the hold and the risk band | payouts |
+| shipped | Deposit sweep priced in yield, insurance, and operational links | deposits |

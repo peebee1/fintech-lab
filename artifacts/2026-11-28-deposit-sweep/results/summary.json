@@ -1,0 +1,403 @@
+{
+  "banks": [
+    {
+      "allocated_yield_only_cents": 300000000,
+      "apy_bps": 455,
+      "capacity_cents": 300000000,
+      "id": "bank_1"
+    },
+    {
+      "allocated_yield_only_cents": 400000000,
+      "apy_bps": 430,
+      "capacity_cents": 400000000,
+      "id": "bank_2"
+    },
+    {
+      "allocated_yield_only_cents": 500000000,
+      "apy_bps": 410,
+      "capacity_cents": 500000000,
+      "id": "bank_3"
+    },
+    {
+      "allocated_yield_only_cents": 600000000,
+      "apy_bps": 395,
+      "capacity_cents": 600000000,
+      "id": "bank_4"
+    },
+    {
+      "allocated_yield_only_cents": 700000000,
+      "apy_bps": 380,
+      "capacity_cents": 700000000,
+      "id": "bank_5"
+    },
+    {
+      "allocated_yield_only_cents": 800000000,
+      "apy_bps": 365,
+      "capacity_cents": 800000000,
+      "id": "bank_6"
+    },
+    {
+      "allocated_yield_only_cents": 1000000000,
+      "apy_bps": 350,
+      "capacity_cents": 1000000000,
+      "id": "bank_7"
+    },
+    {
+      "allocated_yield_only_cents": 741000308,
+      "apy_bps": 340,
+      "capacity_cents": 1200000000,
+      "id": "bank_8"
+    }
+  ],
+  "book": {
+    "banks": 8,
+    "capacity_cents": 5500000000,
+    "capacity_cover_bps": 10910,
+    "customers": 1500,
+    "customers_over_cap": 11,
+    "max_cents": 88334423,
+    "mean_cents": 3360666,
+    "median_cents": 1541678,
+    "min_cents": 64979,
+    "top5pct_share_bps": 2820,
+    "total_cents": 5041000308
+  },
+  "capacity_test": {
+    "base_banks_full": 7,
+    "base_capacity_used_bps": 9165,
+    "base_interest_cents": 191044010,
+    "doubled_banks_full": 5,
+    "doubled_capacity_interest_cents": 204796511
+  },
+  "checks": [
+    {
+      "detail": "5041000308 cents placed under every policy",
+      "name": "every cent of every customer is placed",
+      "ok": true
+    },
+    {
+      "detail": "7 of 8 banks full under yield_only",
+      "name": "no bank is over its declared capacity",
+      "ok": true
+    },
+    {
+      "detail": "at most one overflow bank per customer, every other slice at or under 250,000.00",
+      "name": "the capped policies respect the 250,000 cap on every covered link",
+      "ok": true
+    },
+    {
+      "detail": "capped_3 max links per customer 3",
+      "name": "the capped policy respects its link cap",
+      "ok": true
+    },
+    {
+      "detail": "116223827 cents uninsured under yield_only",
+      "name": "the insurance cap bites under yield only",
+      "ok": true
+    },
+    {
+      "detail": "oracle uninsured 0 cents",
+      "name": "the oracle leaves nothing uninsured",
+      "ok": true
+    },
+    {
+      "detail": "oracle 191044010 vs yield_only 191044010",
+      "name": "the oracle earns at least the interest of every policy",
+      "ok": true
+    },
+    {
+      "detail": "largest first 191044010 vs smallest first 191044010 cents",
+      "name": "interest depends on bank totals, not on customer order",
+      "ok": true
+    },
+    {
+      "detail": "capped_3 191044010 vs yield_only 191044010 cents",
+      "name": "insurance within the link cap does not cost interest",
+      "ok": true
+    },
+    {
+      "detail": "doubled capacity 204796511 vs 191044010 cents",
+      "name": "capacity binds: doubling it raises interest",
+      "ok": true
+    },
+    {
+      "detail": "oracle blended 378 bps",
+      "name": "interest stays under the highest bank rate applied to the whole book",
+      "ok": true
+    },
+    {
+      "detail": "small book capped 7753576 vs yield_only 7777808 cents",
+      "name": "the cap costs yield only when the book fits inside the top banks",
+      "ok": true
+    }
+  ],
+  "customers": 1500,
+  "link_fee_cents": 150,
+  "order_sensitivity": {
+    "interest_delta_cents": 0,
+    "largest_first": {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 1,
+      "interest_cents": 191044010,
+      "link_cost_cents": 227850,
+      "links": 1519,
+      "max_customer_links": 3,
+      "max_links": 3,
+      "net_cents": 190816160,
+      "policy": "capped_3",
+      "top10_customer_interest_cents": 16449104,
+      "uninsured_bps": 26,
+      "uninsured_cents": 13334423
+    },
+    "smallest_first": {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 11,
+      "interest_cents": 191044010,
+      "link_cost_cents": 226050,
+      "links": 1507,
+      "max_customer_links": 2,
+      "max_links": 3,
+      "net_cents": 190817960,
+      "policy": "capped_3",
+      "top10_customer_interest_cents": 12525258,
+      "uninsured_bps": 235,
+      "uninsured_cents": 118531375
+    },
+    "top10_interest_delta_cents": 3923846,
+    "uninsured_delta_cents": -105196952
+  },
+  "policies": [
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 10,
+      "interest_cents": 191044010,
+      "link_cost_cents": 226050,
+      "links": 1507,
+      "max_customer_links": 2,
+      "max_links": 1,
+      "net_cents": 190817960,
+      "policy": "yield_only",
+      "top10_customer_interest_cents": 16590768,
+      "uninsured_bps": 230,
+      "uninsured_cents": 116223827
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 10,
+      "interest_cents": 191044010,
+      "link_cost_cents": 226050,
+      "links": 1507,
+      "max_customer_links": 2,
+      "max_links": 1,
+      "net_cents": 190817960,
+      "policy": "capped_1",
+      "top10_customer_interest_cents": 16590768,
+      "uninsured_bps": 230,
+      "uninsured_cents": 116223827
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 1,
+      "interest_cents": 191044010,
+      "link_cost_cents": 227850,
+      "links": 1519,
+      "max_customer_links": 3,
+      "max_links": 3,
+      "net_cents": 190816160,
+      "policy": "capped_3",
+      "top10_customer_interest_cents": 16449104,
+      "uninsured_bps": 26,
+      "uninsured_cents": 13334423
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 0,
+      "interest_cents": 191044010,
+      "link_cost_cents": 763200,
+      "links": 5088,
+      "max_customer_links": 8,
+      "max_links": 8,
+      "net_cents": 190280810,
+      "policy": "even",
+      "top10_customer_interest_cents": 14390193,
+      "uninsured_bps": 0,
+      "uninsured_cents": 0
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 0,
+      "interest_cents": 191044010,
+      "link_cost_cents": 228000,
+      "links": 1520,
+      "max_customer_links": 4,
+      "max_links": 12,
+      "net_cents": 190816010,
+      "policy": "capped_12",
+      "top10_customer_interest_cents": 16369097,
+      "uninsured_bps": 0,
+      "uninsured_cents": 0
+    }
+  ],
+  "seed": 20261128,
+  "small_book_test": {
+    "capped_3_interest_cents": 7753576,
+    "capped_3_links": 61,
+    "capped_3_uninsured_cents": 0,
+    "customers": 60,
+    "total_cents": 170940838,
+    "yield_delta_bps_x100": 141,
+    "yield_delta_cents": 24232,
+    "yield_only_interest_cents": 7777808,
+    "yield_only_links": 60,
+    "yield_only_uninsured_cents": 9692658
+  },
+  "sweep": [
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 10,
+      "interest_cents": 191044010,
+      "link_cost_cents": 226050,
+      "links": 1507,
+      "max_customer_links": 2,
+      "max_links": 1,
+      "net_cents": 190817960,
+      "policy": "capped_1",
+      "top10_customer_interest_cents": 16590768,
+      "uninsured_bps": 230,
+      "uninsured_cents": 116223827
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 1,
+      "interest_cents": 191044010,
+      "link_cost_cents": 227550,
+      "links": 1517,
+      "max_customer_links": 2,
+      "max_links": 2,
+      "net_cents": 190816460,
+      "policy": "capped_2",
+      "top10_customer_interest_cents": 16561604,
+      "uninsured_bps": 76,
+      "uninsured_cents": 38334423
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 1,
+      "interest_cents": 191044010,
+      "link_cost_cents": 227850,
+      "links": 1519,
+      "max_customer_links": 3,
+      "max_links": 3,
+      "net_cents": 190816160,
+      "policy": "capped_3",
+      "top10_customer_interest_cents": 16449104,
+      "uninsured_bps": 26,
+      "uninsured_cents": 13334423
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 0,
+      "interest_cents": 191044010,
+      "link_cost_cents": 228000,
+      "links": 1520,
+      "max_customer_links": 4,
+      "max_links": 4,
+      "net_cents": 190816010,
+      "policy": "capped_4",
+      "top10_customer_interest_cents": 16369097,
+      "uninsured_bps": 0,
+      "uninsured_cents": 0
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 0,
+      "interest_cents": 191044010,
+      "link_cost_cents": 228000,
+      "links": 1520,
+      "max_customer_links": 4,
+      "max_links": 5,
+      "net_cents": 190816010,
+      "policy": "capped_5",
+      "top10_customer_interest_cents": 16369097,
+      "uninsured_bps": 0,
+      "uninsured_cents": 0
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 0,
+      "interest_cents": 191044010,
+      "link_cost_cents": 228000,
+      "links": 1520,
+      "max_customer_links": 4,
+      "max_links": 6,
+      "net_cents": 190816010,
+      "policy": "capped_6",
+      "top10_customer_interest_cents": 16369097,
+      "uninsured_bps": 0,
+      "uninsured_cents": 0
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 0,
+      "interest_cents": 191044010,
+      "link_cost_cents": 228000,
+      "links": 1520,
+      "max_customer_links": 4,
+      "max_links": 7,
+      "net_cents": 190816010,
+      "policy": "capped_7",
+      "top10_customer_interest_cents": 16369097,
+      "uninsured_bps": 0,
+      "uninsured_cents": 0
+    },
+    {
+      "banks_full": 7,
+      "blended_apy_bps": 378,
+      "capacity_used_bps": 9165,
+      "exposed_customers": 0,
+      "interest_cents": 191044010,
+      "link_cost_cents": 228000,
+      "links": 1520,
+      "max_customer_links": 4,
+      "max_links": 8,
+      "net_cents": 190816010,
+      "policy": "capped_8",
+      "top10_customer_interest_cents": 16369097,
+      "uninsured_bps": 0,
+      "uninsured_cents": 0
+    }
+  ],
+  "uninsured_concentration": {
+    "exposed_customers": 10,
+    "top10_share_bps": 10000,
+    "top10_uninsured_cents": 116223827
+  }
+}

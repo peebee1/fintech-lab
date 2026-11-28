@@ -483,6 +483,27 @@
       "added": "2026-11-27",
       "shipped": "2026-11-27",
       "artifact": "artifacts/2026-11-27-payout-holds/"
+    },
+    {
+      "id": "deposit-sweep",
+      "title": "Deposit sweep priced in yield, insurance, and operational links",
+      "thesis": "A sweep engine that maximises yield leaves the tail uninsured. Capping it costs no yield when capacity binds, and the real bill is the customer to bank links.",
+      "theme": "deposits",
+      "type": "artifact",
+      "status": "shipped",
+      "scores": {
+        "s1": 4,
+        "s2": 4,
+        "s3": 4,
+        "s4": 4,
+        "s5": 5,
+        "s6": 5,
+        "s7": 4
+      },
+      "notes": "Queue was empty: every backlog item was shipped or parked and every hardening item was shipped, so this was scored and built in the same run. Shipped 2026-11-28, scored 4.15. 1,500 synthetic customers, USD 50,410,003.08 of deposits, 8 partner banks at 3.40 to 4.55 percent with USD 55,000,000 of capacity, seven banks full, 91.65 percent of capacity used. The yield-only default leaves USD 1,162,238.27 uninsured, 2.30 percent of the book, on 10 customers, all of it on 11 balances above the cap. Three links cuts it to USD 133,344.23, 0.26 percent, for 12 links and USD 18.00, and earns the same USD 1,910,440.10, because capacity sets the blended rate: doubling capacity adds USD 137,525.01, 7.20 percent, 27 bps. Four links is zero uninsured at USD 19.50 a year. Equal split across 8 banks also reaches zero with 5,088 links against 1,520, 3.35 times, USD 5,352.00 a year more. Order changes no interest and changes uninsured by USD 1,051,969.52: smallest first leaves USD 1,185,313.75 exposed and costs the top 10 customers USD 39,238.46, so largest first is the only order that uses the cap where it can bind. Boundary: on a 60 customer book of USD 1,709,408.38 that fits inside the top bank, the cap costs USD 242.32, 1.41 bps. 42 tests, gate green at 1,031 python lines, both results files re-derived by tools/repro.py.",
+      "added": "2026-11-28",
+      "shipped": "2026-11-28",
+      "artifact": "artifacts/2026-11-28-deposit-sweep/"
     }
   ]
 }

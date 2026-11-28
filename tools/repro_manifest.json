@@ -191,5 +191,13 @@
         "byte": ["results/summary.json", "results/summary.md"]
       }
     ]
+  },
+  "artifacts/2026-11-28-deposit-sweep/": {
+    "steps": [
+      {
+        "argv": ["python", "-m", "depositsweep.cli", "bench"],
+        "byte": ["results/summary.json", "results/summary.md"]
+      }
+    ]
   }
 }

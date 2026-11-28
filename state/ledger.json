@@ -2,7 +2,7 @@
   "version": 1,
   "repo": "peebee1/fintech-lab",
   "started": "2026-10-23",
-  "sequence": 24,
+  "sequence": 25,
   "shipped": [
     {
       "date": "2026-10-23",
@@ -556,6 +556,22 @@
         "failed": 0
       },
       "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-27-payout-holds",
+      "promoted": false
+    },
+    {
+      "date": "2026-11-28",
+      "id": "deposit-sweep",
+      "lane": "build",
+      "title": "Deposit sweep: what the insurance cap costs in yield and in links",
+      "thesis": "On 1,500 synthetic customers and USD 50,410,003.08 of deposits across 8 partner banks paying 3.40 to 4.55 percent with USD 55,000,000 of capacity, the yield-only sweep leaves USD 1,162,238.27 uninsured, 2.30 percent of the book, on 10 customers, because 11 customers exceed the USD 250,000 per bank cap. Capping each customer at 250,000 per bank with at most 3 links cuts that to USD 133,344.23, 0.26 percent, for 12 extra links and USD 18.00 a year, and earns the same USD 1,910,440.10: capacity, not the cap, sets the 3.78 percent blended rate. Seven of eight banks are full at 91.65 percent of capacity, and doubling every capacity adds USD 137,525.01, 7.20 percent of interest, 27 bps on the book. Four links reaches zero uninsured for 13 extra links and USD 19.50 a year. Splitting every balance equally across all 8 banks also reaches zero but uses 5,088 links against 1,520, 3.35 times as many, for USD 5,352.00 a year more. Allocation order moves interest by zero and uninsured dollars by USD 1,051,969.52: serving the smallest balances first leaves USD 1,185,313.75 uninsured across 11 customers and costs the top 10 customers USD 39,238.46 of interest, so largest first is the only order that spends the cap on balances that can exceed it. The invariance is conditional: on a 60 customer book of USD 1,709,408.38 that fits inside the top bank, the cap costs USD 242.32, 1.41 bps. 42 tests, gate green at 1,031 python lines, both results files re-derived by tools/repro.py.",
+      "path": "artifacts/2026-11-28-deposit-sweep/",
+      "theme": "deposits",
+      "score": 4.15,
+      "tests": {
+        "passed": 42,
+        "failed": 0
+      },
+      "url": "https://github.com/peebee1/fintech-lab/tree/main/artifacts/2026-11-28-deposit-sweep",
       "promoted": false
     }
   ],
